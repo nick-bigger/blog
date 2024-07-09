@@ -17,7 +17,10 @@
     "lucide-react": "^0.400.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-ga4": "^2.1.0",
     "react-router-dom": "^6.24.1",
+    "react-topbar-progress-indicator": "^4.1.1",
+    "react-transition-group": "^4.4.5",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },

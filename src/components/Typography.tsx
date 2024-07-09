@@ -69,7 +69,7 @@ const P = React.forwardRef<
   <p
     ref={ref} 
     className={cn(
-      "leading-8 lowercase",
+      "leading-8 text-lg",
       className,
     )}
     {...props}

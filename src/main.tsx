@@ -6,23 +6,36 @@ import {
 } from "react-router-dom";
 import "./index.css";
 
-import { Article, loader as articleLoader } from "./routes/Article";
+import { Apologize } from "./routes/Apologize";
 import { ErrorPage } from "./routes/Error";
-import { Root, loader as rootLoader } from "./routes/Root";
+import { Her } from "./routes/Her";
+import { Home } from "./routes/Home";
+import { Lines } from "./routes/Lines";
+import { Root } from "./routes/Root";
 
 const router = createBrowserRouter([
   {
+    element: <Root />,
+    path: "",
     children: [
       {
-        path: "articles/:articleId",
-        element: <Article />,
-        loader: articleLoader,
+        path: "/",
+        element: <Home />,
+        errorElement: <ErrorPage />,
       },
+      {
+        path: "her",
+        element: <Her />,
+      },
+      {
+        path: "lines",
+        element: <Lines />,
+      },
+      {
+        path: "apologize",
+        element: <Apologize />,
+      }
     ],
-    path: "/",
-    loader: rootLoader,
-    element: <Root />,
-    errorElement: <ErrorPage />,
   },
 ]);
 
