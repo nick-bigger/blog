@@ -1,11 +1,9 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import "./index.css";
 
+import * as ReactDOM from "react-dom/client";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import "./index.css";
 import { Apologize } from "./routes/Apologize";
 import { ErrorPage } from "./routes/Error";
 import { Her } from "./routes/Her";
@@ -34,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: "apologize",
         element: <Apologize />,
-      }
+      },
     ],
   },
 ]);
@@ -42,5 +40,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
