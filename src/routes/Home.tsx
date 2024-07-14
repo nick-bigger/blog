@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
 
-const options = ["her", "lines", "apologize"];
+const poems = ["her", "lines", "apologize"];
+const stories = ["test", "another", "this is the last one here"];
 
 export const Home = () => {
-  const wordWall = Array.from(
+  const poemWall = Array.from(
     { length: 400 },
-    () => options[Math.floor(Math.random() * options.length)],
+    () => poems[Math.floor(Math.random() * poems.length)],
+  );
+  const storyWall = Array.from(
+    { length: 400 },
+    () => stories[Math.floor(Math.random() * stories.length)],
   );
 
   return (
-    <div>
+    <div className="overflow-clip">
       <div className="flex flex-col gap-6 p-2 lg:p-6">
         <hr className="w-full border-black" />
         <div className="p-2">
@@ -27,17 +32,47 @@ export const Home = () => {
         </div>
         <hr className="w-full border-black" />
       </div>
-      <div className="flex flex-col px-6 pb-0">
-        <p className="text-[70px] font-black tracking-tight sm:text-[100px] md:text-[150px] lg:text-[200px]">
+      <div className="m-auto flex max-w-[1500px] flex-col p-6 pb-0 pt-8">
+        <p className="text-[70px] font-black leading-[70px] tracking-tight sm:text-[100px] sm:leading-[100px] md:text-[150px] md:leading-[150px] lg:text-[200px] lg:leading-[200px]">
           Conifer
         </p>
-        <p className="text-[70px] font-black tracking-tight sm:text-[100px] md:text-[150px] lg:text-end lg:text-[200px]">
+        <p className="text-end text-[70px] font-black leading-[70px] tracking-tight sm:text-[100px] sm:leading-[100px] md:text-[150px] md:leading-[150px] lg:text-[200px] lg:leading-[200px]">
           Crown
         </p>
       </div>
-      <hr className="mb-2 border-black lg:m-6" />
+      <div className="h-4 w-56 bg-red-600"></div>
+      <hr className="border-black" />
+      <p className="py-2">
+        /////////////////////////////////////////////////////////////////////////////
+      </p>
+      <hr className="border-black" />
+      <p className="bg-black py-20 pl-8 text-start font-mono text-3xl tracking-widest text-white">
+        POEMS
+      </p>
+      <div className="bg-black pb-20">
+        <div className="mx-[-500px] flex h-[300px] flex-wrap gap-2 overflow-clip">
+          {poemWall.map((option, idx) => (
+            <Link to={`${option}`} key={idx}>
+              <p
+                className={`text-2xl uppercase ${idx % 2 === 0 ? "text-gray-300" : "text-white"}`}
+              >
+                {option}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </div>
+      <hr className="border-black" />
+      <p className="py-2 text-end">
+        /////////////////////////////////////////////////////////////////////////////
+      </p>
+      <hr className="border-black" />
+      <div className="ml-auto h-4 w-56 bg-red-600"></div>
+      <p className="my-20 mr-8 text-end font-mono text-3xl tracking-widest">
+        STORIES
+      </p>
       <div className="mx-[-500px] flex h-[300px] flex-wrap gap-2 overflow-clip">
-        {wordWall.map((option, idx) => (
+        {storyWall.map((option, idx) => (
           <Link to={`${option}`} key={idx}>
             <p
               className={`text-2xl uppercase ${idx % 2 === 0 ? "text-gray-300" : "text-black"}`}
@@ -47,6 +82,11 @@ export const Home = () => {
           </Link>
         ))}
       </div>
+      <hr className="mt-20 border-black" />
+      <p className="py-2 text-center">
+        /////////////////////////////////////////////////////////////////////////////
+      </p>
+      <hr className="border-black" />
     </div>
   );
 };
