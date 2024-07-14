@@ -5,11 +5,11 @@ const stories = ["Us, Again", "Fine", "Apologize"];
 
 export const Home = () => {
   const poemWall = Array.from(
-    { length: 50 * poems.length },
+    { length: 30 * poems.length },
     () => poems[Math.floor(Math.random() * poems.length)],
   );
   const storyWall = Array.from(
-    { length: 50 * stories.length },
+    { length: 30 * stories.length },
     () => stories[Math.floor(Math.random() * stories.length)],
   );
 
@@ -36,7 +36,7 @@ export const Home = () => {
         </div>
         <hr className="w-full border-black" />
       </div>
-      <div className="m-auto flex max-w-[1500px] flex-col p-6 pb-40 pt-8">
+      <div className="m-auto flex max-w-[1500px] flex-col p-6 pb-32 pt-8">
         <p className="text-[70px] font-black leading-[70px] tracking-tight sm:text-[100px] sm:leading-[100px] md:text-[150px] md:leading-[150px] lg:text-[200px] lg:leading-[200px]">
           Conifer
         </p>
@@ -54,7 +54,7 @@ export const Home = () => {
         HER
       </p>
       <div className="bg-black pb-20">
-        <div className="mx-[-500px] flex h-[200px] flex-wrap gap-2 overflow-clip">
+        <div className="mx-[-500px] flex flex-wrap gap-2 overflow-clip">
           {poemWall.map((option, idx) => (
             <Link to={`${option.replace(/\s+/g, "").toLowerCase()}`} key={idx}>
               <p
@@ -75,7 +75,7 @@ export const Home = () => {
       <p className="my-20 mr-8 text-end font-mono text-3xl tracking-widest">
         LOVE INURE
       </p>
-      <div className="mx-[-500px] flex h-[200px] flex-wrap gap-2 overflow-clip">
+      <div className="mx-[-500px] flex flex-wrap gap-2 overflow-clip">
         {storyWall.map((option, idx) => (
           <Link to={`${option.replace(/\s+/g, "").toLowerCase()}`} key={idx}>
             <p
