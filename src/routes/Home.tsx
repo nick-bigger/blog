@@ -20,11 +20,15 @@ export const Home = () => {
         <div className="p-2">
           <div className="flex justify-between">
             <div>
-              <p className="font-mono text-[15px]">A COLLECTION OF THINGS</p>
-              <p className="font-mono text-[15px]">LOST IN AUSTIN</p>
+              <p className="font-mono text-[10px] md:text-[15px] lg:text-[15px]">
+                A COLLECTION OF THINGS
+              </p>
+              <p className="font-mono text-[10px] md:text-[15px] lg:text-[15px]">
+                LOST IN AUSTIN
+              </p>
             </div>
             <div>
-              <p className="font-mono text-[15px] font-medium">
+              <p className="font-mono text-[10px] font-medium md:text-[15px] lg:text-[15px]">
                 9F2F4D8E-478B36
               </p>
             </div>
@@ -54,7 +58,7 @@ export const Home = () => {
           {poemWall.map((option, idx) => (
             <Link to={`${option}`} key={idx}>
               <p
-                className={`text-2xl uppercase ${idx % 2 === 0 ? "text-gray-300" : "text-white"}`}
+                className={`text-1xl uppercase lg:text-2xl ${idx % 2 === 0 ? "text-gray-300" : "text-white"}`}
               >
                 {option}
               </p>
@@ -75,7 +79,7 @@ export const Home = () => {
         {storyWall.map((option, idx) => (
           <Link to={`${option}`} key={idx}>
             <p
-              className={`text-2xl uppercase ${idx % 2 === 0 ? "text-gray-300" : "text-black"}`}
+              className={`text-1xl uppercase lg:text-2xl ${idx % 2 === 0 ? "text-gray-300" : "text-black"}`}
             >
               {option}
             </p>
