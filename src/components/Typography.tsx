@@ -9,7 +9,7 @@ const H1 = React.forwardRef<
   <h1
     ref={ref}
     className={cn(
-      "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl lowercase",
+      "scroll-m-20 text-4xl font-extrabold lowercase tracking-tight lg:text-5xl",
       className,
     )}
     {...props}
@@ -24,7 +24,7 @@ const H2 = React.forwardRef<
   <h2
     ref={ref}
     className={cn(
-      "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight lowercase",
+      "scroll-m-20 border-b pb-2 text-3xl font-semibold lowercase tracking-tight",
       className,
     )}
     {...props}
@@ -39,7 +39,7 @@ const H3 = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "scroll-m-20 text-2xl font-semibold tracking-tight lowercase",
+      "scroll-m-20 text-2xl font-semibold lowercase tracking-tight",
       className,
     )}
     {...props}
@@ -66,14 +66,7 @@ const P = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-  <p
-    ref={ref} 
-    className={cn(
-      "leading-8 text-lg",
-      className,
-    )}
-    {...props}
-  />
+  <p ref={ref} className={cn("text-lg leading-8", className)} {...props} />
 ));
 P.displayName = "P";
 
@@ -96,7 +89,11 @@ const Large = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-  <p ref={ref} className={cn("text-lg font-semibold lowercase", className)} {...props} />
+  <p
+    ref={ref}
+    className={cn("text-lg font-semibold lowercase", className)}
+    {...props}
+  />
 ));
 Large.displayName = "Large";
 
@@ -106,7 +103,7 @@ const Small = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm font-medium leading-none lowercase", className)}
+    className={cn("text-sm font-medium lowercase leading-none", className)}
     {...props}
   />
 ));
@@ -118,11 +115,10 @@ const Muted = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-muted-foreground lowercase", className)}
+    className={cn("text-sm lowercase text-muted-foreground", className)}
     {...props}
   />
 ));
 Muted.displayName = "Muted";
 
 export { Code, H1, H2, H3, H4, Large, Muted, P, Small };
-
