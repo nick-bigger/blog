@@ -26,9 +26,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
-
       - name: Deploy
         env:
           user_name: "github-actions[bot]"
@@ -38,6 +35,5 @@ jobs:
         run: |
           git config --global user.name $user_name
           git config --global user.email $user_email
-          echo https://git:${github_token}@github.com/${repository}.git
           git remote set-url origin https://git:${github_token}@github.com/${repository}.git
-          npm run deploy
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
