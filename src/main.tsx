@@ -14,10 +14,10 @@ import { Root } from "./routes/Root";
 const router = createBrowserRouter([
   {
     element: <Root />,
-    path: "",
+    path: "blog",
     children: [
       {
-        path: "/",
+        path: "",
         element: <Home />,
         errorElement: <ErrorPage />,
       },
