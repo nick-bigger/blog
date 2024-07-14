@@ -8,22 +8,32 @@ import { Apologize } from "./routes/Apologize";
 import { ErrorPage } from "./routes/Error";
 import { Her } from "./routes/Her";
 import { Home } from "./routes/Home";
+import { InMyDreams } from "./routes/InMyDreams";
 import { Lines } from "./routes/Lines";
+import { Mother } from "./routes/Mother";
 import { Root } from "./routes/Root";
 
 const router = createBrowserRouter([
   {
     element: <Root />,
     path: "blog",
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "",
         element: <Home />,
-        errorElement: <ErrorPage />,
       },
       {
         path: "her",
         element: <Her />,
+      },
+      {
+        path: "mother",
+        element: <Mother />,
+      },
+      {
+        path: "inmydreams",
+        element: <InMyDreams />,
       },
       {
         path: "lines",
