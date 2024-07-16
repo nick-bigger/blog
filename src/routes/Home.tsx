@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 
+import Logo from "../assets/logo.svg";
+
 const poems = ["Her", "Lines", "Mother", "In My Dreams"];
-const stories = ["Us, Again", "Fine", "Apologize"];
+const stories = ["Back", "Apologize"];
 
 export const Home = () => {
   const poemWall = Array.from(
@@ -36,7 +38,7 @@ export const Home = () => {
         </div>
         <hr className="w-full border-black" />
       </div>
-      <div className="m-auto flex max-w-[1500px] flex-col p-6 pb-32 pt-8">
+      <div className="m-auto flex max-w-[1500px] flex-col p-6 pb-12 pt-8">
         <p className="text-[70px] font-black leading-[70px] tracking-tight sm:text-[100px] sm:leading-[100px] md:text-[150px] md:leading-[150px] lg:text-[200px] lg:leading-[200px]">
           Conifer
         </p>
@@ -44,14 +46,17 @@ export const Home = () => {
           Crown
         </p>
       </div>
+      <div className="m-auto flex justify-center pb-12">
+        <img src={Logo} className="h-36" />
+      </div>
       <div className="h-4 w-56 bg-red-600"></div>
       <hr className="border-black" />
       <p className="py-2">
-        /////////////////////////////////////////////////////////////////////////////
+        C/O/L/L/E/C/T/I/O/N/S///////////////////////////////////////////////////////////////////
       </p>
       <hr className="border-black" />
       <p className="bg-black py-20 pl-8 text-start font-mono text-3xl tracking-widest text-white">
-        HER
+        YOU
       </p>
       <div className="bg-black pb-20">
         <div className="mx-[-500px] flex flex-wrap gap-2 overflow-clip">
@@ -67,13 +72,8 @@ export const Home = () => {
         </div>
       </div>
       <hr className="border-black" />
-      <p className="py-2 text-end">
-        /////////////////////////////////////////////////////////////////////////////
-      </p>
-      <hr className="border-black" />
-      <div className="ml-auto h-4 w-56 bg-red-600"></div>
       <p className="my-20 mr-8 text-end font-mono text-3xl tracking-widest">
-        LOVE INURE
+        LOVE INURED
       </p>
       <div className="mx-[-500px] flex flex-wrap gap-2 overflow-clip">
         {storyWall.map((option, idx) => (
@@ -87,7 +87,7 @@ export const Home = () => {
         ))}
       </div>
       <hr className="mt-20 border-black" />
-      <p className="py-2 text-center">
+      <p className="py-2 text-end">
         /////////////////////////////////////////////////////////////////////////////
       </p>
       <hr className="border-black" />

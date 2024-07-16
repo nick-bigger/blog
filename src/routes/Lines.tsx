@@ -1,8 +1,10 @@
+import { HomeButton } from "../components/HomeButton";
 import { P } from "../components/Typography";
 
 export const Lines = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden">
+      <HomeButton />
       {Array.from({ length: 10 }).map((_, index) => (
         <div
           key={index}

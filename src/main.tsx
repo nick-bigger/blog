@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
 import { Apologize } from "./routes/Apologize";
+import { Back } from "./routes/Back";
 import { ErrorPage } from "./routes/Error";
 import { Her } from "./routes/Her";
 import { Home } from "./routes/Home";
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "her",
         element: <Her />,
+      },
+      {
+        path: "back",
+        element: <Back />,
       },
       {
         path: "mother",

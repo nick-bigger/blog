@@ -1,6 +1,9 @@
+import { HomeButton } from "../components/HomeButton";
+
 export const Mother = () => {
   return (
-    <div className="flex h-screen justify-center p-5">
+    <div className="flex h-screen justify-center">
+      <HomeButton />
       <div className="m-auto">
         <div className="max-w-[500px] flex-col space-y-3 font-mono lowercase">
           <p>I just know that you'll be the best mother</p>
