@@ -38,7 +38,7 @@ export const Home = () => {
         </div>
         <hr className="w-full border-black" />
       </div>
-      <div className="m-auto flex max-w-[1500px] flex-col p-6 pb-12 pt-8">
+      <div className="m-auto flex max-w-[1300px] flex-col p-6 pb-12 pt-8">
         <p className="text-[70px] font-black leading-[70px] tracking-tight sm:text-[100px] sm:leading-[100px] md:text-[150px] md:leading-[150px] lg:text-[200px] lg:leading-[200px]">
           Conifer
         </p>
@@ -47,7 +47,7 @@ export const Home = () => {
         </p>
       </div>
       <div className="m-auto flex justify-center pb-12">
-        <img src={Logo} className="h-36" />
+        <img src={Logo} className="h-16 md:h-36 lg:h-48" />
       </div>
       <div className="h-4 w-56 bg-red-600"></div>
       <hr className="border-black" />

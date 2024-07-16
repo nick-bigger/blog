@@ -5,7 +5,7 @@ export const Back = () => {
   return (
     <div>
       <HomeButton />
-      <div className="flex pt-8">
+      <div className="p-8">
         <div className="m-auto w-[700px]">
           <div className="w-[300px] flex-col space-y-5 font-mono">
             <P>

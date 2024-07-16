@@ -6,7 +6,7 @@ export const Her = () => {
     <div>
       <HomeButton />
       <p className="pr-5 text-end font-mono text-[100px] tracking-tight">HER</p>
-      <div className="flex">
+      <div className="flex p-5">
         <div className="m-auto w-[700px]">
           <div className="w-[300px] flex-col space-y-5 font-mono">
             <P>
