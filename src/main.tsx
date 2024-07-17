@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import * as ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 
 import "./index.css";
 import { Apologize } from "./routes/Apologize";
@@ -14,10 +14,10 @@ import { Lines } from "./routes/Lines";
 import { Mother } from "./routes/Mother";
 import { Root } from "./routes/Root";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     element: <Root />,
-    path: "blog",
+    path: "*",
     errorElement: <ErrorPage />,
     children: [
       {
