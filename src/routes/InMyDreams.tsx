@@ -3,7 +3,7 @@ import { P } from "../components/Typography";
 
 export const InMyDreams = () => {
   return (
-    <div className="flex h-screen justify-center overflow-hidden">
+    <div className="flex h-screen justify-center overflow-hidden bg-[#D8DACF]">
       <HomeButton />
       <div className="m-auto">
         <div className="max-w-[500px] flex-col space-y-3 font-mono lowercase">

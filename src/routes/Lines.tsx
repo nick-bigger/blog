@@ -3,12 +3,12 @@ import { P } from "../components/Typography";
 
 export const Lines = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-screen w-full overflow-hidden bg-[#D8DACF]">
       <HomeButton />
       {Array.from({ length: 10 }).map((_, index) => (
         <div
           key={index}
-          className="absolute h-1 w-full bg-black opacity-10"
+          className="absolute h-1 w-full bg-[#141414]"
           style={{
             transform: `rotate(${Math.random() * 100}deg)`,
             transformOrigin: "top left",

@@ -3,7 +3,7 @@ import { P } from "../components/Typography";
 
 export const Back = () => {
   return (
-    <div>
+    <div className="h-screen bg-[#D8DACF]">
       <HomeButton />
       <div className="p-8">
         <div className="m-auto w-[700px]">

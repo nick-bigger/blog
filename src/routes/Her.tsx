@@ -3,7 +3,7 @@ import { P } from "../components/Typography";
 
 export const Her = () => {
   return (
-    <div>
+    <div className="h-screen bg-[#D8DACF]">
       <HomeButton />
       <p className="pr-5 text-end font-mono text-[100px] tracking-tight">HER</p>
       <div className="flex p-5">

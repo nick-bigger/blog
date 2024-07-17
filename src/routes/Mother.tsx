@@ -2,7 +2,7 @@ import { HomeButton } from "../components/HomeButton";
 
 export const Mother = () => {
   return (
-    <div className="flex h-screen justify-center">
+    <div className="flex h-screen justify-center bg-[#D8DACF]">
       <HomeButton />
       <div className="m-auto">
         <div className="max-w-[500px] flex-col space-y-3 font-mono lowercase">

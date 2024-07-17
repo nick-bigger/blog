@@ -23,13 +23,13 @@ const poem = [
 
 export const Apologize = () => {
   return (
-    <>
+    <div className="h-screen bg-[#D8DACF]">
       <HomeButton />
       <div className="flex flex-col gap-1 p-2 pt-8 font-mono">
         {poem.map((word, idx) => (
           <P key={idx}>{word}</P>
         ))}
       </div>
-    </>
+    </div>
   );
 };
