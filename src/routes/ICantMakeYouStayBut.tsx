@@ -33,38 +33,6 @@ export const ICantMakeYouStayBut = () => {
           i will make life so achingly beautiful that you could never bear to
           leave it
         </p>
-        <p>
-          i will make life so achingly beautiful that you could never bear to
-          leave it
-        </p>
-        <p>
-          i will make life so achingly beautiful that you could never bear to
-          leave it
-        </p>
-        <p>
-          i will make life so achingly beautiful that you could never bear to
-          leave it
-        </p>
-        <p>
-          i will make life so achingly beautiful that you could never bear to
-          leave it
-        </p>
-        <p>
-          i will make life so achingly beautiful that you could never bear to
-          leave it
-        </p>
-        <p>
-          i will make life so achingly beautiful that you could never bear to
-          leave it
-        </p>
-        <p>
-          i will make life so achingly beautiful that you could never bear to
-          leave it
-        </p>
-        <p>
-          i will make life so achingly beautiful that you could never bear to
-          leave it
-        </p>
       </div>
     </div>
   );
