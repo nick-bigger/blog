@@ -7,6 +7,7 @@ import "./index.css";
 import { Apologize } from "./routes/Apologize";
 import { Back } from "./routes/Back";
 import { ErrorPage } from "./routes/Error";
+import { Good } from "./routes/Good";
 import { Her } from "./routes/Her";
 import { Home } from "./routes/Home";
 import { ICantMakeYouStayBut } from "./routes/ICantMakeYouStayBut";
@@ -28,6 +29,10 @@ const router = createHashRouter([
       {
         path: "her",
         element: <Her />,
+      },
+      {
+        path: "good",
+        element: <Good />,
       },
       {
         path: "icantmakeyoustaybut",

@@ -1,5 +1,4 @@
-import { HomeButton } from "../components/HomeButton";
-import { P } from "../components/Typography";
+import { Poem } from "../components/Poem";
 
 const poem = [
   "i",
@@ -23,13 +22,10 @@ const poem = [
 
 export const Apologize = () => {
   return (
-    <div className="h-screen bg-[#D8DACF]">
-      <HomeButton />
-      <div className="flex flex-col gap-1 p-2 pt-8 font-mono">
-        {poem.map((word, idx) => (
-          <P key={idx}>{word}</P>
-        ))}
-      </div>
-    </div>
+    <Poem>
+      {poem.map((word, idx) => (
+        <p key={idx}>{word}</p>
+      ))}
+    </Poem>
   );
 };

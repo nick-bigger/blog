@@ -14,13 +14,13 @@ export const HomeButton = () => {
           <g id="30x30">
             <rect
               id="Rectangle"
-              stroke="#000000"
+              stroke="white"
               x="1"
               y="1"
               width="30"
               height="30"
             ></rect>
-            <circle id="Oval" fill="#000000" cx="16" cy="16" r="8"></circle>
+            <circle id="Oval" fill="white" cx="16" cy="16" r="8"></circle>
           </g>
         </g>
       </svg>
