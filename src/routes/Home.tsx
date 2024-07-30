@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 
 const waldosia = ["Her", "Mother", "In My Dreams"];
-const evenAWorm = ["Back", "Apologize", "I Cant Make You Stay But"];
+const evenAWorm = ["Back", "Apologize", "I Cant Make You Stay"];
 const occhiolism = ["Lines", "Good"];
 
 export const Home = () => {

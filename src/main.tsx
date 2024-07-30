@@ -35,7 +35,7 @@ const router = createHashRouter([
         element: <Good />,
       },
       {
-        path: "icantmakeyoustaybut",
+        path: "icantmakeyoustay",
         element: <ICantMakeYouStayBut />,
       },
       {
