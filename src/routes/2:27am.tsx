@@ -1,6 +1,6 @@
 import { Poem } from "../components/Poem";
 
-export const Good = () => {
+export const _227am = () => {
   return (
     <Poem>
       <p>i hope you're good</p>

@@ -1,6 +1,6 @@
 import { Poem } from "../components/Poem";
 
-export const Lines = () => {
+export const Retrograde = () => {
   return (
     <Poem>
       <p>the thin lines</p>

@@ -2,9 +2,27 @@ import { Link } from "react-router-dom";
 
 import Logo from "../assets/logo.svg";
 
-const waldosia = ["Her", "Mother", "In My Dreams"];
-const evenAWorm = ["Back", "Apologize", "I Cant Make You Stay"];
-const occhiolism = ["Lines", "Good"];
+const waldosia = [
+  { title: "Her", slug: "her" },
+  { title: "Mother", slug: "mother" },
+  { title: "In My Dreams", slug: "inMyDreams" },
+  { title: "Remains", slug: "remains" },
+  { title: "My Heart Can Barely Swim", slug: "myHeartCanBarelySwim" },
+];
+const evenAWorm = [
+  { title: "Back", slug: "back" },
+  { title: "Apologize", slug: "apologize" },
+  { title: "I Can't Make You Stay", slug: "stay" },
+  { title: "Stuck", slug: "stuck" },
+];
+const occhiolism = [
+  { title: "Retrograde", slug: "retrograde" },
+  { title: "Read 2:27AM", slug: "227" },
+  {
+    title: "Secure Your Own Mask First Before Helping Others",
+    slug: "secureYourOwnMask",
+  },
+];
 
 export const Home = () => {
   return (
@@ -17,9 +35,9 @@ export const Home = () => {
         <p className="pb-20 text-start text-4xl text-white">waldosia.</p>
         <div className="">
           {waldosia.map((option, idx) => (
-            <Link to={`${option.replace(/\s+/g, "").toLowerCase()}`} key={idx}>
-              <p className="text-2xl lowercase text-white lg:text-3xl">
-                {option}
+            <Link to={option.slug} key={idx}>
+              <p className="text-2xl lowercase text-white underline lg:text-3xl">
+                {option.title}
               </p>
             </Link>
           ))}
@@ -28,9 +46,9 @@ export const Home = () => {
       <p className="mb-20 text-end text-4xl">.even a worm will turn</p>
       <div className="pb-40 text-end">
         {evenAWorm.map((option, idx) => (
-          <Link to={`${option.replace(/\s+/g, "").toLowerCase()}`} key={idx}>
-            <p className="text-2xl lowercase text-[#141414] lg:text-3xl">
-              {option}
+          <Link to={option.slug} key={idx}>
+            <p className="text-2xl lowercase text-[#141414] underline lg:text-3xl">
+              {option.title}
             </p>
           </Link>
         ))}
@@ -39,9 +57,9 @@ export const Home = () => {
         <p className="pb-20 text-start text-4xl text-white">occhiolism.</p>
         <div className="pb-40">
           {occhiolism.map((option, idx) => (
-            <Link to={`${option.replace(/\s+/g, "").toLowerCase()}`} key={idx}>
-              <p className="text-2xl lowercase text-white lg:text-3xl">
-                {option}
+            <Link to={option.slug} key={idx}>
+              <p className="text-2xl lowercase text-white underline lg:text-3xl">
+                {option.title}
               </p>
             </Link>
           ))}
