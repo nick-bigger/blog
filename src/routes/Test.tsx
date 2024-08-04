@@ -20,6 +20,8 @@ export const Test = () => {
       return;
     }
 
+    console.log(count);
+
     setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
 
@@ -49,7 +51,7 @@ export const Test = () => {
             </button>
           </div>
           <div className="flex flex-col gap-2">
-            {[1, 2, 3].map((item, idx) => (
+            {[1, 2, 3].map((_, idx) => (
               <div
                 className={`${current === idx + 1 ? "opacity-100" : "opacity-40"}`}
                 key={idx}
