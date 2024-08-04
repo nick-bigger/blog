@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import * as ReactDOM from "react-dom/client";
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
 import { _227am } from "./routes/2:27am";
@@ -20,7 +20,7 @@ import { Root } from "./routes/Root";
 import { SecureYourOwnMaskFirstBeforeHelpingOthers } from "./routes/SecureYourOwnMaskFirstBeforeHelpingOthers";
 import { Stuck } from "./routes/Stuck";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     element: <Root />,
     path: "*",
