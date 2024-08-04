@@ -20,6 +20,7 @@ import { Retrograde } from "./routes/Retrograde";
 import { Root } from "./routes/Root";
 import { SecureYourOwnMaskFirstBeforeHelpingOthers } from "./routes/SecureYourOwnMaskFirstBeforeHelpingOthers";
 import { Stuck } from "./routes/Stuck";
+import { Test } from "./routes/Test";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: "test",
+        element: <Test />,
       },
       {
         path: "her",
