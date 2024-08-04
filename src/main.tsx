@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
 import { _227am } from "./routes/2:27am";
+import { Afternoon } from "./routes/Afternoon";
 import { Apologize } from "./routes/Apologize";
 import { Back } from "./routes/Back";
 import { ErrorPage } from "./routes/Error";
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "her",
         element: <Her />,
+      },
+      {
+        path: "theNightWeMet",
+        element: <Afternoon />,
       },
       {
         path: "227",

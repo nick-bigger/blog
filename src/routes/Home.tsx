@@ -8,6 +8,7 @@ const waldosia = [
   { title: "In My Dreams", slug: "inMyDreams" },
   { title: "Remains", slug: "remains" },
   { title: "My Heart Can Barely Swim", slug: "myHeartCanBarelySwim" },
+  { title: "The Night We Met", slug: "theNightWeMet" },
 ];
 const evenAWorm = [
   { title: "Back", slug: "back" },
@@ -33,37 +34,44 @@ export const Home = () => {
       </div>
       <div className="bg-[#141414] pb-40">
         <p className="pb-20 text-start text-4xl text-white">waldosia.</p>
-        <div className="">
+        <div className="pl-4">
           {waldosia.map((option, idx) => (
             <Link to={option.slug} key={idx}>
-              <p className="text-2xl lowercase text-white underline lg:text-3xl">
+              <p className="text-2xl lowercase text-white underline lg:text-2xl">
                 {option.title}
               </p>
             </Link>
           ))}
         </div>
       </div>
-      <p className="mb-20 text-end text-4xl">.even a worm will turn</p>
-      <div className="pb-40 text-end">
-        {evenAWorm.map((option, idx) => (
-          <Link to={option.slug} key={idx}>
-            <p className="text-2xl lowercase text-[#141414] underline lg:text-3xl">
-              {option.title}
-            </p>
-          </Link>
-        ))}
+      <div className="pb-40">
+        <p className="pb-20 text-end text-4xl text-[#141414]">
+          .even a worm will turn
+        </p>
+        <div className="pr-4">
+          {evenAWorm.map((option, idx) => (
+            <Link to={option.slug} key={idx}>
+              <p className="text-end text-2xl lowercase text-[#141414] underline lg:text-2xl">
+                {option.title}
+              </p>
+            </Link>
+          ))}
+        </div>
       </div>
-      <div className="bg-[#141414] pb-64">
+      <div className="bg-[#141414] pb-40">
         <p className="pb-20 text-start text-4xl text-white">occhiolism.</p>
-        <div className="pb-40">
+        <div className="pl-4">
           {occhiolism.map((option, idx) => (
             <Link to={option.slug} key={idx}>
-              <p className="text-2xl lowercase text-white underline lg:text-3xl">
+              <p className="text-2xl lowercase text-white underline lg:text-2xl">
                 {option.title}
               </p>
             </Link>
           ))}
         </div>
+      </div>
+      <div className="flex h-screen items-center justify-center">
+        <p className="font-mono text-2xl italic">fin</p>
       </div>
     </div>
   );
