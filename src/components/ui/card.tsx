@@ -12,7 +12,7 @@ const Card = (props: PropsWithChildren) => {
 const CardTitle = (props: PropsWithChildren) => {
   return (
     <h2
-      className="absolute left-[17px] top-[-18px] bg-gray-900 px-1 text-2xl font-normal text-white"
+      className="text-1xl absolute left-[17px] top-[-13px] bg-gray-900 px-1 font-normal text-white"
       {...props}
     ></h2>
   );

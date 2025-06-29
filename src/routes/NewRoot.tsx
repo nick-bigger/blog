@@ -105,6 +105,14 @@ export const NewRoot = () => {
                     letterboxed
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/nickbigger/"
+                    className="transition duration-200 hover:text-blue-400"
+                  >
+                    linkedin
+                  </a>
+                </li>
               </ul>
             </Card>
           </aside>

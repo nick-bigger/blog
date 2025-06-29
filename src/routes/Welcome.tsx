@@ -4,9 +4,10 @@ export const Welcome = () => {
   return (
     <>
       <Card>
-        <h3 className="text-1xl mb-4 text-white">welcome to my website !</h3>
+        <h3 className="mb-4 text-3xl text-white">welcome !</h3>
         <p className="mb-4 leading-relaxed text-gray-300">
-          hey there ! i'm nick. i wrote this website
+          hey there ! i'm nick. i wrote this website for fun and to put all the
+          random things i've created in a single place.
         </p>
       </Card>
       <Card>
