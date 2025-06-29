@@ -3,12 +3,14 @@ import { Link, Outlet } from "react-router-dom";
 import { Card, CardTitle } from "@/components/ui/card";
 import { Time } from "@/components/ui/time";
 
+import StarsGif from "../assets/stars.gif";
+
 export const NewRoot = () => {
   return (
     <div
       className="font-pixel text-md min-h-screen bg-gray-900 p-4 tracking-wider text-gray-100"
       style={{
-        backgroundImage: 'url("/src/assets/stars.gif")',
+        backgroundImage: StarsGif,
       }}
     >
       <div className="crt-effect pointer-events-none absolute inset-0 z-30"></div>
