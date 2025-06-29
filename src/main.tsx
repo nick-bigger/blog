@@ -5,9 +5,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
 import { _227am } from "./routes/2:27am";
+import { About } from "./routes/About";
 import { Afternoon } from "./routes/Afternoon";
 import { Apologize } from "./routes/Apologize";
 import { Back } from "./routes/Back";
+import { Blog } from "./routes/Blog";
 import { ErrorPage } from "./routes/Error";
 import { Her } from "./routes/Her";
 import { Home } from "./routes/Home";
@@ -15,26 +17,22 @@ import { ICantMakeYouStayBut } from "./routes/ICantMakeYouStayBut";
 import { InMyDreams } from "./routes/InMyDreams";
 import { Mother } from "./routes/Mother";
 import { MyHeartCanBarelySwim } from "./routes/MyHeartCanBarelySwim";
+import { NewRoot } from "./routes/NewRoot";
 import { Remains } from "./routes/Remains";
 import { Retrograde } from "./routes/Retrograde";
 import { Root } from "./routes/Root";
 import { SecureYourOwnMaskFirstBeforeHelpingOthers } from "./routes/SecureYourOwnMaskFirstBeforeHelpingOthers";
 import { Stuck } from "./routes/Stuck";
-import { Test } from "./routes/Test";
+import { Welcome } from "./routes/Welcome";
 
 const router = createBrowserRouter([
   {
     element: <Root />,
-    path: "*",
-    errorElement: <ErrorPage />,
+    path: "poetry",
     children: [
       {
         path: "",
         element: <Home />,
-      },
-      {
-        path: "test",
-        element: <Test />,
       },
       {
         path: "her",
@@ -91,6 +89,25 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <ErrorPage />,
+      },
+    ],
+  },
+  {
+    element: <NewRoot />,
+    path: "*",
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "",
+        element: <Welcome />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "blog",
+        element: <Blog />,
       },
     ],
   },
