@@ -10,7 +10,7 @@ export const NewRoot = () => {
     <div
       className="font-pixel text-md min-h-screen bg-gray-900 p-4 tracking-wider text-gray-100"
       style={{
-        backgroundImage: StarsGif,
+        backgroundImage: `url(${StarsGif})`,
       }}
     >
       <div className="crt-effect pointer-events-none absolute inset-0 z-30"></div>
