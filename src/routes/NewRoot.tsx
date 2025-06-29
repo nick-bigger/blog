@@ -117,16 +117,15 @@ export const NewRoot = () => {
             </Card>
           </aside>
         </main>
-        <div>
-          <script
-            type="text/javascript"
-            src="https://www.freevisitorcounters.com/auth.php?id=07f699679f36309015b1c2a50c95d0e17c78ba51"
-          ></script>
-          <script
-            type="text/javascript"
-            src="https://www.freevisitorcounters.com/en/home/counter/1357776/t/5"
-          ></script>
-        </div>
+        <a href="http://www.freevisitorcounters.com"></a>
+        <script
+          type="text/javascript"
+          src="https://www.freevisitorcounters.com/auth.php?id=3113659fcef498473c1b7f4579b8361fce5c29be"
+        ></script>
+        <script
+          type="text/javascript"
+          src="https://www.freevisitorcounters.com/en/home/counter/1357799/t/5"
+        ></script>
         <footer className="mt-6 p-6 text-center font-mono text-sm text-gray-400">
           <p>2025 nick, all rights reserverd</p>
         </footer>
