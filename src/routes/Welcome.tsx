@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Card, CardTitle } from "@/components/ui/card";
 import { Marquee } from "@/components/ui/marquee";
 
@@ -46,18 +48,18 @@ export const Welcome = () => {
       </Marquee>
       <Card>
         <CardTitle>a little about me</CardTitle>
-        <div className="mb-2 grid sm:grid-cols-2">
+        <div className="mb-2 grid gap-4 sm:grid-cols-2">
           <div>
-            <h3 className="mb-4 text-2xl text-white">me:</h3>
-            <ul className="">
+            <h3 className="mb-2 text-2xl text-white">me:</h3>
+            <ul className="ml-4 list-disc">
               <li>name: nick</li>
               <li>birthday: 9/2</li>
               <li>sign: virgo</li>
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-2xl text-white">favorites:</h3>
-            <ul className="">
+            <h3 className="mb-2 text-2xl text-white">favorites:</h3>
+            <ul className="ml-4 list-disc">
               <li>food: ramen</li>
               <li>color: green</li>
               <li>reading books</li>
@@ -66,12 +68,18 @@ export const Welcome = () => {
             </ul>
           </div>
         </div>
-        <h3 className="mb-4 text-2xl text-white">fun facts:</h3>
-        <ul className="">
-          <li>test</li>
+        <h3 className="mb-2 mt-4 text-2xl text-white">fun facts:</h3>
+        <ul className="mb-4 ml-4 list-disc">
+          <li>
+            i have a bachelors degree in computer science and a minor in
+            business
+          </li>
           <li>test</li>
           <li>test</li>
         </ul>
+        <Link to="about">
+          <p className="animate-color-wave">→ click here to learn more !</p>
+        </Link>
       </Card>
     </>
   );

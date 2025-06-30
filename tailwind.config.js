@@ -70,11 +70,19 @@ module.exports = {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "color-wave": {
+          "0%": { color: "#ef4444" },
+          "25%": { color: "#f97316" },
+          "50%": { color: "#eab308" },
+          "75%": { color: "#22c55e" },
+          "100%": { color: "#3b82f6" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "marquee-loop": "marquee-loop linear infinite",
+        "color-wave": "color-wave 4s infinite alternate",
       },
       fontFamily: {
         pixel: ["Pixelify Sans", "sans-serif"],

@@ -9,14 +9,14 @@ import StarsGif from "../assets/stars.gif";
 export const NewRoot = () => {
   return (
     <div
-      className="font-pixel text-md min-h-screen bg-gray-900 p-4 tracking-wider text-gray-100"
+      className="font-pixel text-md min-h-screen bg-gray-900 px-4 tracking-wider text-gray-100"
       style={{
         backgroundImage: `url(${StarsGif})`,
       }}
     >
       <div className="crt-effect pointer-events-none absolute inset-0 z-40"></div>
       <div className="relative z-20 mx-auto max-w-7xl">
-        <header className="mb-6 p-6 text-center">
+        <header className="mb-8 text-center">
           <Banner />
         </header>
         <main className="flex flex-col gap-6 md:flex-row">
@@ -64,11 +64,11 @@ export const NewRoot = () => {
                 </ul>
               </nav>
             </Card>
-            <Card>
+            <Card className="hidden md:block">
               <CardTitle>status</CardTitle>
               the worst thing you can be is boring
             </Card>
-            <Card>
+            <Card className="hidden md:block">
               <CardTitle>my time</CardTitle>
               <Time />
             </Card>
@@ -77,7 +77,7 @@ export const NewRoot = () => {
             <Outlet />
           </section>
           <aside className="flex w-full flex-col gap-5 md:w-1/4">
-            <Card>
+            <Card className="hidden md:block">
               <CardTitle>find me</CardTitle>
               <ul className="space-y-1">
                 <li>
