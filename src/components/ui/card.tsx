@@ -1,21 +1,31 @@
-import { PropsWithChildren } from "react";
+import React from "react";
 
-const Card = (props: PropsWithChildren) => {
+import { cn } from "@/lib/utils";
+
+function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
-      className="relative flex-1 border border-white bg-gray-900 p-5"
+      data-slot="card"
+      className={cn(
+        "relative flex-1 border border-white bg-gray-900 p-5 hover:border-blue-400",
+        className,
+      )}
       {...props}
-    ></div>
+    />
   );
-};
+}
 
-const CardTitle = (props: PropsWithChildren) => {
+function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <h2
-      className="text-1xl absolute left-[17px] top-[-13px] bg-gray-900 px-1 font-normal lowercase text-white"
+    <div
+      data-slot="card-title"
+      className={cn(
+        "text-1xl absolute left-[17px] top-[-13px] bg-gray-900 px-1 font-normal lowercase text-white",
+        className,
+      )}
       {...props}
-    ></h2>
+    />
   );
-};
+}
 
 export { Card, CardTitle };

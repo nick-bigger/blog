@@ -4,10 +4,10 @@ import { HomeButton } from "./HomeButton";
 
 export const Poem = (props: PropsWithChildren) => {
   return (
-    <div className="flex h-screen flex-col bg-[#141414]">
+    <div className="flex h-screen flex-col bg-[#141414] font-mono">
       <HomeButton />
-      <div className="mx-auto mt-48 p-4 md:ml-48 md:mt-48">
-        <div className="max-w-[700px] text-2xl lowercase text-white md:text-xl lg:text-2xl">
+      <div className="mx-12 mt-24 p-4 md:mt-48">
+        <div className="max-w-[700px] text-xl lowercase text-white md:text-xl lg:text-2xl">
           {props.children}
         </div>
       </div>

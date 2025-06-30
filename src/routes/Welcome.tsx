@@ -50,17 +50,19 @@ export const Welcome = () => {
           <div>
             <h3 className="mb-4 text-2xl text-white">me:</h3>
             <ul className="">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+              <li>name: nick</li>
+              <li>birthday: 9/2</li>
+              <li>sign: virgo</li>
             </ul>
           </div>
           <div>
             <h3 className="mb-4 text-2xl text-white">favorites:</h3>
             <ul className="">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+              <li>food: ramen</li>
+              <li>color: green</li>
+              <li>reading books</li>
+              <li>trying new restauraunts</li>
+              <li>skateboarding</li>
             </ul>
           </div>
         </div>

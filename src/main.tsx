@@ -20,14 +20,15 @@ import { MyHeartCanBarelySwim } from "./routes/MyHeartCanBarelySwim";
 import { NewRoot } from "./routes/NewRoot";
 import { Remains } from "./routes/Remains";
 import { Retrograde } from "./routes/Retrograde";
-import { Root } from "./routes/Root";
 import { SecureYourOwnMaskFirstBeforeHelpingOthers } from "./routes/SecureYourOwnMaskFirstBeforeHelpingOthers";
 import { Stuck } from "./routes/Stuck";
 import { Welcome } from "./routes/Welcome";
+import { Home as BlogHome } from "./routes/blog/Home";
+import { TestHello } from "./routes/blog/TestHello";
 
 const router = createBrowserRouter([
   {
-    element: <Root />,
+    element: <Blog />,
     path: "poetry",
     children: [
       {
@@ -89,6 +90,21 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <ErrorPage />,
+      },
+    ],
+  },
+  {
+    element: <Blog />,
+    path: "blog",
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "",
+        element: <BlogHome />,
+      },
+      {
+        path: "1",
+        element: <TestHello />,
       },
     ],
   },

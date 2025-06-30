@@ -28,7 +28,8 @@ const occhiolism = [
 export const Home = () => {
   return (
     <div className="overflow-clip">
-      <div className="flex py-36">
+      <Link to="/">back to home</Link>
+      <div className="flex pb-20 pt-2">
         <img src={Logo} className="h-48" />
         <p className="text-2xl [writing-mode:vertical-lr]">conifer crown</p>
       </div>
