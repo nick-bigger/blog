@@ -9,7 +9,14 @@ export const About = () => {
       </Card>
       <Card>
         <CardTitle>favorites lists</CardTitle>
-        <div className="grid gap-2 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Card>
+            <CardTitle>Books</CardTitle>
+            <ul>
+              <li>Book 1</li>
+              <li>Book 2</li>
+            </ul>
+          </Card>
           <Card>
             <CardTitle>Music</CardTitle>
             <ul>

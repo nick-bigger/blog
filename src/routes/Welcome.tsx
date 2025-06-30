@@ -1,4 +1,5 @@
 import { Card, CardTitle } from "@/components/ui/card";
+import { Marquee } from "@/components/ui/marquee";
 
 export const Welcome = () => {
   return (
@@ -35,6 +36,14 @@ export const Welcome = () => {
         </p>
         <p></p>
       </Card>
+      <Marquee speed={20} className="p-10 text-white">
+        <span className="mx-8 text-2xl">月が綺麗ですね</span>
+        <span className="mx-8 text-2xl">⛦⛦⛦⛦⛦</span>
+        <span className="mx-8 text-2xl">◡̈ welcome ◡̈</span>
+        <span className="mx-8 text-2xl">月が綺麗ですね</span>
+        <span className="mx-8 text-2xl">⛦⛦⛦⛦⛦</span>
+        <span className="mx-8 text-2xl">◡̈ welcome ◡̈</span>
+      </Marquee>
       <Card>
         <CardTitle>a little about me</CardTitle>
         <div className="mb-2 grid sm:grid-cols-2">

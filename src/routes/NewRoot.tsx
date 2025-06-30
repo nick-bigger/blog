@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
+import { Banner } from "@/components/ui/banner";
 import { Card, CardTitle } from "@/components/ui/card";
 import { Time } from "@/components/ui/time";
 
@@ -16,9 +17,7 @@ export const NewRoot = () => {
       <div className="crt-effect pointer-events-none absolute inset-0 z-30"></div>
       <div className="relative z-20 mx-auto max-w-7xl">
         <header className="mb-6 p-6 text-center">
-          <h1 className="mb-2 text-4xl font-extrabold text-white md:text-5xl">
-            conifer crown
-          </h1>
+          <Banner />
         </header>
         <main className="flex flex-col gap-6 md:flex-row">
           <aside className="flex w-full flex-col gap-5 md:w-1/4">
@@ -74,7 +73,7 @@ export const NewRoot = () => {
               <Time />
             </Card>
           </aside>
-          <section className="no-scrollbar flex max-h-[500px] w-full flex-grow flex-col gap-5 overflow-scroll md:w-1/2">
+          <section className="md:no-scrollbar flex w-full flex-grow flex-col gap-5 md:max-h-[500px] md:w-1/2 md:overflow-scroll">
             <Outlet />
           </section>
           <aside className="flex w-full flex-col gap-5 md:w-1/4">
@@ -83,6 +82,7 @@ export const NewRoot = () => {
               <ul className="space-y-1">
                 <li>
                   <a
+                    target="_blank"
                     href="https://www.instagram.com/nick.bigger/"
                     className="transition duration-200 hover:text-blue-400"
                   >
@@ -91,6 +91,7 @@ export const NewRoot = () => {
                 </li>
                 <li>
                   <a
+                    target="_blank"
                     href="https://www.goodreads.com/user/show/34398985-nick"
                     className="transition duration-200 hover:text-blue-400"
                   >
@@ -99,6 +100,7 @@ export const NewRoot = () => {
                 </li>
                 <li>
                   <a
+                    target="_blank"
                     href="https://boxd.it/ec5Jr"
                     className="transition duration-200 hover:text-blue-400"
                   >
@@ -107,6 +109,7 @@ export const NewRoot = () => {
                 </li>
                 <li>
                   <a
+                    target="_blank"
                     href="https://www.linkedin.com/in/nickbigger/"
                     className="transition duration-200 hover:text-blue-400"
                   >
