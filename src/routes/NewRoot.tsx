@@ -8,7 +8,7 @@ import StarsGif from "../assets/stars.gif";
 export const NewRoot = () => {
   return (
     <div
-      className="font-pixel text-md min-h-screen bg-gray-900 p-4 tracking-wider text-gray-100"
+      className="font-pixel min-h-screen bg-gray-900 p-4 text-sm tracking-wider text-gray-100"
       style={{
         backgroundImage: `url(${StarsGif})`,
       }}
@@ -67,14 +67,14 @@ export const NewRoot = () => {
             </Card>
             <Card>
               <CardTitle>status</CardTitle>
-              test
+              the worst thing you can be is boring
             </Card>
             <Card>
               <CardTitle>my time</CardTitle>
               <Time />
             </Card>
           </aside>
-          <section className="flex max-h-[500px] w-full flex-grow flex-col gap-5 overflow-scroll md:w-1/2">
+          <section className="no-scrollbar flex max-h-[500px] w-full flex-grow flex-col gap-5 overflow-scroll md:w-1/2">
             <Outlet />
           </section>
           <aside className="flex w-full flex-col gap-5 md:w-1/4">
@@ -117,16 +117,23 @@ export const NewRoot = () => {
             </Card>
           </aside>
         </main>
-        <a href="http://www.freevisitorcounters.com"></a>
-        <script
-          type="text/javascript"
-          src="https://www.freevisitorcounters.com/auth.php?id=3113659fcef498473c1b7f4579b8361fce5c29be"
-        ></script>
-        <script
-          type="text/javascript"
-          src="https://www.freevisitorcounters.com/en/home/counter/1357799/t/5"
-        ></script>
-        <footer className="mt-6 p-6 text-center font-mono text-sm text-gray-400">
+        <div className="flex justify-center py-4">
+          <script
+            type="text/javascript"
+            src="https://www.freevisitorcounters.com/auth.php?id=1840f318b952e4f7ad8ca1a3210afe2734c583c6"
+          ></script>
+          <script
+            type="text/javascript"
+            src="https://www.freevisitorcounters.com/en/home/counter/1357826/t/5"
+          ></script>
+          <a
+            href="https://www.freevisitorcounters.com/en/home/stats/id/1357826"
+            target="_blank"
+          >
+            <img src="https://www.freevisitorcounters.com/en/counter/render/1357826/t/5" />
+          </a>
+        </div>
+        <footer className="text-center font-mono text-sm text-gray-400">
           <p>2025 nick, all rights reserverd</p>
         </footer>
       </div>
