@@ -28,5 +28,5 @@ export const Time = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  return <p className="mt-1 font-mono">{currentTimeFormatted}</p>;
+  return <p className="mt-1">{currentTimeFormatted}</p>;
 };

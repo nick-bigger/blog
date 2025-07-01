@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "C&C Red Alert";
+  src: url("/fonts/cnc-ra-inet.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* C&C Red Alert [LAN] - Assume this is a 'bold' or heavier version */
+@font-face {
+  font-family: "C&C Red Alert"; /* Same font-family name */
+  src: url("/fonts/cnc-ra-lan.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -65,8 +82,7 @@
   }
   html {
     overscroll-behavior: none;
-    font-family: "Times New Roman", Times, serif, system-ui, Avenir, Helvetica,
-      Arial, sans-serif;
+    font-family: "C&C Red Alert", sans-serif;
   }
   body {
     @apply bg-background text-foreground;

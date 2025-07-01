@@ -85,7 +85,7 @@ module.exports = {
         "color-wave": "color-wave 4s infinite alternate",
       },
       fontFamily: {
-        pixel: ["Pixelify Sans", "sans-serif"],
+        "cnc-ra": ["C&C Red Alert", "cursive", "sans-serif"],
       },
     },
   },

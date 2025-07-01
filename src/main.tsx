@@ -9,7 +9,6 @@ import { About } from "./routes/About";
 import { Afternoon } from "./routes/Afternoon";
 import { Apologize } from "./routes/Apologize";
 import { Back } from "./routes/Back";
-import { Blog } from "./routes/Blog";
 import { ErrorPage } from "./routes/Error";
 import { Her } from "./routes/Her";
 import { Home } from "./routes/Home";
@@ -17,113 +16,113 @@ import { ICantMakeYouStayBut } from "./routes/ICantMakeYouStayBut";
 import { InMyDreams } from "./routes/InMyDreams";
 import { Mother } from "./routes/Mother";
 import { MyHeartCanBarelySwim } from "./routes/MyHeartCanBarelySwim";
-import { NewRoot } from "./routes/NewRoot";
 import { Remains } from "./routes/Remains";
 import { Retrograde } from "./routes/Retrograde";
+import { Root } from "./routes/Root";
 import { SecureYourOwnMaskFirstBeforeHelpingOthers } from "./routes/SecureYourOwnMaskFirstBeforeHelpingOthers";
 import { Stuck } from "./routes/Stuck";
 import { Welcome } from "./routes/Welcome";
-import { Home as BlogHome } from "./routes/blog/Home";
-import { TestHello } from "./routes/blog/TestHello";
+import { Wrapper } from "./routes/Wrapper";
+import { Blog } from "./routes/blog/Blog";
+import { Post } from "./routes/blog/Post";
+import { Thoughts } from "./routes/thoughts/Thoughts";
 
 const router = createBrowserRouter([
   {
-    element: <Blog />,
-    path: "poetry",
-    children: [
-      {
-        path: "",
-        element: <Home />,
-      },
-      {
-        path: "her",
-        element: <Her />,
-      },
-      {
-        path: "theNightWeMet",
-        element: <Afternoon />,
-      },
-      {
-        path: "227",
-        element: <_227am />,
-      },
-      {
-        path: "stuck",
-        element: <Stuck />,
-      },
-      {
-        path: "remains",
-        element: <Remains />,
-      },
-      {
-        path: "secureYourOwnMask",
-        element: <SecureYourOwnMaskFirstBeforeHelpingOthers />,
-      },
-      {
-        path: "myHeartCanBarelySwim",
-        element: <MyHeartCanBarelySwim />,
-      },
-      {
-        path: "stay",
-        element: <ICantMakeYouStayBut />,
-      },
-      {
-        path: "back",
-        element: <Back />,
-      },
-      {
-        path: "mother",
-        element: <Mother />,
-      },
-      {
-        path: "inmydreams",
-        element: <InMyDreams />,
-      },
-      {
-        path: "retrograde",
-        element: <Retrograde />,
-      },
-      {
-        path: "apologize",
-        element: <Apologize />,
-      },
-      {
-        path: "*",
-        element: <ErrorPage />,
-      },
-    ],
-  },
-  {
-    element: <Blog />,
-    path: "blog",
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "",
-        element: <BlogHome />,
-      },
-      {
-        path: "1",
-        element: <TestHello />,
-      },
-    ],
-  },
-  {
-    element: <NewRoot />,
+    element: <Root />,
     path: "*",
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
-        element: <Welcome />,
-      },
-      {
-        path: "about",
-        element: <About />,
+        element: <Wrapper />,
+        path: "*",
+        children: [
+          {
+            path: "",
+            element: <Welcome />,
+          },
+          {
+            path: "about",
+            element: <About />,
+          },
+        ],
       },
       {
         path: "blog",
         element: <Blog />,
+      },
+      {
+        path: "blog/:id",
+        element: <Post />,
+      },
+      {
+        path: "thoughts",
+        element: <Thoughts />,
+      },
+      {
+        path: "poetry",
+        children: [
+          {
+            path: "",
+            element: <Home />,
+          },
+          {
+            path: "her",
+            element: <Her />,
+          },
+          {
+            path: "theNightWeMet",
+            element: <Afternoon />,
+          },
+          {
+            path: "227",
+            element: <_227am />,
+          },
+          {
+            path: "stuck",
+            element: <Stuck />,
+          },
+          {
+            path: "remains",
+            element: <Remains />,
+          },
+          {
+            path: "secureYourOwnMask",
+            element: <SecureYourOwnMaskFirstBeforeHelpingOthers />,
+          },
+          {
+            path: "myHeartCanBarelySwim",
+            element: <MyHeartCanBarelySwim />,
+          },
+          {
+            path: "stay",
+            element: <ICantMakeYouStayBut />,
+          },
+          {
+            path: "back",
+            element: <Back />,
+          },
+          {
+            path: "mother",
+            element: <Mother />,
+          },
+          {
+            path: "inmydreams",
+            element: <InMyDreams />,
+          },
+          {
+            path: "retrograde",
+            element: <Retrograde />,
+          },
+          {
+            path: "apologize",
+            element: <Apologize />,
+          },
+          {
+            path: "*",
+            element: <ErrorPage />,
+          },
+        ],
       },
     ],
   },
