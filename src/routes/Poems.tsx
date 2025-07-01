@@ -5,7 +5,7 @@ import { poems } from "@/data/poems";
 
 export const Poems = () => {
   return (
-    <div className="mx-auto max-w-4xl p-1 md:p-4">
+    <div className="mx-auto max-w-4xl p-1 pt-2 md:p-4">
       <Link to="/">back to home</Link>
       <div className="mt-4 flex justify-start border border-white bg-[#141414] p-8">
         <div className="flex flex-col items-start">
