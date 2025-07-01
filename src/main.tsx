@@ -4,27 +4,15 @@ import * as ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
-import { _227am } from "./routes/2:27am";
 import { About } from "./routes/About";
-import { Afternoon } from "./routes/Afternoon";
-import { Apologize } from "./routes/Apologize";
-import { Back } from "./routes/Back";
 import { ErrorPage } from "./routes/Error";
-import { Her } from "./routes/Her";
-import { Home } from "./routes/Home";
-import { ICantMakeYouStayBut } from "./routes/ICantMakeYouStayBut";
-import { InMyDreams } from "./routes/InMyDreams";
-import { Mother } from "./routes/Mother";
-import { MyHeartCanBarelySwim } from "./routes/MyHeartCanBarelySwim";
-import { Remains } from "./routes/Remains";
-import { Retrograde } from "./routes/Retrograde";
+import { Poems } from "./routes/Poems";
 import { Root } from "./routes/Root";
-import { SecureYourOwnMaskFirstBeforeHelpingOthers } from "./routes/SecureYourOwnMaskFirstBeforeHelpingOthers";
-import { Stuck } from "./routes/Stuck";
 import { Welcome } from "./routes/Welcome";
 import { Wrapper } from "./routes/Wrapper";
 import { Blog } from "./routes/blog/Blog";
 import { Post } from "./routes/blog/Post";
+import { Poem } from "./routes/poetry/Poem";
 import { Thoughts } from "./routes/thoughts/Thoughts";
 
 const router = createBrowserRouter([
@@ -60,69 +48,12 @@ const router = createBrowserRouter([
         element: <Thoughts />,
       },
       {
-        path: "poetry",
-        children: [
-          {
-            path: "",
-            element: <Home />,
-          },
-          {
-            path: "her",
-            element: <Her />,
-          },
-          {
-            path: "theNightWeMet",
-            element: <Afternoon />,
-          },
-          {
-            path: "227",
-            element: <_227am />,
-          },
-          {
-            path: "stuck",
-            element: <Stuck />,
-          },
-          {
-            path: "remains",
-            element: <Remains />,
-          },
-          {
-            path: "secureYourOwnMask",
-            element: <SecureYourOwnMaskFirstBeforeHelpingOthers />,
-          },
-          {
-            path: "myHeartCanBarelySwim",
-            element: <MyHeartCanBarelySwim />,
-          },
-          {
-            path: "stay",
-            element: <ICantMakeYouStayBut />,
-          },
-          {
-            path: "back",
-            element: <Back />,
-          },
-          {
-            path: "mother",
-            element: <Mother />,
-          },
-          {
-            path: "inmydreams",
-            element: <InMyDreams />,
-          },
-          {
-            path: "retrograde",
-            element: <Retrograde />,
-          },
-          {
-            path: "apologize",
-            element: <Apologize />,
-          },
-          {
-            path: "*",
-            element: <ErrorPage />,
-          },
-        ],
+        path: "poems",
+        element: <Poems />,
+      },
+      {
+        path: "poems/:id",
+        element: <Poem />,
       },
     ],
   },

@@ -5,6 +5,9 @@ export const About = () => {
     <>
       <Card>
         <h3 className="mb-4 text-3xl text-white">about me</h3>
+        <p className="animate-color-wave mb-4 text-center">
+          I LIVE TO CREATE !
+        </p>
         <p>here's where i'll put all the cool things about me</p>
       </Card>
       <Card>

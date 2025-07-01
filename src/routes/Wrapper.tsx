@@ -54,7 +54,7 @@ export const Wrapper = () => {
                 </li>
                 <li>
                   <Link
-                    to="/poetry"
+                    to="/poems"
                     className="transition duration-200 hover:text-blue-400"
                   >
                     {">"}
@@ -117,6 +117,10 @@ export const Wrapper = () => {
                 </a>
               </li>
             </ul>
+          </Card>
+          <Card className="hidden md:block">
+            <CardTitle>monthly goal</CardTitle>
+            skateboard !!!
           </Card>
         </aside>
       </main>

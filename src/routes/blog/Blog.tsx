@@ -6,7 +6,7 @@ import { posts } from "@/data/posts";
 
 export const Blog = () => {
   return (
-    <div className="relative z-20 mx-auto max-w-7xl">
+    <div className="mx-auto max-w-7xl p-1 md:p-4">
       <Link to="/">back to home</Link>
       <Card className="mt-4">
         <h3 className="mb-4 text-3xl text-white">blog</h3>

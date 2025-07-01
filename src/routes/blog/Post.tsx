@@ -12,7 +12,7 @@ export const Post = () => {
 
   if (!post) {
     return (
-      <div className="container mx-auto p-4 text-center">
+      <div className="mx-auto p-1 text-center md:p-4">
         <h1 className="text-2xl font-bold text-red-500">Post Not Found</h1>
         <Link to="/blog">back to blog</Link>
       </div>
@@ -20,16 +20,14 @@ export const Post = () => {
   }
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-1 md:p-4">
       <Link to="/blog">back to blog</Link>
-      <Card className="mt-4 bg-white">
-        <h3 className="mb-4 text-4xl text-black">{post.title}</h3>
+      <Card className="mt-4 bg-white text-black">
+        <h3 className="mb-4 text-4xl">{post.title}</h3>
         <p className="text-md mb-6 text-gray-500">
           {formatISO(post.timestamp, { representation: "date" })}
         </p>
-        <div className="text-black">
-          <Markdown>{post.content}</Markdown>
-        </div>
+        <Markdown>{post.content}</Markdown>
       </Card>
     </div>
   );
