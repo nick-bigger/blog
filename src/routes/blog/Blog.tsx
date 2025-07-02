@@ -8,7 +8,7 @@ export const Blog = () => {
   return (
     <div className="mx-auto max-w-7xl p-1 pt-2 md:p-4">
       <Link to="/">back to home</Link>
-      <Card className="mt-4">
+      <Card className="mt-4 bg-[#141414]">
         <h3 className="mb-4 text-3xl text-white">blog</h3>
         <ul>
           {posts
@@ -19,7 +19,7 @@ export const Blog = () => {
                   to={`/blog/${post.id}`}
                   className="text-md font-semibold hover:text-blue-400"
                 >
-                  {formatISO(post.timestamp, { representation: "date" })} -
+                  {formatISO(post.timestamp, { representation: "date" })} -{" "}
                   {post.title}
                 </Link>
               </li>

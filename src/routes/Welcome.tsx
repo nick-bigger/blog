@@ -32,11 +32,16 @@ export const Welcome = () => {
           internet. i want this mostly to be a place for fun, and also somewhere
           to put all the random things i've created.
         </p>
-        <p>
-          this is very much in development, so don't be too suprised if there
-          are chunks missing or placeholder text here and there lol.
+        <p className="mb-4 leading-relaxed">
+          more specifically, this website is a place for me to dump content
+          without the pressure of any of it needing to be good. here, i am
+          allowed to be bad :)
         </p>
-        <p></p>
+        <p className="mb-4 leading-relaxed">
+          this way, i get to make a repo of my content without fear; you get to
+          enjoy the process; and, together, we can work through our fear of
+          being bad as really it's just getting in the way of us being good.
+        </p>
       </Card>
       <Marquee speed={20} className="p-10 text-white">
         <span className="mx-8 text-2xl">月が綺麗ですね</span>

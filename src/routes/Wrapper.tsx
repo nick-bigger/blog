@@ -83,10 +83,10 @@ export const Wrapper = () => {
               <li>
                 <a
                   target="_blank"
-                  href="https://www.instagram.com/nick.bigger/"
+                  href="https://beliapp.co/app/daizycrown"
                   className="transition duration-200 hover:text-blue-400"
                 >
-                  instagram
+                  beli
                 </a>
               </li>
               <li>
@@ -104,7 +104,25 @@ export const Wrapper = () => {
                   href="https://boxd.it/ec5Jr"
                   className="transition duration-200 hover:text-blue-400"
                 >
-                  letterboxed
+                  letterboxd
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://open.spotify.com/user/1136204305?si=e34a13bd7c7149e4"
+                  className="transition duration-200 hover:text-blue-400"
+                >
+                  spotify
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/nick.bigger/"
+                  className="transition duration-200 hover:text-blue-400"
+                >
+                  instagram
                 </a>
               </li>
               <li>
