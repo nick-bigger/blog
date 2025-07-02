@@ -73,7 +73,7 @@ export const Wrapper = () => {
             <Time />
           </Card>
         </aside>
-        <section className="md:no-scrollbar flex w-full flex-grow flex-col gap-5 md:max-h-[500px] md:w-1/2 md:overflow-scroll">
+        <section className="md:no-scrollbar flex w-full flex-grow flex-col gap-5 md:max-h-[600px] md:w-1/2 md:overflow-scroll">
           <Outlet />
         </section>
         <aside className="flex w-full flex-col gap-5 md:w-1/4">
