@@ -18,7 +18,14 @@
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="script-src 'self' 'unsafe-inline';"
+      content="
+      default-src 'self';
+      script-src 'self';
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data:;
+      font-src 'self' data:;
+      connect-src 'self';
+    "
     />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
