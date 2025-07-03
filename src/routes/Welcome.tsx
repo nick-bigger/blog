@@ -8,20 +8,6 @@ export const Welcome = () => {
     <>
       <Card>
         <h3 className="mb-4 text-3xl text-white">welcome !</h3>
-        <div className="mb-4 flex justify-center">
-          {/* <!-- FC2 Clap tag starts here --> */}
-          <a
-            href="//clap.fc2.com/post/daizycrown/?url=https%3A%2F%2Fconifercrown.com&title=Blog"
-            target="_blank"
-            title="Web Clap by FC2"
-          >
-            <img
-              src="//clap.fc2.com/images/button/blue/daizycrown?url=https%3A%2F%2Fconifercrown.com&amp;lang=en"
-              alt="Web Clap by FC2"
-            />
-          </a>
-          {/* <!-- FC2 Clap tag ends here --> */}
-        </div>
         <p className="mb-4 leading-relaxed">
           hey there ! i'm nick. i was inspired by all the cool websites over on
           the{" "}
@@ -44,10 +30,10 @@ export const Welcome = () => {
         </p>
       </Card>
       <Marquee speed={20} className="p-10 text-white">
-        <span className="mx-8 text-2xl">月が綺麗ですね</span>
+        <span className="mx-8 text-2xl">月がきれいですね～</span>
         <span className="mx-8 text-2xl">⛦⛦⛦⛦⛦</span>
         <span className="mx-8 text-2xl">◡̈ welcome ◡̈</span>
-        <span className="mx-8 text-2xl">月が綺麗ですね</span>
+        <span className="mx-8 text-2xl">月がきれいですね～</span>
         <span className="mx-8 text-2xl">⛦⛦⛦⛦⛦</span>
         <span className="mx-8 text-2xl">◡̈ welcome ◡̈</span>
       </Marquee>
@@ -85,6 +71,9 @@ export const Welcome = () => {
         <Link to="about">
           <p className="animate-color-wave">→ click here to learn more !</p>
         </Link>
+      </Card>
+      <Card>
+        <CardTitle>Indie Web</CardTitle>
       </Card>
     </>
   );

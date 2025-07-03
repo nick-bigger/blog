@@ -13,8 +13,9 @@ const crown = `
 export const Banner = () => {
   return (
     <>
-      <pre className="text-xl leading-none">{conifer}</pre>
-      <pre className="text-xl leading-none">{crown}</pre>
+      <pre className="text-sm leading-none">
+        {conifer} {crown}
+      </pre>
     </>
   );
 };
