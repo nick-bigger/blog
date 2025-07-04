@@ -24,7 +24,7 @@ export const Poem = () => {
       <Card className="mt-4 min-h-[700px] border border-white bg-[#141414] text-xl text-white">
         <div className="mt-20 flex w-full flex-col items-center">
           <div>
-            <h3 className="mb-8 text-4xl">{poem.title}</h3>
+            <h3 className="mb-8 text-4xl lowercase">{poem.title}</h3>
             <Markdown>{poem.content}</Markdown>
           </div>
         </div>
