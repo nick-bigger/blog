@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 
+import Stamp1 from "@/assets/stamps/stamp1.gif";
+import Stamp2 from "@/assets/stamps/stamp2.jpg";
+import Stamp7 from "@/assets/stamps/stamp3.png";
+import Stamp4 from "@/assets/stamps/stamp4.jpg";
+import Stamp5 from "@/assets/stamps/stamp5.png";
+import Stamp6 from "@/assets/stamps/stamp6.gif";
+import Stamp3 from "@/assets/stamps/stamp7.gif";
 import { Card, CardTitle } from "@/components/ui/card";
-import { Marquee } from "@/components/ui/marquee";
 
 export const Welcome = () => {
   return (
@@ -29,14 +35,17 @@ export const Welcome = () => {
           being bad as really it's just getting in the way of us being good.
         </p>
       </Card>
-      <Marquee speed={20} className="p-10 text-white">
-        <span className="mx-8 text-2xl">月がきれいですね～</span>
-        <span className="mx-8 text-2xl">⛦⛦⛦⛦⛦</span>
-        <span className="mx-8 text-2xl">◡̈ welcome ◡̈</span>
-        <span className="mx-8 text-2xl">月がきれいですね～</span>
-        <span className="mx-8 text-2xl">⛦⛦⛦⛦⛦</span>
-        <span className="mx-8 text-2xl">◡̈ welcome ◡̈</span>
-      </Marquee>
+      {/* @ts-expect-error Marquee is deprecated, but the custom versions just don't work. */}
+      <marquee className="flex h-[50px] gap-2 md:min-h-[60px]">
+        <img src={Stamp1} />
+        <img src={Stamp2} />
+        <img src={Stamp3} />
+        <img src={Stamp4} />
+        <img src={Stamp5} />
+        <img src={Stamp6} />
+        <img src={Stamp7} />
+        {/* @ts-expect-error Marquee is deprecated, but the custom versions just don't work. */}
+      </marquee>
       <Card>
         <CardTitle>a little about me</CardTitle>
         <div className="mb-2 grid gap-4 sm:grid-cols-2">
@@ -72,7 +81,7 @@ export const Welcome = () => {
           <p className="animate-color-wave">→ click here to learn more !</p>
         </Link>
       </Card>
-      <Card>
+      <Card className="hidden md:block">
         <CardTitle>Indie Web</CardTitle>
       </Card>
     </>

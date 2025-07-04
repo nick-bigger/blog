@@ -73,7 +73,7 @@ export const Wrapper = () => {
             <CardTitle>my time</CardTitle>
             <Time />
           </Card>
-          <Card>
+          <Card className="hidden md:block">
             <CardTitle>Stickers</CardTitle>
             <div className="no-scrollbar flex gap-5 overflow-x-scroll">
               <img src={HeartGif} className="h-20" />
