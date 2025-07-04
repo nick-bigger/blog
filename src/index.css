@@ -98,3 +98,8 @@
     scrollbar-width: none;
   }
 }
+
+q::before,
+q::after {
+  content: none; /* This is the magic line! */
+}

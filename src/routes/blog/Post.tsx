@@ -27,7 +27,18 @@ export const Post = () => {
         <p className="text-md mb-6 text-gray-500">
           {formatISO(post.timestamp, { representation: "date" })}
         </p>
-        <Markdown>{post.content}</Markdown>
+        <Markdown
+          components={{
+            blockquote(props) {
+              return <q className="mb-4 block border-l-2 pl-4" {...props} />;
+            },
+            p(props) {
+              return <p className="mb-4" {...props} />;
+            },
+          }}
+        >
+          {post.content}
+        </Markdown>
       </Card>
     </div>
   );
