@@ -23,7 +23,7 @@ export const Post = () => {
     <div className="container mx-auto max-w-7xl p-1 md:p-4">
       <Link to="/blog">back to blog</Link>
       <Card className="mt-4 bg-[#141414] text-white">
-        <h3 className="text-4xl">{post.title}</h3>
+        <h3 className="text-3xl">{post.title}</h3>
         <p className="text-md mb-6 text-gray-500">
           {formatISO(post.timestamp, { representation: "date" })}
         </p>

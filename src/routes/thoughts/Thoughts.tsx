@@ -31,7 +31,7 @@ export const Thoughts = () => {
                     {format(thought.timestamp, "MMMM d, yyyy")}{" "}
                   </p>
                 )}
-                <Card className="relative bg-white text-black">
+                <Card className="relative rounded-tl-none bg-white text-black hover:border-white">
                   <div
                     className="absolute left-0 top-0 h-0 w-0 -translate-x-full -translate-y-px rotate-[90deg] transform-gpu border-r-[12px] border-t-[12px] border-r-transparent border-t-white"
                     style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}

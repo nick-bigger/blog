@@ -8,7 +8,7 @@ export const About = () => {
         <p className="mb-4 leading-relaxed">
           i think a good place to start is...
         </p>
-        <p className="animate-color-wave mb-4 text-center">
+        <p className="mb-4 animate-color-wave text-center">
           I LIVE TO CREATE !
         </p>
         <p className="mb-4 leading-relaxed">

@@ -1,14 +1,14 @@
 export const collections = [
   {
     id: 1,
-    title: "Waldosia",
+    title: "happy poems",
   },
   {
     id: 2,
-    title: "Even a Worm Will Turn",
+    title: "sad poems",
   },
   {
     id: 3,
-    title: "Occhiolism",
+    title: "really sad poems",
   },
 ];

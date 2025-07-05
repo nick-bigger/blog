@@ -1,3 +1,10 @@
+import {
+  BookUser,
+  House,
+  Library,
+  MessageCircleDashed,
+  NotebookText,
+} from "lucide-react";
 import { Link, Outlet } from "react-router-dom";
 
 import { Card, CardTitle } from "@/components/ui/card";
@@ -12,51 +19,55 @@ export const Wrapper = () => {
       <Card className="md:mb-6">
         <nav>
           <ul className="flex flex-col justify-center gap-2 md:flex-row md:gap-6">
-            <li>
-              <Link
-                to="/"
-                className="transition duration-200 hover:text-blue-400"
-              >
-                {">"}
-                {">"} home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className="transition duration-200 hover:text-blue-400"
-              >
-                {">"}
-                {">"} about
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className="transition duration-200 hover:text-blue-400"
-              >
-                {">"}
-                {">"} blog
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/thoughts"
-                className="transition duration-200 hover:text-blue-400"
-              >
-                {">"}
-                {">"} thoughts
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/poems"
-                className="transition duration-200 hover:text-blue-400"
-              >
-                {">"}
-                {">"} poetry
-              </Link>
-            </li>
+            <Link
+              to="/"
+              className="transition duration-200 hover:text-blue-400"
+            >
+              <li className="flex gap-2 lowercase">
+                <House />
+                Home
+              </li>
+            </Link>
+
+            <Link
+              to="/about"
+              className="transition duration-200 hover:text-blue-400"
+            >
+              <li className="flex gap-2 lowercase">
+                <BookUser />
+                About
+              </li>
+            </Link>
+
+            <Link
+              to="/blog"
+              className="transition duration-200 hover:text-blue-400"
+            >
+              <li className="flex gap-2 lowercase">
+                <NotebookText />
+                Blog
+              </li>
+            </Link>
+
+            <Link
+              to="/thoughts"
+              className="transition duration-200 hover:text-blue-400"
+            >
+              <li className="flex gap-2 lowercase">
+                <MessageCircleDashed />
+                Thoughts
+              </li>
+            </Link>
+
+            <Link
+              to="/poems"
+              className="transition duration-200 hover:text-blue-400"
+            >
+              <li className="flex gap-2 lowercase">
+                <Library />
+                Poems
+              </li>
+            </Link>
           </ul>
         </nav>
       </Card>
@@ -66,14 +77,12 @@ export const Wrapper = () => {
             <CardTitle>recent blog posts</CardTitle>
             <ul className="ml-4 list-disc">
               {posts.slice(0, MAX_BLOG_POSTS).map((post) => (
-                <li>
-                  <Link
-                    to={`/blog/${post.id}`}
-                    className="transition duration-200 hover:text-blue-400"
-                  >
-                    {post.title}
-                  </Link>
-                </li>
+                <Link
+                  to={`/blog/${post.id}`}
+                  className="transition duration-200 hover:text-blue-400"
+                >
+                  <li>{post.title}</li>
+                </Link>
               ))}
             </ul>
           </Card>

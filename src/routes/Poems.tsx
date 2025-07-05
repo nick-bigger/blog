@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Card } from "@/components/ui/card";
 import { collections } from "@/data/collections";
 import { poems } from "@/data/poems";
 
@@ -7,29 +14,33 @@ export const Poems = () => {
   return (
     <div className="mx-auto max-w-4xl p-1 pt-2 md:p-4">
       <Link to="/">back to home</Link>
-      <div className="mt-4 flex justify-start border border-white bg-[#141414] p-8">
-        <div className="flex flex-col items-start">
-          {collections.map((collection) => (
-            <>
-              <p className="pb-4 text-3xl lowercase text-white">
+      <Card className="mt-4 bg-[#141414]">
+        <h3 className="mb-4 text-3xl lowercase text-white">Poems</h3>
+        <Accordion type="multiple">
+          {collections.map((collection, index) => (
+            <AccordionItem
+              key={index}
+              value={collection.title}
+              className="border-none"
+            >
+              <AccordionTrigger className="pb-4 text-2xl lowercase text-white">
                 {collection.title}
-              </p>
-              <div className="pb-10" key={collection.id}>
+              </AccordionTrigger>
+              <AccordionContent key={collection.id} className="pb-4">
                 {poems
                   .filter((poem) => poem.collectionId === collection.id)
                   .map((poem) => (
                     <Link to={`${poem.id}`} key={poem.id}>
-                      <p className="text-2xl lowercase text-white hover:text-blue-400 lg:text-2xl">
-                        {`>`} {poem.title}
+                      <p className="text-md border-l-2 pl-4 lowercase text-white hover:text-blue-400 lg:text-xl">
+                        {poem.title}
                       </p>
                     </Link>
                   ))}
-              </div>
-              <hr className="mb-10 h-1 w-8 bg-white" />
-            </>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
-      </div>
+        </Accordion>
+      </Card>
     </div>
   );
 };

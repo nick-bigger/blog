@@ -1,5 +1,10 @@
 export const thoughts = [
   {
+    timestamp: new Date(2025, 6, 5, 13, 12),
+    content:
+      "i got fed up with all the sharp corners on this website so i rounded everything. don't get used to it though",
+  },
+  {
     timestamp: new Date(2025, 6, 3, 11, 12),
     content: "spent half an hour yesterday just drawing lines and circles",
   },
