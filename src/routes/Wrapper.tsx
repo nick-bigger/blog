@@ -1,10 +1,3 @@
-import {
-  BookUser,
-  House,
-  Library,
-  MessageCircleDashed,
-  NotebookText,
-} from "lucide-react";
 import { Link, Outlet } from "react-router-dom";
 
 import { Card, CardTitle } from "@/components/ui/card";
@@ -16,61 +9,6 @@ const MAX_BLOG_POSTS = 5;
 export const Wrapper = () => {
   return (
     <div className="mx-auto max-w-7xl">
-      <Card className="md:mb-6">
-        <nav>
-          <ul className="flex flex-col justify-center gap-2 md:flex-row md:gap-6">
-            <Link
-              to="/"
-              className="transition duration-200 hover:text-blue-400"
-            >
-              <li className="flex gap-2 lowercase">
-                <House />
-                Home
-              </li>
-            </Link>
-
-            <Link
-              to="/about"
-              className="transition duration-200 hover:text-blue-400"
-            >
-              <li className="flex gap-2 lowercase">
-                <BookUser />
-                About
-              </li>
-            </Link>
-
-            <Link
-              to="/blog"
-              className="transition duration-200 hover:text-blue-400"
-            >
-              <li className="flex gap-2 lowercase">
-                <NotebookText />
-                Blog
-              </li>
-            </Link>
-
-            <Link
-              to="/thoughts"
-              className="transition duration-200 hover:text-blue-400"
-            >
-              <li className="flex gap-2 lowercase">
-                <MessageCircleDashed />
-                Thoughts
-              </li>
-            </Link>
-
-            <Link
-              to="/poems"
-              className="transition duration-200 hover:text-blue-400"
-            >
-              <li className="flex gap-2 lowercase">
-                <Library />
-                Poems
-              </li>
-            </Link>
-          </ul>
-        </nav>
-      </Card>
       <main className="flex flex-col gap-6 md:flex-row">
         <aside className="w-full space-y-5 md:w-1/5">
           <Card className="hidden md:block">

@@ -1,39 +1,104 @@
-import { Outlet } from "react-router-dom";
+import {
+  BookUser,
+  House,
+  Library,
+  MessageCircleDashed,
+  NotebookText,
+} from "lucide-react";
+import { NavLink, Outlet } from "react-router-dom";
 
-import StarsGif from "../assets/stars.gif";
+import StarsGif from "@/assets/stars.gif";
 
 export const Root = () => {
   return (
-    <div
-      className="min-h-screen bg-gray-900 p-5 px-4 font-cnc-ra text-lg tracking-wider text-gray-100"
-      style={{
-        backgroundImage: `url(${StarsGif})`,
-      }}
-    >
-      <Outlet />
-      <div>
-        <div className="flex justify-center py-4">
-          <script
-            type="text/javascript"
-            src="https://www.freevisitorcounters.com/auth.php?id=1840f318b952e4f7ad8ca1a3210afe2734c583c6"
-          ></script>
-          <script
-            type="text/javascript"
-            src="https://www.freevisitorcounters.com/en/home/counter/1357826/t/5"
-          ></script>
-          <a
-            href="https://www.freevisitorcounters.com/en/home/stats/id/1357826"
-            target="_blank"
+    <>
+      <div
+        className="min-h-screen bg-gray-800 font-cnc-ra text-lg tracking-wider text-gray-100"
+        style={{ backgroundImage: `url(${StarsGif})` }}
+      >
+        <nav className="no-scrollbar z-30 mx-auto mb-[-2px] flex max-w-7xl justify-start gap-1 overflow-x-scroll px-2 pt-10">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+            }
           >
-            <img src="https://www.freevisitorcounters.com/en/counter/render/1357826/t/5" />
-          </a>
+            <House />
+            home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+            }
+          >
+            <BookUser />
+            about
+          </NavLink>
+          <NavLink
+            to="/blog"
+            className={({ isActive }) =>
+              isActive
+                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+            }
+          >
+            <NotebookText />
+            blog
+          </NavLink>
+          <NavLink
+            to="/thoughts"
+            className={({ isActive }) =>
+              isActive
+                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+            }
+          >
+            <MessageCircleDashed />
+            thoughts
+          </NavLink>
+          <NavLink
+            to="/poems"
+            className={({ isActive }) =>
+              isActive
+                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+            }
+          >
+            <Library />
+            poetry
+          </NavLink>
+        </nav>
+        <div className="min-h-screen border-y-2 border-black bg-gray-700 p-4">
+          <Outlet />
         </div>
-        <footer className="text-center font-mono text-sm text-gray-400">
-          <p>2025 nick, all rights reserved</p>
-        </footer>
-      </div>
-      <style>
-        {`
+        <div>
+          <div className="flex justify-center py-4">
+            <script
+              type="text/javascript"
+              src="https://www.freevisitorcounters.com/auth.php?id=1840f318b952e4f7ad8ca1a3210afe2734c583c6"
+            ></script>
+            <script
+              type="text/javascript"
+              src="https://www.freevisitorcounters.com/en/home/counter/1357826/t/5"
+            ></script>
+            <a
+              href="https://www.freevisitorcounters.com/en/home/stats/id/1357826"
+              target="_blank"
+            >
+              <img src="https://www.freevisitorcounters.com/en/counter/render/1357826/t/5" />
+            </a>
+          </div>
+          <footer className="pb-10 text-center font-mono text-sm text-gray-400">
+            <p>2025 nick, all rights reserved</p>
+          </footer>
+        </div>
+        <style>
+          {`
         .crt-effect {
           box-shadow: inset 0 0 100px rgba(0,0,0,0.8); /* Inner shadow for slight darkening */
           filter: blur(0.5px) saturate(1.2) hue-rotate(-5deg); /* Subtle blur, saturation, color shift */
@@ -94,7 +159,8 @@ export const Root = () => {
           transform: rotateX(0.5deg) rotateY(-0.5deg); /* Slight tilt on hover */
         }
         `}
-      </style>
-    </div>
+        </style>
+      </div>
+    </>
   );
 };

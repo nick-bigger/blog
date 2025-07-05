@@ -20,25 +20,26 @@ export const Post = () => {
   }
 
   return (
-    <div className="container mx-auto max-w-7xl p-1 md:p-4">
-      <Link to="/blog">back to blog</Link>
-      <Card className="mt-4 bg-[#141414] text-white">
-        <h3 className="text-3xl">{post.title}</h3>
-        <p className="text-md mb-6 text-gray-500">
-          {formatISO(post.timestamp, { representation: "date" })}
-        </p>
-        <Markdown
-          components={{
-            blockquote(props) {
-              return <q className="mb-4 block border-l-2 pl-4" {...props} />;
-            },
-            p(props) {
-              return <p className="mb-4" {...props} />;
-            },
-          }}
-        >
-          {post.content}
-        </Markdown>
+    <div className="mx-auto max-w-7xl">
+      <Card className="rounded-sm border-2 border-black bg-white p-[2px]">
+        <div className="rounded-sm bg-gray-800 p-4">
+          <h3 className="text-3xl">{post.title}</h3>
+          <p className="text-md mb-6 text-gray-500">
+            {formatISO(post.timestamp, { representation: "date" })}
+          </p>
+          <Markdown
+            components={{
+              blockquote(props) {
+                return <q className="mb-4 block border-l-2 pl-4" {...props} />;
+              },
+              p(props) {
+                return <p className="mb-4" {...props} />;
+              },
+            }}
+          >
+            {post.content}
+          </Markdown>
+        </div>
       </Card>
     </div>
   );

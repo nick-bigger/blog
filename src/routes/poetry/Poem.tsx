@@ -19,12 +19,11 @@ export const Poem = () => {
   }
 
   return (
-    <div className="mx-auto max-w-4xl p-1 md:p-4">
-      <Link to="/poems">back to poems</Link>
-      <Card className="mt-4 min-h-[700px] border border-white bg-[#141414] text-xl text-white">
-        <div className="mt-20 flex w-full flex-col items-center">
+    <div className="mx-auto max-w-7xl">
+      <Card className="rounded-sm border-2 border-black bg-white p-[2px]">
+        <div className="flex w-full flex-col items-center rounded-sm bg-gray-800 p-4 pb-40 pt-20">
           <div>
-            <h3 className="mb-20 text-4xl lowercase">{poem.title}</h3>
+            <h3 className="mb-20 text-4xl uppercase">{poem.title}</h3>
             <Markdown
               components={{
                 p(props) {
