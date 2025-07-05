@@ -10,7 +10,7 @@ export const Blog = () => {
       <Link to="/">back to home</Link>
       <Card className="mt-4 bg-[#141414]">
         <h3 className="mb-4 text-3xl text-white">blog</h3>
-        <ul>
+        <ul className="space-y-2">
           {posts
             .sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime()) // Sort by newest first
             .map((post) => (

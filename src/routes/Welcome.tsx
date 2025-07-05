@@ -7,6 +7,7 @@ import Stamp4 from "@/assets/stamps/stamp4.jpg";
 import Stamp5 from "@/assets/stamps/stamp5.png";
 import Stamp6 from "@/assets/stamps/stamp6.gif";
 import Stamp3 from "@/assets/stamps/stamp7.gif";
+import Stamp8 from "@/assets/stamps/stamp8.png";
 import { Card, CardTitle } from "@/components/ui/card";
 
 export const Welcome = () => {
@@ -44,6 +45,7 @@ export const Welcome = () => {
         <img src={Stamp5} />
         <img src={Stamp6} />
         <img src={Stamp7} />
+        <img src={Stamp8} />
         {/* @ts-expect-error Marquee is deprecated, but the custom versions just don't work. */}
       </marquee>
       <Card>
@@ -80,9 +82,6 @@ export const Welcome = () => {
         <Link to="about">
           <p className="animate-color-wave">→ click here to learn more !</p>
         </Link>
-      </Card>
-      <Card className="hidden md:block">
-        <CardTitle>Indie Web</CardTitle>
       </Card>
     </>
   );

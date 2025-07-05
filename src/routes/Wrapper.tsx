@@ -1,69 +1,81 @@
 import { Link, Outlet } from "react-router-dom";
 
-import HeartGif from "@/assets/heart.gif";
-import { Banner } from "@/components/ui/banner";
 import { Card, CardTitle } from "@/components/ui/card";
 import { Time } from "@/components/ui/time";
+import { posts } from "@/data/posts";
+
+const MAX_BLOG_POSTS = 5;
 
 export const Wrapper = () => {
   return (
-    <div className="relative z-20 mx-auto max-w-7xl">
-      <header className="mb-8 text-center">
-        <Banner />
-      </header>
+    <div className="mx-auto max-w-7xl">
+      <Card className="md:mb-6">
+        <nav>
+          <ul className="flex flex-col justify-center gap-2 md:flex-row md:gap-6">
+            <li>
+              <Link
+                to="/"
+                className="transition duration-200 hover:text-blue-400"
+              >
+                {">"}
+                {">"} home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="transition duration-200 hover:text-blue-400"
+              >
+                {">"}
+                {">"} about
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className="transition duration-200 hover:text-blue-400"
+              >
+                {">"}
+                {">"} blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/thoughts"
+                className="transition duration-200 hover:text-blue-400"
+              >
+                {">"}
+                {">"} thoughts
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/poems"
+                className="transition duration-200 hover:text-blue-400"
+              >
+                {">"}
+                {">"} poetry
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </Card>
       <main className="flex flex-col gap-6 md:flex-row">
         <aside className="w-full space-y-5 md:w-1/5">
-          <Card>
-            <CardTitle>navigation</CardTitle>
-            <nav>
-              <ul className="space-y-1">
+          <Card className="hidden md:block">
+            <CardTitle>recent blog posts</CardTitle>
+            <ul className="ml-4 list-disc">
+              {posts.slice(0, MAX_BLOG_POSTS).map((post) => (
                 <li>
                   <Link
-                    to="/"
+                    to={`/blog/${post.id}`}
                     className="transition duration-200 hover:text-blue-400"
                   >
-                    {">"}
-                    {">"} home
+                    {post.title}
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="/about"
-                    className="transition duration-200 hover:text-blue-400"
-                  >
-                    {">"}
-                    {">"} about
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/blog"
-                    className="transition duration-200 hover:text-blue-400"
-                  >
-                    {">"}
-                    {">"} blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/thoughts"
-                    className="transition duration-200 hover:text-blue-400"
-                  >
-                    {">"}
-                    {">"} thoughts
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/poems"
-                    className="transition duration-200 hover:text-blue-400"
-                  >
-                    {">"}
-                    {">"} poetry
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+              ))}
+            </ul>
           </Card>
           <Card className="hidden md:block">
             <CardTitle>status</CardTitle>
@@ -74,17 +86,26 @@ export const Wrapper = () => {
             <Time />
           </Card>
           <Card className="hidden md:block">
-            <CardTitle>Stickers</CardTitle>
-            <div className="no-scrollbar flex gap-5 overflow-x-scroll">
-              <img src={HeartGif} className="h-20" />
-              <img src={HeartGif} className="h-20" />
-              <img src={HeartGif} className="h-20" />
-              <img src={HeartGif} className="h-20" />
-              <img src={HeartGif} className="h-20" />
+            <CardTitle>Buttons</CardTitle>
+            <div className="no-scrollbar overflow-x-scroll">
+              <div className="flex w-max gap-2">
+                <a href="https://nekoweb.org/">
+                  <img src="https://nekoweb.org/assets/buttons/button7.gif" />
+                </a>
+                <a href="https://nekoweb.org/">
+                  <img src="https://nekoweb.org/assets/buttons/button1.gif" />
+                </a>
+                <a href="https://nekoweb.org/">
+                  <img src="https://nekoweb.org/assets/buttons/button3.gif" />
+                </a>
+                <a href="https://nekoweb.org/">
+                  <img src="https://nekoweb.org/assets/buttons/button6.gif" />
+                </a>
+              </div>
             </div>
           </Card>
         </aside>
-        <section className="md:no-scrollbar flex w-full flex-grow flex-col gap-5 md:max-h-[600px] md:w-1/2 md:overflow-scroll">
+        <section className="md:no-scrollbar flex w-full flex-grow flex-col gap-5 md:w-1/2 md:overflow-scroll">
           <Outlet />
         </section>
         <aside className="w-full space-y-5 md:w-1/5">

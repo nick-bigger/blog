@@ -5,7 +5,7 @@ import StarsGif from "../assets/stars.gif";
 export const Root = () => {
   return (
     <div
-      className="font-cnc-ra min-h-screen bg-gray-900 px-4 text-lg tracking-wider text-gray-100"
+      className="min-h-screen bg-gray-900 p-5 px-4 font-cnc-ra text-lg tracking-wider text-gray-100"
       style={{
         backgroundImage: `url(${StarsGif})`,
       }}
@@ -29,7 +29,7 @@ export const Root = () => {
           </a>
         </div>
         <footer className="text-center font-mono text-sm text-gray-400">
-          <p>2025 nick, all rights reserverd</p>
+          <p>2025 nick, all rights reserved</p>
         </footer>
       </div>
       <style>
