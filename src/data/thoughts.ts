@@ -1,5 +1,9 @@
 export const thoughts = [
   {
+    timestamp: new Date(2025, 6, 6, 15, 53),
+    content: "unrounded everything - i told you not to get used to it :D",
+  },
+  {
     timestamp: new Date(2025, 6, 5, 13, 12),
     content:
       "i got fed up with all the sharp corners on this website so i rounded everything. don't get used to it though",
