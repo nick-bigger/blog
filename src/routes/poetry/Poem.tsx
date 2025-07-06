@@ -27,7 +27,7 @@ export const Poem = () => {
             <Markdown
               components={{
                 p(props) {
-                  return <p className="mb-4 leading-7" {...props} />;
+                  return <p className="mb-2 text-xl leading-7" {...props} />;
                 },
               }}
             >

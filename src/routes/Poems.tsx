@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Card } from "@/components/ui/card";
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { collections } from "@/data/collections";
 import { poems } from "@/data/poems";
 
@@ -14,35 +14,37 @@ export const Poems = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Card>
-        <h3 className="mb-2 text-3xl lowercase text-white">Poems</h3>
-        <p className="mb-4 text-gray-300">
-          random poems. i like short poetry, and i'm working on moving into some
-          longer form content as well
-        </p>
-        <Accordion type="multiple">
+        <CardHeader>
+          <CardTitle className="text-2xl">Poetry</CardTitle>
+          <CardDescription>
+            random poems. i like short poetry, and i'm working on moving into
+            some longer form content as well
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {collections.map((collection, index) => (
-            <AccordionItem
-              key={index}
-              value={collection.title}
-              className="border-none"
-            >
-              <AccordionTrigger className="pb-4 text-2xl lowercase text-white">
-                {collection.title}
-              </AccordionTrigger>
-              <AccordionContent key={collection.id} className="pb-4">
-                {poems
-                  .filter((poem) => poem.collectionId === collection.id)
-                  .map((poem) => (
-                    <Link to={`${poem.id}`} key={poem.id}>
-                      <p className="text-md border-l-2 pl-4 lowercase text-white hover:text-blue-400 lg:text-xl">
-                        {poem.title}
-                      </p>
-                    </Link>
-                  ))}
-              </AccordionContent>
-            </AccordionItem>
+            <Card key={index}>
+              <CardHeader>
+                <CardTitle>{collection.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul>
+                  {poems
+                    .filter((poem) => poem.collectionId === collection.id)
+                    .map((poem) => (
+                      <Link
+                        to={`${poem.id}`}
+                        key={poem.id}
+                        className="transition duration-200 hover:text-blue-400"
+                      >
+                        <li className="text-xl">{poem.title}</li>
+                      </Link>
+                    ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
-        </Accordion>
+        </CardContent>
       </Card>
     </div>
   );

@@ -2,7 +2,7 @@ import { formatISO } from "date-fns";
 import Markdown from "react-markdown";
 import { Link, useParams } from "react-router-dom";
 
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { posts } from "@/data/posts";
 
 export const Post = () => {
@@ -22,22 +22,24 @@ export const Post = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Card>
-        <h3 className="text-3xl">{post.title}</h3>
-        <p className="text-md mb-6 text-gray-500">
-          {formatISO(post.timestamp, { representation: "date" })}
-        </p>
-        <Markdown
-          components={{
-            blockquote(props) {
-              return <q className="mb-4 block border-l-2 pl-4" {...props} />;
-            },
-            p(props) {
-              return <p className="mb-4 text-xl" {...props} />;
-            },
-          }}
-        >
-          {post.content}
-        </Markdown>
+        <CardContent>
+          <h3 className="text-3xl">{post.title}</h3>
+          <p className="text-md mb-6 text-gray-500">
+            {formatISO(post.timestamp, { representation: "date" })}
+          </p>
+          <Markdown
+            components={{
+              blockquote(props) {
+                return <q className="mb-4 block border-l-2 pl-4" {...props} />;
+              },
+              p(props) {
+                return <p className="mb-4 text-xl" {...props} />;
+              },
+            }}
+          >
+            {post.content}
+          </Markdown>
+        </CardContent>
       </Card>
     </div>
   );
