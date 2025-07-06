@@ -21,25 +21,23 @@ export const Post = () => {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <Card className="rounded-sm border-2 border-black bg-white p-[2px]">
-        <div className="rounded-sm bg-gray-800 p-4">
-          <h3 className="text-3xl">{post.title}</h3>
-          <p className="text-md mb-6 text-gray-500">
-            {formatISO(post.timestamp, { representation: "date" })}
-          </p>
-          <Markdown
-            components={{
-              blockquote(props) {
-                return <q className="mb-4 block border-l-2 pl-4" {...props} />;
-              },
-              p(props) {
-                return <p className="mb-4" {...props} />;
-              },
-            }}
-          >
-            {post.content}
-          </Markdown>
-        </div>
+      <Card>
+        <h3 className="text-3xl">{post.title}</h3>
+        <p className="text-md mb-6 text-gray-500">
+          {formatISO(post.timestamp, { representation: "date" })}
+        </p>
+        <Markdown
+          components={{
+            blockquote(props) {
+              return <q className="mb-4 block border-l-2 pl-4" {...props} />;
+            },
+            p(props) {
+              return <p className="mb-4 text-xl" {...props} />;
+            },
+          }}
+        >
+          {post.content}
+        </Markdown>
       </Card>
     </div>
   );
