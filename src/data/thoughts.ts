@@ -1,5 +1,9 @@
 export const thoughts = [
   {
+    timestamp: new Date(2025, 6, 6, 22, 29),
+    content: "i don't have chips so i'm dipping cashews in hummus 😔",
+  },
+  {
     timestamp: new Date(2025, 6, 6, 20, 31),
     content:
       "rewatching better call saul and, man, i don't like any of these people",
