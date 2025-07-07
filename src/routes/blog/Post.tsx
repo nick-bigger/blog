@@ -1,7 +1,20 @@
-import { formatISO } from "date-fns";
+import { format } from "date-fns/format";
+import { Share } from "lucide-react";
 import Markdown from "react-markdown";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
+import {
+  Blockquote,
+  H1,
+  H2,
+  H3,
+  H4,
+  Link,
+  P,
+  UL,
+} from "@/components/Typography";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { posts } from "@/data/posts";
 
@@ -23,17 +36,70 @@ export const Post = () => {
     <div className="mx-auto max-w-7xl">
       <Card>
         <CardContent>
-          <h3 className="text-3xl">{post.title}</h3>
-          <p className="text-md mb-6 text-gray-500">
-            {formatISO(post.timestamp, { representation: "date" })}
-          </p>
+          <div className="flex flex-wrap justify-between">
+            <div>
+              <h3 className="text-3xl">{post.title}</h3>
+              <p className="text-md mb-2 text-gray-500">
+                {format(post.timestamp, "PP")}
+              </p>
+              <div className="mb-8 flex flex-wrap items-center gap-2">
+                <p className="text-gray-300">Tags:</p>
+                {post.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-1">
+                    {post.tags.map((tag, tagIdx) => (
+                      <Badge className="bg-gray-700" key={tagIdx}>
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="mb-4 flex gap-2">
+              <Button
+                className="size-10"
+                variant="secondary"
+                size="sm"
+                onClick={async () => {
+                  const shareData = {
+                    title: post.title,
+                    text: post.description,
+                    url: `conifercrown.com/#/blog/${post.id}`,
+                  };
+
+                  await navigator.share(shareData);
+                }}
+              >
+                <Share />
+              </Button>
+            </div>
+          </div>
+          <hr className="mb-8" />
           <Markdown
             components={{
               blockquote(props) {
-                return <q className="mb-4 block border-l-2 pl-4" {...props} />;
+                return <Blockquote {...props} />;
               },
               p(props) {
-                return <p className="mb-4 text-xl" {...props} />;
+                return <P className="mb-4 text-xl" {...props} />;
+              },
+              ul(props) {
+                return <UL {...props} />;
+              },
+              h1(props) {
+                return <H1 {...props} />;
+              },
+              h2(props) {
+                return <H2 {...props} />;
+              },
+              h3(props) {
+                return <H3 {...props} />;
+              },
+              h4(props) {
+                return <H4 {...props} />;
+              },
+              a(props) {
+                return <Link className="text-xl" target="_blank" {...props} />;
               },
             }}
           >

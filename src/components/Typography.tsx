@@ -9,7 +9,7 @@ const H1 = React.forwardRef<
   <h1
     ref={ref}
     className={cn(
-      "scroll-m-20 text-4xl font-extrabold lowercase tracking-tight lg:text-5xl",
+      "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
       className,
     )}
     {...props}
@@ -24,7 +24,7 @@ const H2 = React.forwardRef<
   <h2
     ref={ref}
     className={cn(
-      "scroll-m-20 border-b pb-2 text-3xl font-semibold lowercase tracking-tight",
+      "scroll-m-20 pb-2 text-3xl font-semibold tracking-normal",
       className,
     )}
     {...props}
@@ -39,7 +39,7 @@ const H3 = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "scroll-m-20 text-2xl font-semibold lowercase tracking-tight",
+      "scroll-m-20 text-2xl font-semibold tracking-tight",
       className,
     )}
     {...props}
@@ -62,6 +62,30 @@ const H4 = React.forwardRef<
 ));
 H4.displayName = "H4";
 
+const Blockquote = React.forwardRef<
+  HTMLQuoteElement,
+  React.HTMLAttributes<HTMLQuoteElement>
+>(({ className, ...props }, ref) => (
+  <blockquote
+    ref={ref}
+    className={cn("mt-6 border-l-2 pl-6 italic", className)}
+    {...props}
+  />
+));
+Blockquote.displayName = "Blockquote";
+
+const UL = React.forwardRef<
+  HTMLUListElement,
+  React.HTMLAttributes<HTMLUListElement>
+>(({ className, ...props }, ref) => (
+  <ul
+    className={cn("my-6 ml-6 list-disc [&>li]:mt-2", className)}
+    ref={ref}
+    {...props}
+  />
+));
+UL.displayName = "UL";
+
 const P = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
@@ -77,7 +101,7 @@ const Code = React.forwardRef<
   <code
     ref={ref}
     className={cn(
-      "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold lowercase",
+      "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
       className,
     )}
     {...props}
@@ -89,11 +113,7 @@ const Large = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-  <p
-    ref={ref}
-    className={cn("text-lg font-semibold lowercase", className)}
-    {...props}
-  />
+  <p ref={ref} className={cn("text-lg font-semibold", className)} {...props} />
 ));
 Large.displayName = "Large";
 
@@ -103,7 +123,7 @@ const Small = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm font-medium lowercase leading-none", className)}
+    className={cn("text-sm font-medium leading-none", className)}
     {...props}
   />
 ));
@@ -115,10 +135,22 @@ const Muted = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm lowercase text-muted-foreground", className)}
+    className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
 ));
 Muted.displayName = "Muted";
 
-export { Code, H1, H2, H3, H4, Large, Muted, P, Small };
+const Link = React.forwardRef<
+  HTMLAnchorElement,
+  React.HTMLAttributes<HTMLAnchorElement>
+>(({ className, ...props }, ref) => (
+  <a
+    ref={ref}
+    className={cn("text-sm text-blue-400 underline", className)}
+    {...props}
+  />
+));
+Link.displayName = "Link";
+
+export { Blockquote, Code, H1, H2, H3, H4, Large, Link, Muted, P, Small, UL };

@@ -132,6 +132,15 @@ export const Wrapper = () => {
                     linkedin
                   </a>
                 </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://github.com/nick-bigger"
+                    className="transition duration-200 hover:text-blue-400"
+                  >
+                    GitHub
+                  </a>
+                </li>
               </ul>
             </CardContent>
           </Card>
