@@ -64,7 +64,7 @@ export const Thoughts = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="flex p-0">
-          <div className="flex w-[100px] flex-col border border-black bg-gray-300 text-black">
+          <div className="flex flex-col border border-black bg-gray-300 text-black">
             <div
               className={`flex cursor-pointer justify-center border-b-2 border-black p-1 hover:bg-gray-400 ${
                 selectedYear === null && selectedMonth === null

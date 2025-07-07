@@ -13,6 +13,7 @@ import { Wrapper } from "./routes/Wrapper";
 import { Blog } from "./routes/blog/Blog";
 import { Post } from "./routes/blog/Post";
 import { Poem } from "./routes/poetry/Poem";
+import { Songs } from "./routes/songs/Songs";
 import { Thoughts } from "./routes/thoughts/Thoughts";
 
 const router = createHashRouter([
@@ -54,6 +55,10 @@ const router = createHashRouter([
       {
         path: "poems/:id",
         element: <Poem />,
+      },
+      {
+        path: "songs",
+        element: <Songs />,
       },
     ],
   },

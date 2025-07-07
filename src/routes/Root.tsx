@@ -1,5 +1,6 @@
 import {
   BookUser,
+  Guitar,
   House,
   Library,
   MessageCircleDashed,
@@ -70,7 +71,18 @@ export const Root = () => {
             }
           >
             <Library />
-            poetry
+            poems
+          </NavLink>
+          <NavLink
+            to="/songs"
+            className={({ isActive }) =>
+              isActive
+                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+            }
+          >
+            <Guitar />
+            songs
           </NavLink>
         </nav>
         <div className="min-h-screen border-y-2 border-black bg-gray-700 p-2 md:p-4">
