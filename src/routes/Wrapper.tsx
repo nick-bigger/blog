@@ -10,8 +10,8 @@ export const Wrapper = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <main className="flex flex-col gap-6 md:flex-row">
-        <aside className="w-full space-y-5 md:w-1/5">
-          <Card className="hidden md:block">
+        <aside className="order-3 w-full space-y-5 md:order-1 md:w-1/5">
+          <Card>
             <CardHeader>
               <CardTitle>Recent Blog Posts</CardTitle>
             </CardHeader>
@@ -28,7 +28,7 @@ export const Wrapper = () => {
               </ul>
             </CardContent>
           </Card>
-          <Card className="hidden md:block">
+          <Card>
             <CardHeader>
               <CardTitle>Status</CardTitle>
             </CardHeader>
@@ -36,7 +36,7 @@ export const Wrapper = () => {
               <p>the worst thing you can be is boring</p>
             </CardContent>
           </Card>
-          <Card className="hidden md:block">
+          <Card>
             <CardHeader>
               <CardTitle>My Time</CardTitle>
             </CardHeader>
@@ -44,7 +44,7 @@ export const Wrapper = () => {
               <Time />
             </CardContent>
           </Card>
-          <Card className="hidden md:block">
+          <Card>
             <CardHeader>
               <CardTitle>Buttons</CardTitle>
             </CardHeader>
@@ -68,11 +68,11 @@ export const Wrapper = () => {
             </CardContent>
           </Card>
         </aside>
-        <section className="flex w-full flex-grow flex-col gap-5 md:w-1/2">
+        <section className="order-1 flex w-full flex-grow flex-col gap-5 md:order-2 md:w-1/2">
           <Outlet />
         </section>
-        <aside className="w-full space-y-5 md:w-1/5">
-          <Card className="hidden md:block">
+        <aside className="order-2 w-full space-y-5 md:order-3 md:w-1/5">
+          <Card>
             <CardHeader>
               <CardTitle>Find Me</CardTitle>
             </CardHeader>
@@ -156,7 +156,7 @@ export const Wrapper = () => {
               </div>
             </CardContent>
           </Card>
-          <Card className="hidden md:block">
+          <Card>
             <CardHeader>
               <CardTitle>Monthly Goal</CardTitle>
             </CardHeader>

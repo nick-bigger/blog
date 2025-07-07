@@ -73,7 +73,7 @@ export const Root = () => {
             poetry
           </NavLink>
         </nav>
-        <div className="min-h-screen border-y-2 border-black bg-gray-700 p-4">
+        <div className="min-h-screen border-y-2 border-black bg-gray-700 p-2 md:p-4">
           <Outlet />
         </div>
         <div>
