@@ -1,5 +1,5 @@
 import { format } from "date-fns/format";
-import { Share } from "lucide-react";
+import { Share2 } from "lucide-react";
 import Markdown from "react-markdown";
 import { useParams } from "react-router-dom";
 
@@ -56,9 +56,9 @@ export const Post = () => {
             </div>
             <div className="mb-4 flex gap-2">
               <Button
-                className="size-10"
+                className="size-8"
                 variant="secondary"
-                size="sm"
+                size="icon"
                 onClick={async () => {
                   const shareData = {
                     title: post.title,
@@ -69,7 +69,7 @@ export const Post = () => {
                   await navigator.share(shareData);
                 }}
               >
-                <Share />
+                <Share2 />
               </Button>
             </div>
           </div>

@@ -13,7 +13,7 @@ export const Wrapper = () => {
         <aside className="order-3 w-full space-y-5 md:order-1 md:w-1/5">
           <Card>
             <CardHeader>
-              <CardTitle>Recent Blog Posts</CardTitle>
+              <CardTitle>Recent Posts</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="ml-4 list-disc">

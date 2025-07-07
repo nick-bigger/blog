@@ -1,6 +1,10 @@
 import React from "react";
 
+import { X } from "lucide-react";
+
 import { cn } from "@/lib/utils";
+
+import { Button } from "./button";
 
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
@@ -16,16 +20,29 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
+function CardHeader({
+  children,
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-header"
       className={cn(
-        "@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min items-start gap-1.5 border-b border-gray-700 bg-gray-500 px-3 py-1",
+        "@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 relative grid auto-rows-min items-start gap-1.5 border-b border-gray-700 bg-gray-500 px-3 py-1",
         className,
       )}
       {...props}
-    />
+    >
+      {children}
+      <Button
+        size="icon"
+        className="absolute right-2 top-2 size-5"
+        variant="secondary"
+      >
+        <X />
+      </Button>
+    </div>
   );
 }
 
