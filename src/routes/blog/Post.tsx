@@ -27,7 +27,6 @@ export const Post = () => {
     return (
       <div className="mx-auto p-1 text-center md:p-4">
         <h1 className="text-2xl font-bold text-red-500">Post Not Found</h1>
-        <Link to="/blog">back to blog</Link>
       </div>
     );
   }
