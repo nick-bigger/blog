@@ -127,7 +127,7 @@ export const Thoughts = () => {
                         {format(thought.timestamp, "MMMM d, yyyy")}{" "}
                       </p>
                     )}
-                    <div className="relative rounded-lg rounded-tl-none bg-white p-4 text-black">
+                    <div className="relative rounded-lg rounded-tl-none bg-white p-4 text-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                       <div
                         className="absolute left-[1px] top-[1px] h-0 w-0 -translate-x-full -translate-y-px rotate-[90deg] transform-gpu border-r-[12px] border-t-[12px] border-r-transparent border-t-white"
                         style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}

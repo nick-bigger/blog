@@ -9,6 +9,7 @@ import {
 import { NavLink, Outlet } from "react-router-dom";
 
 import StarsGif from "@/assets/stars.gif";
+import { NowPlaying } from "@/components/NowPlaying";
 
 export const Root = () => {
   return (
@@ -88,6 +89,7 @@ export const Root = () => {
         <div className="min-h-screen border-y-2 border-black bg-gray-700 p-2 md:p-4">
           <Outlet />
         </div>
+        <NowPlaying />
         <div>
           <div className="flex justify-center py-4">
             <script

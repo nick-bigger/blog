@@ -19,6 +19,7 @@ export const Wrapper = () => {
               <ul className="ml-4 list-disc">
                 {posts.slice(0, MAX_BLOG_POSTS).map((post) => (
                   <Link
+                    key={post.id}
                     to={`/blog/${post.id}`}
                     className="transition duration-200 hover:text-blue-400"
                   >
