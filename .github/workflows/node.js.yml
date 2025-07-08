@@ -7,10 +7,10 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: write
+  contents: write # This permission is crucial for 'gh-pages' to push to the repository
 
 jobs:
-  build:
+  build-and-deploy: # Renamed job for clarity
     runs-on: ubuntu-latest
 
     strategy:
@@ -30,15 +30,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Vite App with Environment Variables
-        run: npm run build
-        env:
-          VITE_LASTFM_API_KEY: ${{ secrets.VITE_LASTFM_API_KEY }}
-          VITE_LASTFM_USERNAME: ${{ secrets.VITE_LASTFM_USERNAME }}
-
       - name: Deploy to GitHub Pages
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+
           npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VITE_LASTFM_API_KEY: ${{ secrets.VITE_LASTFM_API_KEY }}
+          VITE_LASTFM_USERNAME: ${{ secrets.VITE_LASTFM_USERNAME }}
