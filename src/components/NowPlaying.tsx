@@ -1,53 +1,47 @@
 import { useEffect, useState } from "react";
 
+import { useQuery } from "@tanstack/react-query";
+
 import { fetchLastTrack } from "@/services/lastFMService";
-import { LastFmTrack } from "@/types/lastFM";
 
 import { WaveForm } from "./WaveForm";
 
 export const NowPlaying = () => {
-  const [lastTrack, setLastTrack] = useState<LastFmTrack | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
+  const {
+    data: lastTrack,
+    isLoading,
+    isFetching,
+    isError,
+    error,
+  } = useQuery({
+    queryKey: ["lastFmTrack"],
+    queryFn: fetchLastTrack,
+    refetchInterval: 30000,
+  });
+
+  // This is gross but necessary because Tanstack removed their callbacks.
   useEffect(() => {
-    const getTrack = async () => {
-      try {
-        setLoading(true);
-        setError(null); // Clear previous errors
-        const track = await fetchLastTrack();
-        setLastTrack(track);
-      } catch (err) {
-        setError("Failed to load current song.");
-        console.error(err);
-      } finally {
-        setLoading(false);
-        // Once data is loaded (or an error occurs), trigger visibility.
-        // We add a small delay to ensure the component is rendered
-        // before the transition class is applied.
-        setTimeout(() => {
-          setIsVisible(true);
-        }, 100);
-      }
-    };
+    if (lastTrack && !isVisible) {
+      setTimeout(() => {
+        setIsVisible(true);
+      }, 100);
+    }
 
-    getTrack();
+    if (isError && error) {
+      console.error("Failed to load current song:", error);
+    }
+  }, [lastTrack, isError, error, isVisible]);
 
-    // Refresh the track periodically.
-    // Last.fm API has rate limits, so don't query too frequently.
-    const interval = setInterval(getTrack, 30000);
-    return () => clearInterval(interval);
-  }, []);
-
-  if (loading || error || !lastTrack) {
+  if (!lastTrack || isLoading || isError) {
     return null;
   }
 
-  const albumArt = lastTrack.image.find(
+  const albumArt = lastTrack?.image.find(
     (img) => img.size === "medium" || img.size === "small",
   );
-  const isNowPlaying = lastTrack["@attr"]?.nowplaying === "true";
+  const isNowPlaying = lastTrack?.["@attr"]?.nowplaying === "true";
 
   return (
     <div
@@ -57,10 +51,9 @@ export const NowPlaying = () => {
         <p className="leading-tight">
           {isNowPlaying ? "Listening to:" : "Last Listened:"}
         </p>
-        <WaveForm />
+        {isNowPlaying || isFetching ? <WaveForm /> : null}
       </div>
       <div className="flex items-center">
-        {" "}
         {albumArt && albumArt["#text"] ? (
           <img
             src={albumArt["#text"]}
