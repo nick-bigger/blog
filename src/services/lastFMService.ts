@@ -2,7 +2,7 @@ import { LastFmRecentTracksResponse, LastFmTrack } from "@/types/lastFM";
 
 const API_KEY = import.meta.env.VITE_LASTFM_API_KEY;
 const USERNAME = import.meta.env.VITE_LASTFM_USERNAME;
-const BASE_URL = "http://ws.audioscrobbler.com/2.0/";
+const BASE_URL = "https://ws.audioscrobbler.com/2.0/";
 
 export const fetchLastTrack = async (): Promise<LastFmTrack | null> => {
   try {
