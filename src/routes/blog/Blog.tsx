@@ -80,28 +80,29 @@ export const Blog = () => {
         </CardHeader>
         <CardContent>
           <div className="mb-4 flex items-center gap-2">
-            <p className="text-gray-300">Search:</p>
+            <p>Search:</p>
             <Input
+              placeholder="search by name..."
               type="text"
               value={searchTerm}
               onChange={handleSearchChange}
             />
           </div>
           <div className="mb-8 flex flex-wrap items-center gap-2">
-            <p className="text-gray-300">Tags:</p>
+            <p>Tags:</p>
             <div className="flex flex-wrap gap-2">
               {allUniqueTags.map((tag, idx) => {
                 const isSelected = selectedTags.includes(tag);
                 return (
                   <Badge
                     key={idx}
-                    className={`cursor-pointer transition-all duration-200 ease-in-out ${isSelected ? "bg-blue-300 text-gray-900 hover:bg-blue-500" : "bg-gray-700 text-gray-200 hover:bg-gray-600"} `}
+                    className={`cursor-pointer transition-all duration-200 ease-in-out ${isSelected ? "bg-primary text-primary-foreground hover:bg-primary/80" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"} `}
                     onClick={() => handleTagClick(tag)}
                   >
                     {tag}
                     {isSelected && (
                       <X
-                        className="ml-1 h-3 w-3 text-gray-900"
+                        className="ml-1 h-3 w-3 text-primary-foreground"
                         onClick={(e) => {
                           e.stopPropagation();
                           handleTagClick(tag);
@@ -117,24 +118,22 @@ export const Blog = () => {
             {filteredAndSortedPosts.length > 0 ? (
               filteredAndSortedPosts.map((post) => (
                 <Link key={post.id} to={`/blog/${post.id}`}>
-                  <div className="rounded-sm border-2 border-black bg-gray-300 p-3 transition-all duration-200 ease-in-out hover:bg-blue-300 hover:text-white">
+                  <div className="rounded-sm border-2 border-border bg-muted p-3 text-primary transition-all duration-200 ease-in-out hover:bg-primary hover:text-primary-foreground">
                     <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
-                      <p className="mb-1 text-2xl font-bold text-gray-900">
-                        {post.title}
-                      </p>
-                      <p className="text-md font-bold text-gray-600">
+                      <p className="mb-1 text-2xl font-bold">{post.title}</p>
+                      <p className="text-md font-bold text-muted-foreground">
                         {format(post.timestamp, "PP")}
                       </p>
                     </div>
                     <div className="mb-2">
-                      <p className="text-md text-gray-600">
+                      <p className="text-md text-muted-foreground">
                         {post.description}
                       </p>
                     </div>
                     {post.tags.length > 0 && (
                       <div className="mt-2 flex flex-wrap gap-1">
                         {post.tags.map((tag, tagIdx) => (
-                          <Badge className="bg-gray-700" key={tagIdx}>
+                          <Badge className="bg-accent" key={tagIdx}>
                             {tag}
                           </Badge>
                         ))}

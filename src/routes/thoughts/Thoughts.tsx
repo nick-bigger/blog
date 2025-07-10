@@ -62,9 +62,9 @@ export const Thoughts = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="flex p-0">
-          <div className="flex flex-col border border-black bg-gray-300 text-black">
+          <div className="flex flex-col border border-border bg-gray-300 text-black">
             <div
-              className={`flex cursor-pointer justify-center border-b-2 border-black p-1 hover:bg-gray-400 ${
+              className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-gray-400 ${
                 selectedYear === null && selectedMonth === null
                   ? "bg-gray-400"
                   : ""
@@ -76,7 +76,7 @@ export const Thoughts = () => {
             {uniqueYears.map((year) => (
               <div
                 key={year}
-                className={`flex cursor-pointer justify-center border-b-2 border-black p-1 hover:bg-gray-400 ${
+                className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-gray-400 ${
                   selectedYear === year ? "bg-gray-400" : ""
                 }`}
                 onClick={() => {
@@ -94,7 +94,7 @@ export const Thoughts = () => {
                   .map((monthIndex) => (
                     <div
                       key={monthIndex}
-                      className={`flex cursor-pointer justify-center border-b-2 border-black p-1 hover:bg-gray-400 ${
+                      className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-gray-400 ${
                         selectedMonth === monthIndex ? "bg-gray-400" : ""
                       }`}
                       onClick={() => setSelectedMonth(monthIndex)}

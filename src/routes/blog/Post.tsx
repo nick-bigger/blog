@@ -46,7 +46,7 @@ export const Post = () => {
                 {post.tags.length > 0 && (
                   <div className="flex flex-wrap gap-1">
                     {post.tags.map((tag, tagIdx) => (
-                      <Badge className="bg-gray-700" key={tagIdx}>
+                      <Badge variant="secondary" key={tagIdx}>
                         {tag}
                       </Badge>
                     ))}

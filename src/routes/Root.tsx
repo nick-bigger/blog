@@ -15,7 +15,7 @@ export const Root = () => {
   return (
     <>
       <div
-        className="min-h-screen bg-gray-800 font-cnc-ra text-lg tracking-wider text-gray-100"
+        className="min-h-screen bg-gray-800 font-cnc-ra text-lg tracking-wider text-foreground"
         style={{ backgroundImage: `url(${StarsGif})` }}
       >
         <nav className="no-scrollbar z-30 mx-auto mb-[-2px] flex max-w-7xl justify-start gap-1 overflow-x-scroll px-2 pt-10">
@@ -23,8 +23,8 @@ export const Root = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
-                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-border bg-gray-500 p-2 hover:cursor-pointer"
             }
           >
             <House />
@@ -34,8 +34,8 @@ export const Root = () => {
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
-                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-border bg-gray-500 p-2 hover:cursor-pointer"
             }
           >
             <BookUser />
@@ -45,8 +45,8 @@ export const Root = () => {
             to="/blog"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
-                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-border bg-gray-500 p-2 hover:cursor-pointer"
             }
           >
             <NotebookText />
@@ -56,8 +56,8 @@ export const Root = () => {
             to="/thoughts"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
-                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-border bg-gray-500 p-2 hover:cursor-pointer"
             }
           >
             <MessageCircleDashed />
@@ -67,8 +67,8 @@ export const Root = () => {
             to="/poems"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
-                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-border bg-gray-500 p-2 hover:cursor-pointer"
             }
           >
             <Library />
@@ -78,15 +78,15 @@ export const Root = () => {
             to="/songs"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-black border-b-gray-700 bg-gray-700 p-2"
-                : "flex gap-2 rounded-t-md border-2 border-black bg-gray-500 p-2 hover:cursor-pointer"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-gray-700 bg-gray-700 p-2"
+                : "flex gap-2 rounded-t-md border-2 border-border bg-gray-500 p-2 hover:cursor-pointer"
             }
           >
             <Guitar />
             songs
           </NavLink>
         </nav>
-        <div className="min-h-screen border-y-2 border-black bg-gray-700 p-2 md:p-4">
+        <div className="min-h-screen border-y-2 border-border bg-gray-700 p-2 md:p-4">
           <Outlet />
         </div>
         <NowPlaying />

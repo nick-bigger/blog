@@ -9,7 +9,7 @@ const WaveformBar = ({
 }) => {
   return (
     <div
-      className={`h-2 w-1 origin-bottom transform rounded-full bg-blue-500 ${animationClass}`}
+      className={`h-2 w-1 origin-bottom transform rounded-full bg-primary ${animationClass}`}
       style={{
         animationDelay: `${animationDelay}ms`,
         animationDuration: `${animationDuration}ms`,

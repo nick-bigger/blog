@@ -35,7 +35,7 @@ export const Poems = () => {
                       <Link
                         to={`${poem.id}`}
                         key={poem.id}
-                        className="transition duration-200 hover:text-blue-400"
+                        className="transition duration-200 hover:text-primary"
                       >
                         <li className="text-xl">{poem.title}</li>
                       </Link>

@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import * as ReactDOM from "react-dom/client";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 
+import { ThemeProvider } from "./components/theme-provider";
 import "./index.css";
 import { About } from "./routes/About";
 import { ErrorPage } from "./routes/Error";
@@ -77,7 +78,9 @@ const router = createHashRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+      <ThemeProvider defaultTheme="dark" storageKey="theme">
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </QueryClientProvider>
   </React.StrictMode>,
 );

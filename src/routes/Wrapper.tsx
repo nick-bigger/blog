@@ -21,7 +21,7 @@ export const Wrapper = () => {
                   <Link
                     key={post.id}
                     to={`/blog/${post.id}`}
-                    className="transition duration-200 hover:text-blue-400"
+                    className="transition duration-200 hover:text-primary"
                   >
                     <li>{post.title}</li>
                   </Link>
@@ -33,8 +33,17 @@ export const Wrapper = () => {
             <CardHeader>
               <CardTitle>Status</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p>the worst thing you can be is boring</p>
+            <CardContent className="flex gap-2">
+              <div className="h-[32px] min-h-[32px] w-[32px] min-w-[32px] rounded-sm bg-white"></div>
+              <div>
+                <div className="flex justify-between">
+                  <p className="leading-tight text-primary">@daizycrown</p>
+                  <p className="leading-tight text-muted-foreground">3d</p>
+                </div>
+                <p className="leading-tight">
+                  the worst thing you can be is boring
+                </p>
+              </div>
             </CardContent>
           </Card>
           <Card>
@@ -83,7 +92,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://beliapp.co/app/daizycrown"
-                    className="transition duration-200 hover:text-blue-400"
+                    className="transition duration-200 hover:text-primary"
                   >
                     beli
                   </a>
@@ -92,7 +101,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://www.goodreads.com/user/show/34398985-nick"
-                    className="transition duration-200 hover:text-blue-400"
+                    className="transition duration-200 hover:text-primary"
                   >
                     goodreads
                   </a>
@@ -101,7 +110,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://boxd.it/ec5Jr"
-                    className="transition duration-200 hover:text-blue-400"
+                    className="transition duration-200 hover:text-primary"
                   >
                     letterboxd
                   </a>
@@ -110,7 +119,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://open.spotify.com/user/1136204305?si=e34a13bd7c7149e4"
-                    className="transition duration-200 hover:text-blue-400"
+                    className="transition duration-200 hover:text-primary"
                   >
                     spotify
                   </a>
@@ -119,7 +128,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://www.instagram.com/nick.bigger/"
-                    className="transition duration-200 hover:text-blue-400"
+                    className="transition duration-200 hover:text-primary"
                   >
                     instagram
                   </a>
@@ -128,7 +137,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://www.linkedin.com/in/nickbigger/"
-                    className="transition duration-200 hover:text-blue-400"
+                    className="transition duration-200 hover:text-primary"
                   >
                     linkedin
                   </a>
@@ -137,7 +146,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://github.com/nick-bigger"
-                    className="transition duration-200 hover:text-blue-400"
+                    className="transition duration-200 hover:text-primary"
                   >
                     GitHub
                   </a>
@@ -171,9 +180,9 @@ export const Wrapper = () => {
               <CardTitle>Monthly Goals</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-400">✅ Apr: screen time</p>
-              <p className="text-gray-400">❌ May: meditate</p>
-              <p className="text-gray-400">✅ Jun: skateboard !!</p>
+              <p className="text-muted-foreground">✅ Apr: screen time</p>
+              <p className="text-muted-foreground">❌ May: meditate</p>
+              <p className="text-muted-foreground">✅ Jun: skateboard !!</p>
               <p>▶️ Jul: writing !!</p>
             </CardContent>
           </Card>

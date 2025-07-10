@@ -45,9 +45,9 @@ export const NowPlaying = () => {
 
   return (
     <div
-      className={`fixed left-1 right-1 flex items-center justify-between rounded-t-lg border-2 border-b-0 border-black bg-white p-2 px-4 transition-transform duration-700 ease-in-out md:left-5 md:clear-right md:max-w-fit md:-translate-x-0 ${isVisible ? "bottom-0 translate-y-0" : "-bottom-full translate-y-full"} `}
+      className={`fixed left-1 right-1 flex items-center justify-between rounded-t-lg border-2 border-b-0 border-border bg-background p-2 px-4 text-foreground transition-transform duration-700 ease-in-out md:left-5 md:clear-right md:max-w-fit md:-translate-x-0 ${isVisible ? "bottom-0 translate-y-0" : "-bottom-full translate-y-full"} `}
     >
-      <div className="mr-8 flex flex-col text-black">
+      <div className="mr-8 flex flex-col">
         <p className="leading-tight">
           {isNowPlaying ? "Listening to:" : "Last Listened:"}
         </p>
@@ -66,12 +66,10 @@ export const NowPlaying = () => {
           </div>
         )}
         <div className="flex flex-col">
-          <p className="text-md max-w-[150px] truncate leading-tight text-black">
+          <p className="text-md max-w-[150px] truncate leading-tight">
             {lastTrack.name}
           </p>
-          <p className="text-sm leading-tight text-black">
-            {lastTrack.artist["#text"]}
-          </p>
+          <p className="text-sm leading-tight">{lastTrack.artist["#text"]}</p>
         </div>
       </div>
     </div>

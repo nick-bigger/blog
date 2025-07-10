@@ -10,7 +10,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card"
-      className="rounded-sm border-2 border-black bg-white p-[1px] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+      className="rounded-sm border-2 border-border bg-white p-[1px] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
     >
       <div
         className={cn("h-[100%] rounded-sm bg-gray-800", className)}
@@ -29,7 +29,7 @@ function CardHeader({
     <div
       data-slot="card-header"
       className={cn(
-        "@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 relative grid auto-rows-min items-start gap-1.5 border-b border-gray-700 bg-gray-500 px-3 py-1",
+        "@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 relative grid auto-rows-min items-start gap-1.5 border-b border-border bg-gray-500 px-3 py-1",
         className,
       )}
       {...props}
