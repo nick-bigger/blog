@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 
-// Import useState
 import { format, formatRelative, getMonth, getYear, isSameDay } from "date-fns";
 
-// Import getYear, getMonth
 import {
   Card,
   CardContent,
@@ -24,7 +22,7 @@ export const Thoughts = () => {
   // Filter thoughts based on selectedYear and selectedMonth.
   const filteredThoughts = thoughts.filter((thought) => {
     const thoughtYear = getYear(thought.timestamp);
-    const thoughtMonth = getMonth(thought.timestamp); // 0-indexed
+    const thoughtMonth = getMonth(thought.timestamp);
 
     if (selectedYear !== null && thoughtYear !== selectedYear) {
       return false;
