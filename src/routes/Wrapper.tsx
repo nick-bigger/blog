@@ -168,10 +168,13 @@ export const Wrapper = () => {
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Monthly Goal</CardTitle>
+              <CardTitle>Monthly Goals</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>skateboard !!!</p>
+              <p className="text-gray-400">✅ Apr: screen time</p>
+              <p className="text-gray-400">❌ May: meditate</p>
+              <p className="text-gray-400">✅ Jun: skateboard !!</p>
+              <p>▶️ Jul: writing !!</p>
             </CardContent>
           </Card>
         </aside>

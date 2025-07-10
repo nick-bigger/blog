@@ -109,6 +109,7 @@ export const Root = () => {
           </div>
           <footer className="pb-10 text-center font-mono text-sm text-gray-400">
             <p>2025 nick, all rights reserved</p>
+            <p>made by me :)</p>
           </footer>
         </div>
       </div>
