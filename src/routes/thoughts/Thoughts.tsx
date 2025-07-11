@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { format, formatRelative, getMonth, getYear, isSameDay } from "date-fns";
+import { format, getMonth, getYear, isSameDay } from "date-fns";
 
 import {
   Card,
@@ -130,10 +130,20 @@ export const Thoughts = () => {
                         className="absolute left-[1px] top-[1px] h-0 w-0 -translate-x-full -translate-y-px rotate-[90deg] transform-gpu border-r-[12px] border-t-[12px] border-r-transparent border-t-white"
                         style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
                       ></div>
-                      <p className="mb-1 text-gray-500">
-                        {formatRelative(thought.timestamp, new Date())}
-                      </p>
-                      <p>{thought.content}</p>
+                      <div className="flex gap-2">
+                        <div className="h-[40px] min-h-[40px] w-[40px] min-w-[40px] rounded-full bg-primary" />
+                        <div>
+                          <div className="flex gap-2">
+                            <p className="text-black">nick</p>
+                            <p className="text-muted-foreground">@daizycrown</p>
+                            <p className="text-muted-foreground">•</p>
+                            <p className="text-muted-foreground">
+                              {format(thought.timestamp, "HH:mm - MMM d, yyyy")}
+                            </p>
+                          </div>
+                          <p>{thought.content}</p>
+                        </div>
+                      </div>
                     </div>
                   </React.Fragment>
                 );

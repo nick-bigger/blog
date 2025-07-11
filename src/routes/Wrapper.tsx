@@ -1,5 +1,7 @@
+import { Clock, MapPin } from "lucide-react";
 import { Link, Outlet } from "react-router-dom";
 
+import { Weather } from "@/components/Weather";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Time } from "@/components/ui/time";
 import { posts } from "@/data/posts";
@@ -48,10 +50,18 @@ export const Wrapper = () => {
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>My Time</CardTitle>
+              <CardTitle>Where I Am</CardTitle>
             </CardHeader>
             <CardContent>
-              <Time />
+              <div className="flex items-center gap-2 text-foreground">
+                <MapPin size={18} />
+                <span>Austin, TX</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground">
+                <Clock size={16} />
+                <Time />
+              </div>
+              <Weather />
             </CardContent>
           </Card>
           <Card>

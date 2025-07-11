@@ -118,7 +118,7 @@ export const Blog = () => {
             {filteredAndSortedPosts.length > 0 ? (
               filteredAndSortedPosts.map((post) => (
                 <Link key={post.id} to={`/blog/${post.id}`}>
-                  <div className="rounded-sm border-2 border-border bg-muted p-3 text-primary transition-all duration-200 ease-in-out hover:bg-primary hover:text-primary-foreground">
+                  <div className="rounded-sm border-2 border-border bg-accent p-3 transition-all duration-200 ease-in-out hover:bg-primary hover:text-primary-foreground">
                     <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
                       <p className="mb-1 text-2xl font-bold">{post.title}</p>
                       <p className="text-md font-bold text-muted-foreground">
@@ -133,7 +133,7 @@ export const Blog = () => {
                     {post.tags.length > 0 && (
                       <div className="mt-2 flex flex-wrap gap-1">
                         {post.tags.map((tag, tagIdx) => (
-                          <Badge className="bg-accent" key={tagIdx}>
+                          <Badge variant="secondary" key={tagIdx}>
                             {tag}
                           </Badge>
                         ))}
