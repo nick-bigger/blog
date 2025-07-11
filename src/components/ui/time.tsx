@@ -12,7 +12,6 @@ export const Time = () => {
         timeZone: "America/Chicago",
         hour: "numeric",
         minute: "numeric",
-        second: "numeric",
         hour12: true,
       });
       setCurrentTimeFormatted(`${time} CDT`);

@@ -190,9 +190,15 @@ export const Wrapper = () => {
               <CardTitle>Monthly Goals</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground">✅ Apr: screen time</p>
-              <p className="text-muted-foreground">❌ May: meditate</p>
-              <p className="text-muted-foreground">✅ Jun: skateboard !!</p>
+              <p className="text-muted-foreground line-through">
+                ✅ Apr: screen time
+              </p>
+              <p className="text-muted-foreground line-through">
+                ❌ May: meditate
+              </p>
+              <p className="text-muted-foreground line-through">
+                ✅ Jun: skateboard !!
+              </p>
               <p>▶️ Jul: writing !!</p>
             </CardContent>
           </Card>

@@ -45,7 +45,7 @@ export const NowPlaying = () => {
 
   return (
     <div
-      className={`fixed left-1 right-1 flex items-center justify-between rounded-t-lg border-2 border-b-0 border-border bg-background p-2 px-4 text-foreground transition-transform duration-700 ease-in-out md:left-5 md:clear-right md:max-w-fit md:-translate-x-0 ${isVisible ? "bottom-0 translate-y-0" : "-bottom-full translate-y-full"} `}
+      className={`fixed left-1 right-1 flex items-center justify-between rounded-t-lg border-2 border-b-0 border-border bg-background p-2 px-4 text-foreground shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-transform duration-700 ease-in-out md:left-5 md:clear-right md:max-w-fit md:-translate-x-0 ${isVisible ? "bottom-0 translate-y-0" : "-bottom-full translate-y-full"} `}
     >
       <div className="mr-8 flex flex-col">
         <p className="leading-tight">

@@ -34,12 +34,12 @@ export const Post = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Card>
-        <CardContent>
+        <CardContent className="md:p-6">
           <div className="flex flex-wrap justify-between">
             <div>
               <h3 className="text-3xl">{post.title}</h3>
-              <p className="text-md mb-2 text-gray-500">
-                {format(post.timestamp, "PP")}
+              <p className="text-md mb-2 text-muted-foreground">
+                Posted on {format(post.timestamp, "PP")}
               </p>
               <div className="mb-8 flex flex-wrap items-center gap-2">
                 <p className="text-gray-300">Tags:</p>
@@ -73,7 +73,7 @@ export const Post = () => {
               </Button>
             </div>
           </div>
-          <hr className="mb-8" />
+          <hr className="mb-8 border-foreground" />
           <Markdown
             components={{
               blockquote(props) {
@@ -96,6 +96,9 @@ export const Post = () => {
               },
               h4(props) {
                 return <H4 {...props} />;
+              },
+              hr(props) {
+                return <hr className="border-foreground" {...props} />;
               },
               a(props) {
                 return <Link className="text-xl" target="_blank" {...props} />;

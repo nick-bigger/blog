@@ -121,12 +121,12 @@ export const Blog = () => {
                   <div className="rounded-sm border-2 border-border bg-accent p-3 transition-all duration-200 ease-in-out hover:bg-primary hover:text-primary-foreground">
                     <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
                       <p className="mb-1 text-2xl font-bold">{post.title}</p>
-                      <p className="text-md font-bold text-muted-foreground">
+                      <p className="text-md font-bold text-muted">
                         {format(post.timestamp, "PP")}
                       </p>
                     </div>
                     <div className="mb-2">
-                      <p className="text-md text-muted-foreground">
+                      <p className="text-md text-accent-foreground">
                         {post.description}
                       </p>
                     </div>

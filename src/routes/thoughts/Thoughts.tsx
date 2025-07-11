@@ -133,11 +133,15 @@ export const Thoughts = () => {
                       <div className="flex gap-2">
                         <div className="h-[40px] min-h-[40px] w-[40px] min-w-[40px] rounded-full bg-primary" />
                         <div>
-                          <div className="flex gap-2">
-                            <p className="text-black">nick</p>
-                            <p className="text-muted-foreground">@daizycrown</p>
-                            <p className="text-muted-foreground">•</p>
-                            <p className="text-muted-foreground">
+                          <div className="flex flex-wrap gap-x-2">
+                            <p className="leading-tight text-black">nick</p>
+                            <p className="leading-tight text-muted-foreground">
+                              @daizycrown
+                            </p>
+                            <p className="leading-tight text-muted-foreground">
+                              •
+                            </p>
+                            <p className="leading-tight text-muted-foreground">
                               {format(thought.timestamp, "HH:mm - MMM d, yyyy")}
                             </p>
                           </div>
