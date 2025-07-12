@@ -103,6 +103,41 @@ export const Post = () => {
               a(props) {
                 return <Link className="text-xl" target="_blank" {...props} />;
               },
+              img(props) {
+                const { node } = props;
+                const { properties } = node || {};
+
+                let altText = "";
+                let width;
+                let height = "500";
+
+                if (properties?.alt) {
+                  const altString = properties.alt.toString();
+                  const parts = altString.split("|");
+
+                  // First part is always the alt text.
+                  altText = parts[0];
+
+                  if (parts.length > 1) {
+                    const dimensions = parts[1];
+                    const dimensionParts = dimensions.split("x");
+
+                    if (dimensionParts.length === 2) {
+                      [width, height] = dimensionParts;
+                    }
+                  }
+                }
+
+                return (
+                  <img
+                    alt={altText}
+                    width={width}
+                    height={height}
+                    className="mx-auto"
+                    {...props}
+                  />
+                );
+              },
             }}
           >
             {post.content}

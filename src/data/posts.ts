@@ -1,8 +1,17 @@
 import LifeUpdate from "./posts/20250606LifeUpdate.md?raw";
 import AgainstConsistencyContent from "./posts/AgainstConsistency.md?raw";
+import BookReviewTDET from "./posts/BookReview.md?raw";
 import TestHelloContent from "./posts/TestHello.md?raw";
 
 export const posts = [
+  {
+    id: 3,
+    title: "Book Review: 'The Design of Everyday Things'",
+    timestamp: new Date(2025, 6, 11),
+    content: BookReviewTDET,
+    description: "Life update on my current creative endeavors",
+    tags: ["books", "review", "art"],
+  },
   {
     id: 3,
     title: "Life Update",
