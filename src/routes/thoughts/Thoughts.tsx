@@ -62,9 +62,9 @@ export const Thoughts = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="flex p-0">
-          <div className="flex flex-col border border-border bg-gray-300 text-black">
+          <div className="flex flex-col border border-t-0 border-border bg-accent">
             <div
-              className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-gray-400 ${
+              className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-accent/95 ${
                 selectedYear === null && selectedMonth === null
                   ? "bg-gray-400"
                   : ""
@@ -121,20 +121,16 @@ export const Thoughts = () => {
                 return (
                   <React.Fragment key={thought.timestamp.toISOString() + index}>
                     {showDateSeparator && (
-                      <p className="my-2 text-center text-sm text-gray-300">
+                      <p className="my-2 text-center text-sm text-muted-foreground">
                         {format(thought.timestamp, "MMMM d, yyyy")}{" "}
                       </p>
                     )}
-                    <div className="relative rounded-lg rounded-tl-none bg-white p-4 text-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                      <div
-                        className="absolute left-[1px] top-[1px] h-0 w-0 -translate-x-full -translate-y-px rotate-[90deg] transform-gpu border-r-[12px] border-t-[12px] border-r-transparent border-t-white"
-                        style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-                      ></div>
+                    <div className="relative rounded-lg rounded-tl-none border border-border bg-background p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                       <div className="flex gap-2">
                         <div className="h-[40px] min-h-[40px] w-[40px] min-w-[40px] rounded-full bg-primary" />
                         <div>
                           <div className="flex flex-wrap gap-x-2">
-                            <p className="leading-tight text-black">nick</p>
+                            <p className="leading-tight">nick</p>
                             <p className="leading-tight text-muted-foreground">
                               @daizycrown
                             </p>

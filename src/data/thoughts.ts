@@ -1,5 +1,9 @@
 export const thoughts = [
   {
+    timestamp: new Date(2025, 6, 12, 20, 12),
+    content: "trying out a light theme on the site instead :o",
+  },
+  {
     timestamp: new Date(2025, 6, 10, 13, 32),
     content:
       "i've been collecting pictures of bad design that i see in the world. i think it would be kinda fun to have a part of this site where i can host all the pictures. AND, and maybe the page is really poorly designed or something",

@@ -15,7 +15,7 @@ export const Welcome = () => {
     <>
       <Card>
         <CardContent>
-          <h3 className="mb-4 text-3xl text-white">welcome !</h3>
+          <h3 className="mb-4 text-3xl">welcome !</h3>
           <p className="mb-4 leading-relaxed">
             hey there ! i'm nick. i was inspired by all the cool websites over
             on the{" "}
@@ -64,7 +64,7 @@ export const Welcome = () => {
         <CardContent>
           <div className="mb-2 grid gap-4 sm:grid-cols-2">
             <div>
-              <h3 className="mb-2 text-2xl text-white">me:</h3>
+              <h3 className="mb-2 text-2xl">me:</h3>
               <ul className="ml-4 list-disc">
                 <li>name: nick</li>
                 <li>birthday: 9/2</li>
@@ -72,7 +72,7 @@ export const Welcome = () => {
               </ul>
             </div>
             <div>
-              <h3 className="mb-2 text-2xl text-white">favorites:</h3>
+              <h3 className="mb-2 text-2xl">favorites:</h3>
               <ul className="ml-4 list-disc">
                 <li>food: ramen</li>
                 <li>color: green</li>
@@ -82,7 +82,7 @@ export const Welcome = () => {
               </ul>
             </div>
           </div>
-          <h3 className="mb-2 mt-4 text-2xl text-white">fun facts:</h3>
+          <h3 className="mb-2 mt-4 text-2xl">fun facts:</h3>
           <ul className="mb-4 ml-4 list-disc">
             <li>i almost died from a trip to the water park</li>
             <li>i pierced my tongue to win a race</li>

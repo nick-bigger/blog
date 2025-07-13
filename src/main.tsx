@@ -78,7 +78,7 @@ const router = createHashRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="dark" storageKey="theme">
+      <ThemeProvider defaultTheme="light" storageKey="theme">
         <RouterProvider router={router} />
       </ThemeProvider>
     </QueryClientProvider>
