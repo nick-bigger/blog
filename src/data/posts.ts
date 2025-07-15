@@ -9,7 +9,7 @@ export const posts = [
     title: "Book Review: 'The Design of Everyday Things'",
     timestamp: new Date(2025, 6, 11),
     content: BookReviewTDET,
-    description: "Life update on my current creative endeavors",
+    description: "My review of a very famous design book",
     tags: ["books", "review", "art"],
   },
   {
