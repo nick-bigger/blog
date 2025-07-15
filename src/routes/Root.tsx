@@ -107,7 +107,7 @@ export const Root = () => {
               <img src="https://www.freevisitorcounters.com/en/counter/render/1357826/t/5" />
             </a>
           </div>
-          <footer className="pb-10 text-center font-mono text-sm text-gray-400">
+          <footer className="pb-10 text-center font-mono text-sm text-muted-foreground">
             <p>2025 nick, all rights reserved</p>
             <p>made by me :)</p>
           </footer>
