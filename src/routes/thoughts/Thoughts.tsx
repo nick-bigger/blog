@@ -127,7 +127,7 @@ export const Thoughts = () => {
                     )}
                     <div className="relative rounded-lg rounded-tl-none border border-border bg-background p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                       <div className="flex gap-2">
-                        <div className="h-[40px] min-h-[40px] w-[40px] min-w-[40px] rounded-full bg-primary" />
+                        <div className="h-[40px] min-h-[40px] w-[40px] min-w-[40px] rounded-sm bg-primary" />
                         <div>
                           <div className="flex flex-wrap gap-x-2">
                             <p className="leading-tight">nick</p>

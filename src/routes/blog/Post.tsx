@@ -42,7 +42,7 @@ export const Post = () => {
                 Posted on {format(post.timestamp, "PP")}
               </p>
               <div className="mb-8 flex flex-wrap items-center gap-2">
-                <p className="text-gray-300">Tags:</p>
+                <p className="text-muted-foreground">Tags:</p>
                 {post.tags.length > 0 && (
                   <div className="flex flex-wrap gap-1">
                     {post.tags.map((tag, tagIdx) => (

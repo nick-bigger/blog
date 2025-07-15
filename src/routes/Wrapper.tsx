@@ -5,6 +5,7 @@ import { Weather } from "@/components/Weather";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Time } from "@/components/ui/time";
 import { posts } from "@/data/posts";
+import { formatRelativeShorthand } from "@/helpers/formatRelativeShorthand";
 
 const MAX_BLOG_POSTS = 5;
 
@@ -36,14 +37,17 @@ export const Wrapper = () => {
               <CardTitle>Status</CardTitle>
             </CardHeader>
             <CardContent className="flex gap-2">
-              <div className="h-[32px] min-h-[32px] w-[32px] min-w-[32px] rounded-sm bg-white"></div>
+              <div className="h-[32px] min-h-[32px] w-[32px] min-w-[32px] rounded-sm bg-primary"></div>
               <div>
                 <div className="flex justify-between">
                   <p className="leading-tight text-primary">@daizycrown</p>
-                  <p className="leading-tight text-muted-foreground">3d</p>
+                  <p className="leading-tight text-muted-foreground">
+                    {formatRelativeShorthand(new Date(2025, 6, 15, 18, 4))}
+                  </p>
                 </div>
                 <p className="leading-tight">
-                  the worst thing you can be is boring
+                  i don't love the light mode, but i haven't got a dark mode i
+                  prefer yet
                 </p>
               </div>
             </CardContent>
