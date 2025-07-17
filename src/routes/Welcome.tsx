@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import Avatar from "@/assets/avatar.png";
 import Stamp1 from "@/assets/stamps/stamp1.gif";
 import Stamp2 from "@/assets/stamps/stamp2.jpg";
 import Stamp7 from "@/assets/stamps/stamp3.png";
@@ -18,7 +19,10 @@ export const Welcome = () => {
           <CardTitle>welcome !</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="mb-4 leading-relaxed">
+          <div className="float-left mr-4 block h-fit w-fit border border-primary">
+            <img src={Avatar} className="w-[96px]" />
+          </div>
+          <p className="leading-relaxed">
             hey there ! i'm nick. i was inspired by all the cool websites over
             on the{" "}
             <a className="underline" href="https://indieweb.org">
@@ -30,8 +34,10 @@ export const Welcome = () => {
           </p>
           <p className="mb-4 leading-relaxed">
             more specifically, this website is a place for me to dump content
-            without the pressure of any of it needing to be good. here, i am
-            allowed to be bad :)
+            without the pressure of any of it needing to be good.
+          </p>
+          <p className="mb-4 leading-relaxed">
+            here, i am allowed to be bad at stuff :)
           </p>
           <p className="mb-4 leading-relaxed">
             this way, i get to make a repo of my content without fear; you get
