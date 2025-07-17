@@ -72,7 +72,7 @@ export const Blog = () => {
     <div className="mx-auto max-w-7xl">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Blog</CardTitle>
+          <CardTitle>Blog</CardTitle>
           <CardDescription>
             here is where i write about anything and everything. some of these
             are going to be serious and most are just for fun !!

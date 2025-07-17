@@ -23,7 +23,7 @@ export const Root = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2 text-primary"
                 : "flex gap-2 rounded-t-md border-2 border-border bg-card p-2 hover:cursor-pointer"
             }
           >
@@ -34,7 +34,7 @@ export const Root = () => {
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2 text-primary"
                 : "flex gap-2 rounded-t-md border-2 border-border bg-card p-2 hover:cursor-pointer"
             }
           >
@@ -45,7 +45,7 @@ export const Root = () => {
             to="/blog"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2 text-primary"
                 : "flex gap-2 rounded-t-md border-2 border-border bg-card p-2 hover:cursor-pointer"
             }
           >
@@ -56,7 +56,7 @@ export const Root = () => {
             to="/thoughts"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2 text-primary"
                 : "flex gap-2 rounded-t-md border-2 border-border bg-card p-2 hover:cursor-pointer"
             }
           >
@@ -67,7 +67,7 @@ export const Root = () => {
             to="/poems"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2 text-primary"
                 : "flex gap-2 rounded-t-md border-2 border-border bg-card p-2 hover:cursor-pointer"
             }
           >
@@ -78,7 +78,7 @@ export const Root = () => {
             to="/songs"
             className={({ isActive }) =>
               isActive
-                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2"
+                ? "flex gap-2 rounded-t-md border-2 border-border border-b-card bg-card p-2 text-primary"
                 : "flex gap-2 rounded-t-md border-2 border-border bg-card p-2 hover:cursor-pointer"
             }
           >

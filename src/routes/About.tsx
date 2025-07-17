@@ -57,9 +57,11 @@ export const About = () => {
         </CardHeader>
         <CardContent>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Card>
+            <Card className="border-none">
               <CardHeader>
-                <CardTitle>Books</CardTitle>
+                <CardTitle className="lowercase text-foreground">
+                  Books:
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-4">
@@ -68,9 +70,11 @@ export const About = () => {
                 </ul>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="border-none">
               <CardHeader>
-                <CardTitle>Music</CardTitle>
+                <CardTitle className="lowercase text-foreground">
+                  Music:
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-4">
@@ -79,9 +83,11 @@ export const About = () => {
                 </ul>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="border-none">
               <CardHeader>
-                <CardTitle>Video Games</CardTitle>
+                <CardTitle className="lowercase text-foreground">
+                  Video Games:
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-4">

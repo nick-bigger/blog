@@ -19,12 +19,12 @@ export const Wrapper = () => {
               <CardTitle>Recent Posts</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="ml-4 list-disc">
+              <ul className="ml-4 list-['-_']">
                 {posts.slice(0, MAX_BLOG_POSTS).map((post) => (
                   <Link
                     key={post.id}
                     to={`/blog/${post.id}`}
-                    className="transition duration-200 hover:text-primary"
+                    className="transition duration-200 hover:text-primary hover:underline"
                   >
                     <li>{post.title}</li>
                   </Link>
@@ -101,12 +101,12 @@ export const Wrapper = () => {
               <CardTitle>Find Me</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-1">
+              <ul className="ml-4 list-['-_']">
                 <li>
                   <a
                     target="_blank"
                     href="https://beliapp.co/app/daizycrown"
-                    className="transition duration-200 hover:text-primary"
+                    className="transition duration-200 hover:text-primary hover:underline"
                   >
                     beli
                   </a>
@@ -115,7 +115,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://www.goodreads.com/user/show/34398985-nick"
-                    className="transition duration-200 hover:text-primary"
+                    className="transition duration-200 hover:text-primary hover:underline"
                   >
                     goodreads
                   </a>
@@ -124,7 +124,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://boxd.it/ec5Jr"
-                    className="transition duration-200 hover:text-primary"
+                    className="transition duration-200 hover:text-primary hover:underline"
                   >
                     letterboxd
                   </a>
@@ -133,7 +133,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://open.spotify.com/user/1136204305?si=e34a13bd7c7149e4"
-                    className="transition duration-200 hover:text-primary"
+                    className="transition duration-200 hover:text-primary hover:underline"
                   >
                     spotify
                   </a>
@@ -142,7 +142,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://www.instagram.com/nick.bigger/"
-                    className="transition duration-200 hover:text-primary"
+                    className="transition duration-200 hover:text-primary hover:underline"
                   >
                     instagram
                   </a>
@@ -151,7 +151,7 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://www.linkedin.com/in/nickbigger/"
-                    className="transition duration-200 hover:text-primary"
+                    className="transition duration-200 hover:text-primary hover:underline"
                   >
                     linkedin
                   </a>
@@ -160,9 +160,9 @@ export const Wrapper = () => {
                   <a
                     target="_blank"
                     href="https://github.com/nick-bigger"
-                    className="transition duration-200 hover:text-primary"
+                    className="transition duration-200 hover:text-primary hover:underline"
                   >
-                    GitHub
+                    github
                   </a>
                 </li>
               </ul>

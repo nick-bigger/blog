@@ -11,7 +11,7 @@ export const Songs = () => {
     <div className="mx-auto max-w-7xl">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Songs</CardTitle>
+          <CardTitle>Songs</CardTitle>
           <CardDescription>
             lyrics for songs that i've written. hopefully i can figure out how
             to attach the audio at some point !

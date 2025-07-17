@@ -15,7 +15,7 @@ export const Poems = () => {
     <div className="mx-auto max-w-7xl">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Poetry</CardTitle>
+          <CardTitle>Poetry</CardTitle>
           <CardDescription>
             random poems. i like short poetry, and i'm working on moving into
             some longer form content as well

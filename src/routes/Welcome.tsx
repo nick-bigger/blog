@@ -14,8 +14,10 @@ export const Welcome = () => {
   return (
     <>
       <Card>
+        <CardHeader>
+          <CardTitle>welcome !</CardTitle>
+        </CardHeader>
         <CardContent>
-          <h3 className="mb-4 text-3xl">welcome !</h3>
           <p className="mb-4 leading-relaxed">
             hey there ! i'm nick. i was inspired by all the cool websites over
             on the{" "}

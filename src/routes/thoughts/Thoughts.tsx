@@ -56,7 +56,7 @@ export const Thoughts = () => {
     <div className="mx-auto max-w-7xl">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Thoughts</CardTitle>
+          <CardTitle>Thoughts</CardTitle>
           <CardDescription>
             kind of like my own personal twitter. random thoughts, ideas, etc.
           </CardDescription>
@@ -125,7 +125,7 @@ export const Thoughts = () => {
                         {format(thought.timestamp, "MMMM d, yyyy")}{" "}
                       </p>
                     )}
-                    <div className="relative rounded-lg rounded-tl-none border border-border bg-background p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="relative rounded-lg rounded-tl-none border border-border bg-background p-4">
                       <div className="flex gap-2">
                         <div className="h-[40px] min-h-[40px] w-[40px] min-w-[40px] rounded-sm bg-primary" />
                         <div>
