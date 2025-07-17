@@ -1,5 +1,14 @@
 export const thoughts = [
   {
+    timestamp: new Date(2025, 6, 17, 16, 58),
+    content:
+      "also i added my pixel portrait to the welcome page ! thank you Dimdan for the cool idea :~) but man, pixel art is hard. took me forever",
+  },
+  {
+    timestamp: new Date(2025, 6, 17, 16, 58),
+    content: "okay we're back to the comfort of the dark theme :P",
+  },
+  {
     timestamp: new Date(2025, 6, 12, 20, 12),
     content: "trying out a light theme on the site instead :o",
   },
