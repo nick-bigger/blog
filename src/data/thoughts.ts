@@ -2,7 +2,7 @@ export const thoughts = [
   {
     timestamp: new Date(2025, 6, 17, 16, 58),
     content:
-      "also i added my pixel portrait to the welcome page ! thank you Dimdan for the cool idea :~) but man, pixel art is hard. took me forever",
+      "also i added my pixel portrait to the welcome page ! thank you Dimden.dev for the cool idea :~) but man, pixel art is hard. took me forever",
   },
   {
     timestamp: new Date(2025, 6, 17, 16, 58),
