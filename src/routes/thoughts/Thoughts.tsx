@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { format, getMonth, getYear, isSameDay } from "date-fns";
 
+import Avatar from "@/assets/avatar.png";
 import {
   Card,
   CardContent,
@@ -127,7 +128,12 @@ export const Thoughts = () => {
                     )}
                     <div className="relative rounded-lg rounded-tl-none border border-border bg-background p-4">
                       <div className="flex gap-2">
-                        <div className="h-[40px] min-h-[40px] w-[40px] min-w-[40px] rounded-sm bg-primary" />
+                        <div className="float-left block h-fit min-w-[32px] overflow-hidden rounded-sm border border-primary">
+                          <img
+                            src={Avatar}
+                            className="h-[32px] w-[32px] min-w-[32px]"
+                          />
+                        </div>
                         <div>
                           <div className="flex flex-wrap gap-x-2">
                             <p className="leading-tight">nick</p>

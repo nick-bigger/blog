@@ -20,9 +20,9 @@ export const Welcome = () => {
         </CardHeader>
         <CardContent>
           <div className="float-left mr-4 block h-fit w-fit border border-primary">
-            <img src={Avatar} className="w-[96px]" />
+            <img src={Avatar} className="w-[150px]" />
           </div>
-          <p className="leading-relaxed">
+          <p className="mb-4 leading-relaxed">
             hey there ! i'm nick. i was inspired by all the cool websites over
             on the{" "}
             <a className="underline" href="https://indieweb.org">

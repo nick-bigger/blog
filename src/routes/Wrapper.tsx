@@ -1,6 +1,7 @@
 import { Clock, MapPin } from "lucide-react";
 import { Link, Outlet } from "react-router-dom";
 
+import Avatar from "@/assets/avatar.png";
 import { Weather } from "@/components/Weather";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Time } from "@/components/ui/time";
@@ -37,7 +38,9 @@ export const Wrapper = () => {
               <CardTitle>Status</CardTitle>
             </CardHeader>
             <CardContent className="flex gap-2">
-              <div className="h-[32px] min-h-[32px] w-[32px] min-w-[32px] rounded-sm bg-primary"></div>
+              <div className="float-left block h-fit min-w-[32px] overflow-hidden rounded-sm border border-muted">
+                <img src={Avatar} className="h-[32px] w-[32px] min-w-[32px]" />
+              </div>
               <div>
                 <div className="flex justify-between">
                   <p className="leading-tight text-primary">@daizycrown</p>
@@ -45,10 +48,7 @@ export const Wrapper = () => {
                     {formatRelativeShorthand(new Date(2025, 6, 15, 18, 4))}
                   </p>
                 </div>
-                <p className="leading-tight">
-                  i don't love the light mode, but i haven't got a dark mode i
-                  prefer yet
-                </p>
+                <p className="leading-tight">PIXEL ART IS HARD</p>
               </div>
             </CardContent>
           </Card>
