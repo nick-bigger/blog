@@ -1,4 +1,9 @@
 export const thoughts = [
+    {
+    timestamp: new Date(2025, 6, 18, 23, 53),
+    content:
+      "just finished k-pop demon hunters. so good. and i'm so glad to finally have more unique animated movies coming out !!",
+  },
   {
     timestamp: new Date(2025, 6, 17, 16, 58),
     content:
