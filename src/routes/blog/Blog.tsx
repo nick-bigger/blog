@@ -70,7 +70,7 @@ export const Blog = () => {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <Card>
+      <Card className="border-none">
         <CardHeader>
           <CardTitle>Blog</CardTitle>
           <CardDescription>

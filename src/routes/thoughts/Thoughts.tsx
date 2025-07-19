@@ -55,19 +55,19 @@ export const Thoughts = () => {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <Card>
+      <Card className="border-none">
         <CardHeader>
           <CardTitle>Thoughts</CardTitle>
           <CardDescription>
             kind of like my own personal twitter. random thoughts, ideas, etc.
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex p-0">
-          <div className="flex flex-col border border-t-0 border-border bg-accent">
+        <CardContent className="flex">
+          <div className="flex flex-col border border-t-0 border-border bg-accent rounded-sm overflow-hidden">
             <div
-              className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-accent/95 ${
+              className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary ${
                 selectedYear === null && selectedMonth === null
-                  ? "bg-gray-400"
+                  ? "bg-primary"
                   : ""
               }`}
               onClick={resetFilters}
@@ -77,8 +77,8 @@ export const Thoughts = () => {
             {uniqueYears.map((year) => (
               <div
                 key={year}
-                className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-gray-400 ${
-                  selectedYear === year ? "bg-gray-400" : ""
+                className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary ${
+                  selectedYear === year ? "bg-primary" : ""
                 }`}
                 onClick={() => {
                   setSelectedYear(year);
@@ -95,8 +95,8 @@ export const Thoughts = () => {
                   .map((monthIndex) => (
                     <div
                       key={monthIndex}
-                      className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-gray-400 ${
-                        selectedMonth === monthIndex ? "bg-gray-400" : ""
+                      className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary ${
+                        selectedMonth === monthIndex ? "bg-primary" : ""
                       }`}
                       onClick={() => setSelectedMonth(monthIndex)}
                     >
@@ -106,7 +106,7 @@ export const Thoughts = () => {
               </>
             )}
           </div>
-          <div className="m-2 ml-4 flex max-w-3xl flex-1 flex-col gap-4 md:m-4 md:ml-8">
+          <div className="ml-4 flex max-w-3xl flex-1 flex-col gap-4 md:ml-8">
             {filteredThoughts.length === 0 ? (
               <p className="text-gray-600">
                 No thoughts found for this selection.

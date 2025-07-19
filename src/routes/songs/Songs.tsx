@@ -9,7 +9,7 @@ import {
 export const Songs = () => {
   return (
     <div className="mx-auto max-w-7xl">
-      <Card>
+      <Card className="border-none">
         <CardHeader>
           <CardTitle>Songs</CardTitle>
           <CardDescription>

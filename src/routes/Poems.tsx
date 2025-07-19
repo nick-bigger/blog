@@ -13,7 +13,7 @@ import { poems } from "@/data/poems";
 export const Poems = () => {
   return (
     <div className="mx-auto max-w-7xl">
-      <Card>
+      <Card className="border-none">
         <CardHeader>
           <CardTitle>Poetry</CardTitle>
           <CardDescription>

@@ -20,7 +20,7 @@ export const Poem = () => {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <Card>
+      <Card className="border-none">
         <div className="flex w-full flex-col items-center p-4 pb-40 pt-20">
           <div>
             <h3 className="mb-20 text-4xl uppercase">{poem.title}</h3>

@@ -33,7 +33,7 @@ export const Post = () => {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <Card>
+      <Card className="border-none">
         <CardContent className="md:p-6">
           <div className="flex flex-wrap justify-between">
             <div>

@@ -18,7 +18,7 @@ export const Root = () => {
         className="min-h-screen bg-background font-cnc-ra text-lg tracking-wider text-foreground"
         style={{ backgroundImage: `url(${StarsGif})` }}
       >
-        <nav className="no-scrollbar z-30 mx-auto mb-[-2px] flex max-w-7xl justify-start gap-1 overflow-x-scroll px-2 pt-10">
+        <nav className="no-scrollbar z-30 mx-auto mb-[-2px] flex max-w-7xl justify-start gap-1 overflow-x-scroll px-2 md:px-0 pt-10">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -86,7 +86,7 @@ export const Root = () => {
             songs
           </NavLink>
         </nav>
-        <div className="min-h-screen border-y-2 border-border bg-card p-2 md:p-4">
+        <div className="min-h-screen border-y-2 border-border bg-card p-2 md:p-4 md:max-w-7xl md:mx-auto md:rounded-sm md:rounded-tl-none md:border-2">
           <Outlet />
         </div>
         <NowPlaying />
