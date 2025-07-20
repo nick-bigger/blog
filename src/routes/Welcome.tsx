@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import Avatar from "@/assets/avatar.png";
+import AvatarGif from "@/assets/avatar.gif";
 import Stamp1 from "@/assets/stamps/stamp1.gif";
 import Stamp2 from "@/assets/stamps/stamp2.jpg";
 import Stamp7 from "@/assets/stamps/stamp3.png";
@@ -20,7 +20,7 @@ export const Welcome = () => {
         </CardHeader>
         <CardContent>
           <div className="float-left mr-4 block h-fit w-fit border border-primary">
-            <img src={Avatar} className="w-[150px]" />
+            <img src={AvatarGif} className="w-[150px]" />
           </div>
           <p className="mb-4 leading-relaxed">
             hey there ! i'm nick. i was inspired by all the cool websites over
