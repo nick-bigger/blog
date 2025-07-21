@@ -10,6 +10,7 @@ import { NavLink, Outlet } from "react-router-dom";
 
 import Banner from "@/assets/banner.png";
 import StarsGif from "@/assets/stars.gif";
+import { CRTScreen } from "@/components/CRTScreen";
 import { NowPlaying } from "@/components/NowPlaying";
 
 export const Root = () => {
@@ -115,6 +116,7 @@ export const Root = () => {
           </footer>
         </div>
       </div>
+      <CRTScreen />
     </>
   );
 };
