@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 
+import Banner from "@/assets/banner.png";
 import StarsGif from "@/assets/stars.gif";
 import { NowPlaying } from "@/components/NowPlaying";
 
@@ -18,7 +19,8 @@ export const Root = () => {
         className="min-h-screen bg-background font-cnc-ra text-lg tracking-wider text-foreground"
         style={{ backgroundImage: `url(${StarsGif})` }}
       >
-        <nav className="no-scrollbar z-30 mx-auto mb-[-2px] flex max-w-7xl justify-start gap-1 overflow-x-scroll px-2 md:px-0 pt-10">
+        <img src={Banner} className="mx-auto my-4 w-[200px]" />
+        <nav className="no-scrollbar z-30 mx-auto mb-[-2px] flex max-w-7xl justify-start gap-1 overflow-x-scroll px-2 md:px-0">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -86,7 +88,7 @@ export const Root = () => {
             songs
           </NavLink>
         </nav>
-        <div className="min-h-screen border-y-2 border-border bg-card p-2 md:p-4 md:max-w-7xl md:mx-auto md:rounded-sm md:rounded-tl-none md:border-2">
+        <div className="min-h-screen border-y-2 border-border bg-card p-2 md:mx-auto md:max-w-7xl md:rounded-sm md:rounded-tl-none md:border-2 md:p-4">
           <Outlet />
         </div>
         <NowPlaying />

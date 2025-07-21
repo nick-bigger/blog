@@ -27,7 +27,7 @@ export const Welcome = () => {
             on the{" "}
             <a className="underline" href="https://indieweb.org">
               IndieWeb
-            </a>{" "}
+            </a>
             , so i decided to make this website to be my own little slice of the
             internet. i want this mostly to be a place for fun, and also
             somewhere to put all the random things i've created.
