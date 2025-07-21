@@ -19,7 +19,7 @@ export const Welcome = () => {
           <CardTitle>welcome !</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="float-left mr-4 block h-fit w-fit border border-primary">
+          <div className="float-left mr-4 block h-fit w-fit overflow-hidden rounded-sm border border-primary">
             <img src={AvatarGif} className="w-[150px]" />
           </div>
           <p className="mb-4 leading-relaxed">
