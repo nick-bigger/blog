@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 
-import Banner from "@/assets/banner.png";
+import Banner from "@/assets/banner.gif";
 import StarsGif from "@/assets/stars.gif";
 import { CRTScreen } from "@/components/CRTScreen";
 import { NowPlaying } from "@/components/NowPlaying";
