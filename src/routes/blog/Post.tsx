@@ -2,6 +2,7 @@ import { format } from "date-fns/format";
 import { Share2 } from "lucide-react";
 import Markdown from "react-markdown";
 import { useParams } from "react-router-dom";
+import remarkFrontmatter from "remark-frontmatter";
 
 import {
   Blockquote,
@@ -75,6 +76,7 @@ export const Post = () => {
           </div>
           <hr className="mb-8 border-foreground" />
           <Markdown
+            remarkPlugins={[remarkFrontmatter]}
             components={{
               blockquote(props) {
                 return <Blockquote {...props} />;

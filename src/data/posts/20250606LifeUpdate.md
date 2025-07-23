@@ -1,3 +1,10 @@
+---
+title: life update
+link: https://conifercrown.com/#/blog/2
+description: Life update on my current creative endeavors
+pubDate: 2025-07-06 0:00:00.000
+---
+
 As usual, I have way too many personal projects going at once. But I really wouldn't have it any other way! I thought it might be fun going through and discussing my progress with each of my current projects:
 
 ## Skateboarding

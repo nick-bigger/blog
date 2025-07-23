@@ -1,3 +1,10 @@
+---
+title: "Book Review: 'The Design of Everyday Things'"
+link: https://conifercrown.com/#/blog/3
+description: My review of a very famous design book
+pubDate: 2025-07-11 0:00:00.000
+---
+
 As someone who loves both art and psychology, design has always attracted me. How often do you get a chance to both impress AND manipulate someone? When something is well designed, it feels like it reaches into my head and fiddles with the knobs and buttons. Why did I press this and then pull that? Well, I'm not sure, it just felt right.
 
 Poorly designed things, by contrast, feel like acting without knowing the lines: there's _clearly_ a correct sequence here, if you could just figure it out! Everyone else seems to know their part, but you just keep missing the cues.

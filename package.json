@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run generate-rss && tsc -b && vite build",
+    "generate-rss": "ts-node generate-rss.ts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -24,6 +25,7 @@
     "embla-carousel-react": "^8.6.0",
     "embla-carousel-wheel-gestures": "^8.0.1",
     "gh-pages": "^6.1.1",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.400.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -32,8 +34,10 @@
     "react-router-dom": "^6.24.1",
     "react-topbar-progress-indicator": "^4.1.1",
     "react-transition-group": "^4.4.5",
+    "remark-frontmatter": "^5.0.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
+    "ts-node": "^10.9.2",
     "vaul": "^1.1.2"
   },
   "devDependencies": {
