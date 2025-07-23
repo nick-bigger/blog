@@ -3,32 +3,11 @@ import matter from "gray-matter";
 import * as path from "path";
 
 /**
- * Interface for a single blog post.
- */
-interface BlogPost {
-  title: string;
-  link: string;
-  description: string;
-  pubDate: string;
-}
-
-/**
- * Interface for the RSS feed configuration.
- */
-interface FeedConfig {
-  title: string;
-  link: string;
-  description: string;
-  language?: string;
-  generator?: string;
-}
-
-/**
  * Escapes special characters in a string for XML.
  * @param {string} text - The text to escape.
  * @returns {string} The escaped text.
  */
-function escapeXml(text: string): string {
+function escapeXml(text) {
   return text
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -37,7 +16,7 @@ function escapeXml(text: string): string {
     .replace(/'/g, "&apos;");
 }
 
-const feedConfig: FeedConfig = {
+const feedConfig = {
   title: "My Awesome Blog",
   link: "https://conifercrown.com/#/blog",
   description: "a blog for my stuff",
@@ -48,8 +27,8 @@ const feedConfig: FeedConfig = {
  * Reads Markdown files from a directory, parses their front matter,
  * and returns an array of BlogPost objects.
  */
-function getBlogPostsFromMarkdown(directoryPath: string): BlogPost[] {
-  const posts: BlogPost[] = [];
+function getBlogPostsFromMarkdown(directoryPath) {
+  const posts = [];
   try {
     const files = fs.readdirSync(directoryPath);
 
@@ -59,10 +38,8 @@ function getBlogPostsFromMarkdown(directoryPath: string): BlogPost[] {
         const fileContent = fs.readFileSync(filePath, "utf8");
         const { data } = matter(fileContent); // Parse front matter
 
-        // Type assertion for data to ensure it matches BlogPost structure
-        const postData = data as Partial<BlogPost>;
+        const postData = data;
 
-        // Validate and add post if essential data is present
         if (
           postData.title &&
           postData.link &&
@@ -94,19 +71,19 @@ function getBlogPostsFromMarkdown(directoryPath: string): BlogPost[] {
 /**
  * Generates the RSS 2.0 XML string from blog post data and feed configuration.
  */
-function generateRssFeed(posts: BlogPost[]): string {
+function generateRssFeed(posts) {
   if (!feedConfig.title || !feedConfig.link || !feedConfig.description) {
     throw new Error(
       "Please ensure feedConfig has title, link, and description.",
     );
   }
 
-  const escapedFeedTitle: string = escapeXml(feedConfig.title);
-  const escapedFeedLink: string = escapeXml(feedConfig.link);
-  const escapedFeedDescription: string = escapeXml(feedConfig.description);
-  const lastBuildDate: string = new Date().toUTCString(); // Current date for lastBuildDate
+  const escapedFeedTitle = escapeXml(feedConfig.title);
+  const escapedFeedLink = escapeXml(feedConfig.link);
+  const escapedFeedDescription = escapeXml(feedConfig.description);
+  const lastBuildDate = new Date().toUTCString(); // Current date for lastBuildDate
 
-  let rssXml: string = `<?xml version="1.0" encoding="UTF-8"?>
+  let rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
     <title>${escapedFeedTitle}</title>
@@ -117,7 +94,7 @@ function generateRssFeed(posts: BlogPost[]): string {
     <language>${escapeXml(feedConfig.language || "en-us")}</language>
 `;
 
-  posts.forEach((post: BlogPost) => {
+  posts.forEach((post) => {
     if (!post.title || !post.link || !post.description || !post.pubDate) {
       console.warn(
         `[WARNING] Skipping malformed blog post due to missing data: ${JSON.stringify(post)}`,
@@ -125,10 +102,11 @@ function generateRssFeed(posts: BlogPost[]): string {
       return; // Skip this post if essential data is missing
     }
 
-    const title: string = escapeXml(post.title);
-    const link: string = escapeXml(post.link);
-    const description: string = escapeXml(post.description);
-    let pubDate: string;
+    const title = escapeXml(post.title);
+    const link = escapeXml(post.link);
+    const description = escapeXml(post.description);
+    let pubDate;
+
     try {
       pubDate = new Date(post.pubDate).toUTCString();
     } catch (e) {
@@ -162,7 +140,7 @@ try {
 
   const posts = getBlogPostsFromMarkdown(markdownPostsDir);
 
-  const generatedXml: string = generateRssFeed(posts);
+  const generatedXml = generateRssFeed(posts);
 
   const outputDir = path.join(process.cwd(), "public"); // Assumes 'public' folder at project root
   const outputFilePath = path.join(outputDir, "rss.xml");
