@@ -63,11 +63,11 @@ export const Thoughts = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="flex">
-          <div className="flex flex-col border border-t-0 border-border bg-accent rounded-sm overflow-hidden">
+          <div className="flex flex-col overflow-hidden rounded-sm border border-t-0 border-border bg-accent">
             <div
-              className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary ${
+              className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary hover:text-primary-foreground ${
                 selectedYear === null && selectedMonth === null
-                  ? "bg-primary"
+                  ? "bg-primary text-primary-foreground"
                   : ""
               }`}
               onClick={resetFilters}
@@ -77,8 +77,10 @@ export const Thoughts = () => {
             {uniqueYears.map((year) => (
               <div
                 key={year}
-                className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary ${
-                  selectedYear === year ? "bg-primary" : ""
+                className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary hover:text-primary-foreground ${
+                  selectedYear === year
+                    ? "bg-primary text-primary-foreground"
+                    : ""
                 }`}
                 onClick={() => {
                   setSelectedYear(year);
@@ -95,8 +97,10 @@ export const Thoughts = () => {
                   .map((monthIndex) => (
                     <div
                       key={monthIndex}
-                      className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary ${
-                        selectedMonth === monthIndex ? "bg-primary" : ""
+                      className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary hover:text-primary-foreground ${
+                        selectedMonth === monthIndex
+                          ? "bg-primary text-primary-foreground"
+                          : ""
                       }`}
                       onClick={() => setSelectedMonth(monthIndex)}
                     >

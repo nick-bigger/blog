@@ -1,5 +1,10 @@
 export const thoughts = [
-    {
+  {
+    timestamp: new Date(2025, 6, 23, 16, 22),
+    content:
+      "for all of my millions of readers i am thrilled to announce this blog now has an official RSS feed at https://conifercrown.com/rss.xml",
+  },
+  {
     timestamp: new Date(2025, 6, 18, 23, 53),
     content:
       "just finished k-pop demon hunters. so good. and i'm so glad to finally have more unique animated movies coming out !!",

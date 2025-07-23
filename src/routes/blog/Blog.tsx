@@ -1,10 +1,12 @@
 import { useMemo, useState } from "react";
 
 import { format } from "date-fns";
-import { X } from "lucide-react";
+import { RssIcon, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -71,12 +73,23 @@ export const Blog = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Card className="border-none">
-        <CardHeader>
-          <CardTitle>Blog</CardTitle>
-          <CardDescription>
-            here is where i write about anything and everything. some of these
-            are going to be serious and most are just for fun !!
-          </CardDescription>
+        <CardHeader className="flex flex-wrap justify-between">
+          <div>
+            <CardTitle>Blog</CardTitle>
+            <CardDescription>
+              here is where i write about anything and everything. some of these
+              are going to be serious and most are just for fun !!
+            </CardDescription>
+          </div>
+          <Button
+            size="icon"
+            onClick={() => {
+              navigator.clipboard.writeText("https://conifercrown.com/rss.xml");
+              toast("RSS URL copied to clipboard !");
+            }}
+          >
+            <RssIcon />
+          </Button>
         </CardHeader>
         <CardContent>
           <div className="mb-4 flex items-center gap-2">

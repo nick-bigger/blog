@@ -5,6 +5,7 @@ import * as ReactDOM from "react-dom/client";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 
 import { ThemeProvider } from "./components/theme-provider";
+import { Toaster } from "./components/ui/sonner";
 import "./index.css";
 import { About } from "./routes/About";
 import { ErrorPage } from "./routes/Error";
@@ -80,6 +81,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="dark" storageKey="theme">
         <RouterProvider router={router} />
+        <Toaster />
       </ThemeProvider>
     </QueryClientProvider>
   </React.StrictMode>,
