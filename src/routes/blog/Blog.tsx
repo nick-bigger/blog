@@ -75,7 +75,7 @@ export const Blog = () => {
       <Card className="border-none">
         <CardHeader className="flex flex-wrap justify-between">
           <div>
-            <CardTitle>Blog</CardTitle>
+            <CardTitle className="text-3xl">Blog</CardTitle>
             <CardDescription>
               here is where i write about anything and everything. some of these
               are going to be serious and most are just for fun !!
@@ -83,6 +83,7 @@ export const Blog = () => {
           </div>
           <Button
             size="icon"
+            className="size-8"
             onClick={() => {
               navigator.clipboard.writeText("https://conifercrown.com/rss.xml");
               toast("RSS URL copied to clipboard !");

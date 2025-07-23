@@ -57,7 +57,7 @@ export const Thoughts = () => {
     <div className="mx-auto max-w-7xl">
       <Card className="border-none">
         <CardHeader>
-          <CardTitle>Thoughts</CardTitle>
+          <CardTitle className="text-3xl">Thoughts</CardTitle>
           <CardDescription>
             kind of like my own personal twitter. random thoughts, ideas, etc.
           </CardDescription>

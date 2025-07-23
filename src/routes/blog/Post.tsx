@@ -16,7 +16,7 @@ import {
 } from "@/components/Typography";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { posts } from "@/data/posts";
 
 export const Post = () => {
@@ -35,46 +35,46 @@ export const Post = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Card className="border-none">
-        <CardContent className="md:p-6">
-          <div className="flex flex-wrap justify-between">
-            <div>
-              <h3 className="text-3xl">{post.title}</h3>
-              <p className="text-md mb-2 text-muted-foreground">
-                Posted on {format(post.timestamp, "PP")}
-              </p>
-              <div className="mb-8 flex flex-wrap items-center gap-2">
-                <p className="text-muted-foreground">Tags:</p>
-                {post.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-1">
-                    {post.tags.map((tag, tagIdx) => (
-                      <Badge variant="secondary" key={tagIdx}>
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-            <div className="mb-4 flex gap-2">
-              <Button
-                className="size-8"
-                variant="secondary"
-                size="icon"
-                onClick={async () => {
-                  const shareData = {
-                    title: post.title,
-                    text: post.description,
-                    url: `conifercrown.com/#/blog/${post.id}`,
-                  };
-
-                  await navigator.share(shareData);
-                }}
-              >
-                <Share2 />
-              </Button>
+        <CardHeader className="flex flex-wrap justify-between">
+          <div>
+            <h3 className="text-3xl">{post.title}</h3>
+            <p className="text-md mb-2 text-muted-foreground">
+              Posted on {format(post.timestamp, "PP")}
+            </p>
+            <div className="mb-8 flex flex-wrap items-center gap-2">
+              <p className="text-muted-foreground">Tags:</p>
+              {post.tags.length > 0 && (
+                <div className="flex flex-wrap gap-1">
+                  {post.tags.map((tag, tagIdx) => (
+                    <Badge variant="secondary" key={tagIdx}>
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
-          <hr className="mb-8 border-foreground" />
+          <div className="mb-4 flex gap-2">
+            <Button
+              className="size-8"
+              variant="secondary"
+              size="icon"
+              onClick={async () => {
+                const shareData = {
+                  title: post.title,
+                  text: post.description,
+                  url: `conifercrown.com/#/blog/${post.id}`,
+                };
+
+                await navigator.share(shareData);
+              }}
+            >
+              <Share2 />
+            </Button>
+          </div>
+        </CardHeader>
+        <hr className="mb-8 border-foreground" />
+        <CardContent>
           <Markdown
             remarkPlugins={[remarkFrontmatter]}
             components={{

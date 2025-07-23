@@ -16,7 +16,7 @@ export const Welcome = () => {
     <>
       <Card>
         <CardHeader>
-          <CardTitle>welcome !</CardTitle>
+          <CardTitle className="animate-pulse text-5xl">welcome !</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="float-left mr-4 block h-fit w-fit overflow-hidden rounded-sm border border-primary">

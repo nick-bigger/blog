@@ -8,7 +8,7 @@ import { Time } from "@/components/ui/time";
 import { posts } from "@/data/posts";
 import { formatRelativeShorthand } from "@/helpers/formatRelativeShorthand";
 
-const MAX_BLOG_POSTS = 5;
+const MAX_BLOG_POSTS = 3;
 
 export const Wrapper = () => {
   return (
