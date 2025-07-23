@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run generate-rss && tsc -b && vite build",
-    "generate-rss": "node_modules/.bin/ts-node --esm generate-rss",
+    "generate-rss": "node_modules/.bin/ts-node --esm generate-rss.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
