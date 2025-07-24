@@ -402,7 +402,7 @@ This book was actually the inspiration for a series I'm hoping to start and host
 
 For a particular example that I found especially interesting, consider the burners on your stove. How are the controls for these burners configured? Now take a look at this fantastic illustration from chapter three:
 
-![Four stove top layouts with burner controls in different configurations|568x232](/src/assets//burners.png)
+![Four stove top layouts with burner controls in different configurations|568x232](/burners.png)
 
 All of these layouts are perfectly valid and all four stoves are usable - however, the bottom two don't require labels to intuitively understand which knobs control which burner. This might seem small on the surface, and once you've used the stove a few times you will likely have memorized the layout regardless, but small changes can make a big difference. At worst, it is slightly more delightful to use your stove. At best, it could prevent a fire.
 
