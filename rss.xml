@@ -4,7 +4,7 @@
     <title>My Awesome Blog</title>
     <link>https://conifercrown.com/#/blog</link>
     <description>a blog for my stuff</description>
-    <lastBuildDate>Thu, 24 Jul 2025 17:06:16 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jul 2025 18:23:20 GMT</lastBuildDate>
     <generator>Custom RSS Feed Generator</generator>
     <language>en-us</language>
 
@@ -30,6 +30,14 @@
       <description>My review of a very famous design book</description>
       <pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://conifercrown.com/#/blog/3</guid>
+    </item>
+
+    <item>
+      <title>i&apos;ve been learning pixel art !!</title>
+      <link>https://conifercrown.com/#/blog/4</link>
+      <description>pixel art update</description>
+      <pubDate>Wed, 23 Jul 2025 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://conifercrown.com/#/blog/4</guid>
     </item>
 
   </channel>
