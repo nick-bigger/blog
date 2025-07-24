@@ -147,7 +147,10 @@ const Link = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <a
     ref={ref}
-    className={cn("text-sm text-primary underline", className)}
+    className={cn(
+      "text-sm text-foreground underline hover:text-primary",
+      className,
+    )}
     {...props}
   />
 ));

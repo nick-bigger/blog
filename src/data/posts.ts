@@ -1,8 +1,17 @@
 import LifeUpdate from "./posts/20250606LifeUpdate.md?raw";
 import AgainstConsistencyContent from "./posts/AgainstConsistency.md?raw";
 import BookReviewTDET from "./posts/BookReview.md?raw";
+import LearningPixelArtContent from "./posts/LearningPixelArt.md?raw";
 
 export const posts = [
+  {
+    id: 4,
+    title: "i've been learning pixel art !!",
+    timestamp: new Date(2025, 6, 23),
+    content: LearningPixelArtContent,
+    description: "art isn't a hobby, it's human",
+    tags: ["fun", "art"],
+  },
   {
     id: 3,
     title: "Book Review: 'The Design of Everyday Things'",
