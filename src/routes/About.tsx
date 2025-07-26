@@ -1,3 +1,4 @@
+import { Link } from "@/components/Typography";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const About = () => {
@@ -21,13 +22,13 @@ export const About = () => {
           </p>
           <p className="mb-4 leading-relaxed">
             i play guitar in a band called{" "}
-            <a
-              className="underline"
+            <Link
+              className="text-md"
               href="https://tokyovinylband.com"
               target="_blank"
             >
               Tokyo Vinyl
-            </a>
+            </Link>
             . i am currently in the process of writing a short story tentatively
             called "The Man and the Moon". i have a whole set of poetry on here
             that i try to update. i'm currently learning to swing dance and in

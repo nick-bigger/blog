@@ -9,6 +9,7 @@ import Stamp5 from "@/assets/stamps/stamp5.png";
 import Stamp6 from "@/assets/stamps/stamp6.gif";
 import Stamp3 from "@/assets/stamps/stamp7.gif";
 import Stamp8 from "@/assets/stamps/stamp8.png";
+import { Link as TextLink } from "@/components/Typography";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const Welcome = () => {
@@ -25,9 +26,9 @@ export const Welcome = () => {
           <p className="mb-4 leading-relaxed">
             hey there ! i'm nick. i was inspired by all the cool websites over
             on the{" "}
-            <a className="underline" href="https://indieweb.org">
+            <TextLink href="https://indieweb.org" className="text-md">
               IndieWeb
-            </a>
+            </TextLink>
             , so i decided to make this website to be my own little slice of the
             internet. i want this mostly to be a place for fun, and also
             somewhere to put all the random things i've created.

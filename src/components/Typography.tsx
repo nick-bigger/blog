@@ -143,12 +143,12 @@ Muted.displayName = "Muted";
 
 const Link = React.forwardRef<
   HTMLAnchorElement,
-  React.HTMLAttributes<HTMLAnchorElement>
+  React.AnchorHTMLAttributes<HTMLAnchorElement>
 >(({ className, ...props }, ref) => (
   <a
     ref={ref}
     className={cn(
-      "text-sm text-foreground underline hover:text-primary",
+      "text-sm text-foreground underline decoration-primary hover:text-primary",
       className,
     )}
     {...props}
