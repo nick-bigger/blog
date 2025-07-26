@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import { Link as TextLink } from "@/components/Typography";
 import {
   Card,
   CardContent,
@@ -21,28 +22,32 @@ export const Poems = () => {
             some longer form content as well
           </CardDescription>
         </CardHeader>
-        <CardContent className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <CardContent>
           {collections.map((collection, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle>{collection.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul>
-                  {poems
-                    .filter((poem) => poem.collectionId === collection.id)
-                    .map((poem) => (
-                      <Link
-                        to={`${poem.id}`}
-                        key={poem.id}
-                        className="transition duration-200 hover:text-primary"
-                      >
-                        <li className="text-xl">{poem.title}</li>
-                      </Link>
-                    ))}
-                </ul>
-              </CardContent>
-            </Card>
+            <div key={index} className="mb-8">
+              <p className="text-2xl uppercase leading-none">
+                {"=".repeat(collection.title.length + 5)}
+              </p>
+              <p className="text-2xl uppercase leading-none">
+                | {collection.title} |
+              </p>
+              <p className="text-2xl uppercase leading-none">
+                {"=".repeat(collection.title.length + 5)}
+              </p>
+              <div className="flex flex-col gap-2">
+                {poems
+                  .filter((poem) => poem.collectionId === collection.id)
+                  .map((poem) => (
+                    <Link to={`${poem.id}`} key={poem.id}>
+                      <TextLink className="flex items-baseline justify-between gap-2 text-2xl lowercase no-underline">
+                        {poem.title}
+                        <span className="dots flex-grow border-b-[2px] border-dotted border-current"></span>
+                        <span>{poem.id}</span>
+                      </TextLink>
+                    </Link>
+                  ))}
+              </div>
+            </div>
           ))}
         </CardContent>
       </Card>

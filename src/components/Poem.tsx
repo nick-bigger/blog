@@ -19,15 +19,19 @@ export const Poem = () => {
   }
 
   return (
-    <div className="mx-auto max-w-7xl">
-      <Card className="border-none">
-        <div className="flex w-full flex-col items-center p-4 pb-40 pt-20">
+    <div className="mx-auto max-w-3xl rounded-sm border border-border">
+      <Card className="min-h-screen border-none bg-white bg-[image:linear-gradient(90deg,transparent_79px,#abced4_79px,#abced4_81px,transparent_81px),linear-gradient(#eee_.1em,transparent_.1em)] bg-[size:100%_1.2em] text-black">
+        <div className="flex w-full flex-col p-4 pl-24 pt-[64px]">
           <div>
-            <h3 className="mb-20 text-4xl uppercase">{poem.title}</h3>
             <Markdown
               components={{
                 p(props) {
-                  return <p className="mb-2 text-xl leading-7" {...props} />;
+                  return (
+                    <p
+                      className="mb-[20.5px] text-xl leading-[22px]"
+                      {...props}
+                    />
+                  );
                 },
               }}
             >
