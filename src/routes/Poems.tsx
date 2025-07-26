@@ -42,7 +42,11 @@ export const Poems = () => {
                       <TextLink className="flex items-baseline justify-between gap-2 text-2xl lowercase no-underline">
                         {poem.title}
                         <span className="dots flex-grow border-b-[2px] border-dotted border-current"></span>
-                        <span>{poem.id}</span>
+                        <span>
+                          {poem.id > 1
+                            ? poem.id + (poem.id * Math.random()).toFixed()
+                            : 1}
+                        </span>
                       </TextLink>
                     </Link>
                   ))}
