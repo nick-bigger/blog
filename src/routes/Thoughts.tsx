@@ -62,7 +62,7 @@ export const Thoughts = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="flex">
-          <div className="flex flex-col overflow-hidden rounded-sm border border-t-0 border-border bg-accent">
+          <div className="flex min-w-[47px] flex-col overflow-hidden rounded-sm border border-t-0 border-border bg-accent">
             <div
               className={`flex cursor-pointer justify-center border-b-2 border-border p-1 hover:bg-primary hover:text-primary-foreground ${
                 selectedYear === null && selectedMonth === null
