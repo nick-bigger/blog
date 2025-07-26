@@ -1,5 +1,19 @@
 export const thoughts = [
   {
+    timestamp: new Date(2025, 6, 26, 14, 15),
+    content:
+      "also i saw fantastic 4 for the second time last night. it's very good if you haven't seen it ! i'm not a big super hero movie fan, but i actually really enjoyed both this one and superman",
+  },
+  {
+    timestamp: new Date(2025, 6, 26, 14, 15),
+    content:
+      "tho adjusting the padding to get the text to look like it was on the notebook lines almost killed me",
+  },
+  {
+    timestamp: new Date(2025, 6, 26, 14, 14),
+    content: "okay i update the poems page which i think looks better",
+  },
+  {
     timestamp: new Date(2025, 6, 23, 16, 22),
     content:
       "for all of my millions of readers i am thrilled to announce this blog now has an official RSS feed at https://conifercrown.com/rss.xml",
