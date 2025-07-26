@@ -4,20 +4,20 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import * as ReactDOM from "react-dom/client";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 
+import { Poem } from "./components/Poem";
+import { Post } from "./components/Post";
 import { ThemeProvider } from "./components/theme-provider";
 import { Toaster } from "./components/ui/sonner";
 import "./index.css";
 import { About } from "./routes/About";
+import { Blog } from "./routes/Blog";
 import { ErrorPage } from "./routes/Error";
 import { Poems } from "./routes/Poems";
 import { Root } from "./routes/Root";
+import { Songs } from "./routes/Songs";
+import { Thoughts } from "./routes/Thoughts";
 import { Welcome } from "./routes/Welcome";
 import { Wrapper } from "./routes/Wrapper";
-import { Blog } from "./routes/blog/Blog";
-import { Post } from "./routes/blog/Post";
-import { Poem } from "./routes/poetry/Poem";
-import { Songs } from "./routes/songs/Songs";
-import { Thoughts } from "./routes/thoughts/Thoughts";
 
 const queryClient = new QueryClient({
   defaultOptions: {

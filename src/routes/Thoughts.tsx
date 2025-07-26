@@ -10,8 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-import { thoughts } from "../../data/thoughts";
+import { thoughts } from "@/data/thoughts";
 
 export const Thoughts = () => {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
