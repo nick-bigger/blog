@@ -24,16 +24,7 @@ export const Poems = () => {
         </CardHeader>
         <CardContent>
           {collections.map((collection, index) => (
-            <div key={index} className="mb-8">
-              <p className="text-2xl uppercase leading-none">
-                {"=".repeat(collection.title.length + 5)}
-              </p>
-              <p className="text-2xl uppercase leading-none">
-                | {collection.title} |
-              </p>
-              <p className="text-2xl uppercase leading-none">
-                {"=".repeat(collection.title.length + 5)}
-              </p>
+            <div key={index} className="mb-6">
               <div className="flex flex-col gap-2">
                 {poems
                   .filter((poem) => poem.collectionId === collection.id)
@@ -50,6 +41,9 @@ export const Poems = () => {
                       </TextLink>
                     </Link>
                   ))}
+                {index !== collections.length - 1 && (
+                  <p className="mt-6 text-center">* . ﹢ ˖ ✦ ¸ .</p>
+                )}
               </div>
             </div>
           ))}
