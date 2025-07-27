@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="og:title" content="nick's website" />
+    <meta name="og:title" content="nick's spot" />
     <meta
       name="og:description"
-      content="the official website for me AKA nick bigger AKA conifer crown. information hub, creative dump, and life repository"
+      content="the official website for me AKA nick bigger AKA conifer crown. includes a blog, poetry, songs, and random thoughts: information hub, creative dump, and life repository"
     />
     <meta name="msapplication-TileColor" content="#111827" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
@@ -66,8 +66,55 @@
       title="RSS Feed"
       href="/rss.xml"
     />
-    <title>nick's website !</title>
-    <script type="module" crossorigin src="/assets/index-xooVxZMC.js"></script>
+    <title>nick's spot</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://conifercrown.com/#website",
+            "url": "https://conifercrown.com",
+            "name": "nick's spot",
+            "description": "the official website for me AKA nick bigger AKA conifer crown. includes a blog, poetry, songs, and random thoughts: information hub, creative dump, and life repository",
+            "publisher": {
+              "@id": "https://conifercrown.com/#person"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://conifercrown.com/?s={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://conifercrown.com/#person",
+            "name": "Nick Bigger",
+            "url": "https://conifercrown.com",
+            "image": "https://conifercrown.com/avatar.gif",
+            "description": "hey there ! i'm nick. i was inspired by all the cool websites over on the IndieWeb, so i decided to make this website to be my own little slice of the
+            internet. i want this mostly to be a place for fun, and also somewhere to put all the random things i've created. more specifically, this website is a place for me to dump content
+            without the pressure of any of it needing to be good. here, i am allowed to be bad at stuff :)",
+            "sameAs": [
+              "https://conifercrown.com/#/blog",
+              "https://conifercrown.com/#/poems",
+              "https://conifercrown.com/#/thoughts",
+              "https://beliapp.co/app/daizycrown",
+              "https://www.goodreads.com/user/show/34398985-nick",
+              "https://boxd.it/ec5Jr",
+              "https://open.spotify.com/user/1136204305?si=e34a13bd7c7149e4",
+              "https://www.instagram.com/nick.bigger/",
+              "https://www.linkedin.com/in/nickbigger/",
+              "https://github.com/nick-bigger"
+            ]
+          }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-B7DxZCLm.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-RzpFGz-s.css">
   </head>
   <body>
