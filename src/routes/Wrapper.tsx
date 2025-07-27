@@ -39,7 +39,11 @@ export const Wrapper = () => {
             </CardHeader>
             <CardContent className="flex gap-2">
               <div className="float-left block h-fit min-w-[32px] overflow-hidden rounded-sm border border-muted">
-                <img src={Avatar} className="h-[32px] w-[32px] min-w-[32px]" />
+                <img
+                  src={Avatar}
+                  className="h-[32px] w-[32px] min-w-[32px]"
+                  alt="user avatar"
+                />
               </div>
               <div>
                 <div className="flex flex-wrap justify-between gap-2">
@@ -78,16 +82,28 @@ export const Wrapper = () => {
               <div className="no-scrollbar overflow-x-scroll">
                 <div className="flex w-max gap-2">
                   <a href="https://nekoweb.org/">
-                    <img src="https://nekoweb.org/assets/buttons/button7.gif" />
+                    <img
+                      src="https://nekoweb.org/assets/buttons/button7.gif"
+                      alt="nekoweb button 1"
+                    />
                   </a>
                   <a href="https://nekoweb.org/">
-                    <img src="https://nekoweb.org/assets/buttons/button1.gif" />
+                    <img
+                      src="https://nekoweb.org/assets/buttons/button1.gif"
+                      alt="nekoweb button 2"
+                    />
                   </a>
                   <a href="https://nekoweb.org/">
-                    <img src="https://nekoweb.org/assets/buttons/button3.gif" />
+                    <img
+                      src="https://nekoweb.org/assets/buttons/button3.gif"
+                      alt="nekoweb button 3"
+                    />
                   </a>
                   <a href="https://nekoweb.org/">
-                    <img src="https://nekoweb.org/assets/buttons/button6.gif" />
+                    <img
+                      src="https://nekoweb.org/assets/buttons/button6.gif"
+                      alt="nekoweb button 4"
+                    />
                   </a>
                 </div>
               </div>

@@ -56,7 +56,7 @@ export const Thoughts = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Helmet>
-        <title>nick's website | thoughts</title>
+        <title>nick's spot | thoughts</title>
       </Helmet>
       <Card className="border-none">
         <CardHeader>
@@ -139,6 +139,7 @@ export const Thoughts = () => {
                       <div className="flex gap-2">
                         <div className="float-left block h-fit min-w-[32px] overflow-hidden rounded-sm border border-primary">
                           <img
+                            alt="user avatar"
                             src={Avatar}
                             className="h-[32px] w-[32px] min-w-[32px]"
                           />

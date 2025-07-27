@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <>
       <Helmet>
-        <title>nick's website | about me</title>
+        <title>nick's spot | about me</title>
       </Helmet>
       <Card>
         <CardHeader>

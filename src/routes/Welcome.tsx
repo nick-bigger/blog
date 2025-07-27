@@ -17,7 +17,7 @@ export const Welcome = () => {
   return (
     <>
       <Helmet>
-        <title>nick's website | welcome</title>
+        <title>nick's spot | welcome</title>
       </Helmet>
       <Card>
         <CardHeader>
@@ -27,7 +27,7 @@ export const Welcome = () => {
         </CardHeader>
         <CardContent>
           <div className="float-left mr-4 block h-fit w-fit overflow-hidden rounded-sm border border-primary">
-            <img src={AvatarGif} className="w-[150px]" />
+            <img src={AvatarGif} className="w-[150px]" alt="user avatar GIF" />
           </div>
           <p className="mb-4 leading-relaxed">
             hey there ! i'm nick. i was inspired by all the cool websites over
@@ -60,14 +60,14 @@ export const Welcome = () => {
         <CardContent>
           {/* @ts-expect-error Marquee is deprecated, but the custom versions just don't work. */}
           <marquee className="flex h-[50px] gap-2 md:min-h-[60px]">
-            <img src={Stamp1} />
-            <img src={Stamp2} />
-            <img src={Stamp3} />
-            <img src={Stamp4} />
-            <img src={Stamp5} />
-            <img src={Stamp6} />
-            <img src={Stamp7} />
-            <img src={Stamp8} />
+            <img src={Stamp1} alt="stamp 1" />
+            <img src={Stamp2} alt="stamp 2" />
+            <img src={Stamp3} alt="stamp 3" />
+            <img src={Stamp4} alt="stamp 4" />
+            <img src={Stamp5} alt="stamp 5" />
+            <img src={Stamp6} alt="stamp 6" />
+            <img src={Stamp7} alt="stamp 7" />
+            <img src={Stamp8} alt="stamp 8" />
             {/* @ts-expect-error Marquee is deprecated, but the custom versions just don't work. */}
           </marquee>
         </CardContent>

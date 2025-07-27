@@ -15,7 +15,7 @@ export const Poems = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Helmet>
-        <title>nick's website | poems</title>
+        <title>nick's spot | poems</title>
       </Helmet>
       <Card className="border-none">
         <CardHeader>

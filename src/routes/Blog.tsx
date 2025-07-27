@@ -74,7 +74,7 @@ export const Blog = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Helmet>
-        <title>nick's website | blog</title>
+        <title>nick's spot | blog</title>
       </Helmet>
       <Card className="border-none">
         <CardHeader className="flex flex-wrap justify-between">

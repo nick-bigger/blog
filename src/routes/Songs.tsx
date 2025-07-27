@@ -12,7 +12,7 @@ export const Songs = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Helmet>
-        <title>nick's website | songs</title>
+        <title>nick's spot | songs</title>
       </Helmet>
       <Card className="border-none">
         <CardHeader>

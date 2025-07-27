@@ -22,7 +22,7 @@ export const Poem = () => {
   return (
     <div className="mx-auto max-w-3xl rounded-sm border border-border">
       <Helmet>
-        <title>nick's website | poems | {poem.title}</title>
+        <title>nick's spot | poems | {poem.title}</title>
       </Helmet>
       <Card className="min-h-screen border-none bg-white bg-[image:linear-gradient(90deg,transparent_79px,#abced4_79px,#abced4_81px,transparent_81px),linear-gradient(#eee_.1em,transparent_.1em)] bg-[size:100%_1.2em] text-black">
         <div className="flex w-full flex-col p-4 pl-24 pt-[64px]">

@@ -37,7 +37,7 @@ export const Post = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <Helmet>
-        <title>nick's website | blog | {post.title}</title>
+        <title>nick's spot | blog | {post.title}</title>
       </Helmet>
       <Card className="border-none">
         <CardHeader className="flex flex-wrap justify-between">

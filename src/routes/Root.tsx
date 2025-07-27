@@ -20,7 +20,11 @@ export const Root = () => {
         className="min-h-screen bg-background font-cnc-ra text-lg tracking-wider text-foreground"
         style={{ backgroundImage: `url(${StarsGif})` }}
       >
-        <img src={Banner} className="mx-auto w-[400px]" />
+        <img
+          src={Banner}
+          className="mx-auto w-[400px]"
+          alt="site banner with website title"
+        />
         <nav className="no-scrollbar z-30 mx-auto mb-[-2px] flex max-w-7xl justify-start gap-1 overflow-x-scroll px-2 md:px-0">
           <NavLink
             to="/"
