@@ -42,13 +42,15 @@ export const Wrapper = () => {
                 <img src={Avatar} className="h-[32px] w-[32px] min-w-[32px]" />
               </div>
               <div>
-                <div className="flex justify-between">
+                <div className="flex flex-wrap justify-between gap-2">
                   <p className="leading-tight text-primary">@daizycrown</p>
                   <p className="leading-tight text-muted-foreground">
-                    {formatRelativeShorthand(new Date(2025, 6, 15, 18, 4))}
+                    {formatRelativeShorthand(new Date(2025, 6, 27, 12, 56))}
                   </p>
                 </div>
-                <p className="leading-tight">PIXEL ART IS HARD</p>
+                <p className="leading-tight">
+                  really happy with that notebook effect on the poems page :)
+                </p>
               </div>
             </CardContent>
           </Card>
