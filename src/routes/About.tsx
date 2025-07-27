@@ -1,12 +1,19 @@
-import { Link } from "@/components/Typography";
+import { Helmet } from "react-helmet";
+
+import { H1, Link } from "@/components/Typography";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const About = () => {
   return (
     <>
+      <Helmet>
+        <title>nick's website | about me</title>
+      </Helmet>
       <Card>
         <CardHeader>
-          <CardTitle>About Me</CardTitle>
+          <H1 className="text-2xl font-normal uppercase tracking-normal text-primary lg:text-2xl">
+            About Me
+          </H1>
         </CardHeader>
         <CardContent>
           <p className="mb-4 leading-relaxed">

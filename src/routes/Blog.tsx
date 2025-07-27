@@ -2,9 +2,11 @@ import { useMemo, useState } from "react";
 
 import { format } from "date-fns";
 import { RssIcon, X } from "lucide-react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
+import { H1 } from "@/components/Typography";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,7 +14,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { posts } from "@/data/posts";
@@ -72,10 +73,15 @@ export const Blog = () => {
 
   return (
     <div className="mx-auto max-w-7xl">
+      <Helmet>
+        <title>nick's website | blog</title>
+      </Helmet>
       <Card className="border-none">
         <CardHeader className="flex flex-wrap justify-between">
           <div>
-            <CardTitle className="text-3xl">Blog</CardTitle>
+            <H1 className="text-3xl font-normal uppercase tracking-normal text-primary lg:text-3xl">
+              Blog
+            </H1>
             <CardDescription>
               here is where i write about anything and everything. some of these
               are going to be serious and most are just for fun !!

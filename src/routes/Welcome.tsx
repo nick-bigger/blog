@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 import AvatarGif from "@/assets/avatar.gif";
@@ -9,15 +10,20 @@ import Stamp5 from "@/assets/stamps/stamp5.png";
 import Stamp6 from "@/assets/stamps/stamp6.gif";
 import Stamp3 from "@/assets/stamps/stamp7.gif";
 import Stamp8 from "@/assets/stamps/stamp8.png";
-import { Link as TextLink } from "@/components/Typography";
+import { H1, Link as TextLink } from "@/components/Typography";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const Welcome = () => {
   return (
     <>
+      <Helmet>
+        <title>nick's website | welcome</title>
+      </Helmet>
       <Card>
         <CardHeader>
-          <CardTitle className="animate-pulse text-5xl">welcome !</CardTitle>
+          <H1 className="animate-pulse text-5xl font-normal text-primary">
+            welcome !
+          </H1>
         </CardHeader>
         <CardContent>
           <div className="float-left mr-4 block h-fit w-fit overflow-hidden rounded-sm border border-primary">

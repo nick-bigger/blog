@@ -1,7 +1,8 @@
 import { format } from "date-fns/format";
 import { Share2 } from "lucide-react";
+import { Helmet } from "react-helmet";
 import Markdown from "react-markdown";
-import { useParams } from "react-router-dom";
+import { Link as RRLink, useParams } from "react-router-dom";
 import remarkFrontmatter from "remark-frontmatter";
 
 import {
@@ -27,13 +28,17 @@ export const Post = () => {
   if (!post) {
     return (
       <div className="mx-auto p-1 text-center md:p-4">
-        <h1 className="text-2xl font-bold text-red-500">Post Not Found</h1>
+        <h1 className="text-2xl font-bold text-destructive">post not found</h1>
+        <RRLink to="/blog">back to poems</RRLink>
       </div>
     );
   }
 
   return (
     <div className="mx-auto max-w-7xl">
+      <Helmet>
+        <title>nick's website | blog | {post.title}</title>
+      </Helmet>
       <Card className="border-none">
         <CardHeader className="flex flex-wrap justify-between">
           <div>

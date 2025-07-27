@@ -17,9 +17,9 @@ function escapeXml(text) {
 }
 
 const feedConfig = {
-  title: "My Awesome Blog",
+  title: "nick bigger",
   link: "https://conifercrown.com/#/blog",
-  description: "a blog for my stuff",
+  description: "unstructured and unregulated thoughts on stuff and things",
   language: "en-us",
 };
 

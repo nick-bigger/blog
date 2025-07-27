@@ -14,10 +14,10 @@ export const posts = [
   },
   {
     id: 3,
-    title: "Book Review: 'The Design of Everyday Things'",
+    title: "book review: 'The Design of Everyday Things'",
     timestamp: new Date(2025, 6, 11),
     content: BookReviewTDET,
-    description: "My review of a very famous design book",
+    description: "my review of a very famous design book",
     tags: ["books", "review", "art"],
   },
   {
@@ -25,12 +25,12 @@ export const posts = [
     title: "life update",
     timestamp: new Date(2025, 6, 6),
     content: LifeUpdate,
-    description: "Life update on my current creative endeavors",
+    description: "life update on my current creative endeavors",
     tags: ["fun", "art"],
   },
   {
     id: 1,
-    title: "Your Routine is Stealing Your Time",
+    title: "your Routine is stealing your time",
     timestamp: new Date(2025, 6, 4),
     content: AgainstConsistencyContent,
     description: "Why routine is making your life feel short !!",

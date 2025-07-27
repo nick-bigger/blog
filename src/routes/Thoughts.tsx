@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 
 import { format, getMonth, getYear, isSameDay } from "date-fns";
+import { Helmet } from "react-helmet";
 
 import Avatar from "@/assets/avatar.png";
+import { H1 } from "@/components/Typography";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { thoughts } from "@/data/thoughts";
 
@@ -54,9 +55,14 @@ export const Thoughts = () => {
 
   return (
     <div className="mx-auto max-w-7xl">
+      <Helmet>
+        <title>nick's website | thoughts</title>
+      </Helmet>
       <Card className="border-none">
         <CardHeader>
-          <CardTitle className="text-3xl">Thoughts</CardTitle>
+          <H1 className="text-3xl font-normal uppercase tracking-normal text-primary lg:text-3xl">
+            Thoughts
+          </H1>
           <CardDescription>
             kind of like my own personal twitter. random thoughts, ideas, etc.
           </CardDescription>

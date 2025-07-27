@@ -1,12 +1,12 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
-import { Link as TextLink } from "@/components/Typography";
+import { H1, Link as TextLink } from "@/components/Typography";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { collections } from "@/data/collections";
 import { poems } from "@/data/poems";
@@ -14,9 +14,14 @@ import { poems } from "@/data/poems";
 export const Poems = () => {
   return (
     <div className="mx-auto max-w-7xl">
+      <Helmet>
+        <title>nick's website | poems</title>
+      </Helmet>
       <Card className="border-none">
         <CardHeader>
-          <CardTitle className="text-3xl">Poetry</CardTitle>
+          <H1 className="text-3xl font-normal uppercase tracking-normal text-primary lg:text-3xl">
+            Poems
+          </H1>
           <CardDescription>
             random poems. i like short poetry, and i'm working on moving into
             some longer form content as well
