@@ -1,6 +1,8 @@
 import * as React from "react";
 
-import { cn } from "../lib/utils";
+import { Slot } from "@radix-ui/react-slot";
+
+import { cn } from "@/lib/utils";
 
 const H1 = React.forwardRef<
   HTMLParagraphElement,
@@ -141,19 +143,25 @@ const Muted = React.forwardRef<
 ));
 Muted.displayName = "Muted";
 
-const Link = React.forwardRef<
-  HTMLAnchorElement,
-  React.AnchorHTMLAttributes<HTMLAnchorElement>
->(({ className, ...props }, ref) => (
-  <a
-    ref={ref}
-    className={cn(
-      "text-sm text-foreground underline decoration-primary hover:text-primary",
-      className,
-    )}
-    {...props}
-  />
-));
+interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  asChild?: boolean;
+}
+
+const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  ({ className, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "a";
+    return (
+      <Comp
+        ref={ref}
+        className={cn(
+          "text-sm text-foreground underline decoration-primary hover:text-primary",
+          className,
+        )}
+        {...props}
+      />
+    );
+  },
+);
 Link.displayName = "Link";
 
 export { Blockquote, Code, H1, H2, H3, H4, Large, Link, Muted, P, Small, UL };

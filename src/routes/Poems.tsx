@@ -29,8 +29,12 @@ export const Poems = () => {
                 {poems
                   .filter((poem) => poem.collectionId === collection.id)
                   .map((poem) => (
-                    <Link to={`${poem.id}`} key={poem.id}>
-                      <TextLink className="flex items-baseline justify-between gap-2 text-2xl lowercase no-underline">
+                    <TextLink
+                      key={poem.id}
+                      className="flex items-baseline justify-between gap-2 text-2xl lowercase no-underline"
+                      asChild
+                    >
+                      <Link to={`${poem.id}`}>
                         {poem.title}
                         <span className="dots flex-grow border-b-[2px] border-dotted border-current"></span>
                         <span>
@@ -38,8 +42,8 @@ export const Poems = () => {
                             ? poem.id + (poem.id * Math.random()).toFixed()
                             : 1}
                         </span>
-                      </TextLink>
-                    </Link>
+                      </Link>
+                    </TextLink>
                   ))}
                 {index !== collections.length - 1 && (
                   <p className="mt-6 text-center">* . ﹢ ˖ ✦ ¸ .</p>
