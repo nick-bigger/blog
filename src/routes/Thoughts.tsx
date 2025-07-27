@@ -109,7 +109,7 @@ export const Thoughts = () => {
               </>
             )}
           </div>
-          <div className="ml-4 flex max-w-3xl flex-1 flex-col gap-4 md:ml-8">
+          <div className="ml-4 flex min-w-0 max-w-3xl flex-1 flex-col gap-4 md:ml-8">
             {filteredThoughts.length === 0 ? (
               <p className="text-gray-600">
                 No thoughts found for this selection.
@@ -137,7 +137,7 @@ export const Thoughts = () => {
                             className="h-[32px] w-[32px] min-w-[32px]"
                           />
                         </div>
-                        <div>
+                        <div className="min-w-0 flex-grow">
                           <div className="flex flex-wrap gap-x-2">
                             <p className="leading-tight">nick</p>
                             <p className="leading-tight text-muted-foreground">
@@ -150,7 +150,7 @@ export const Thoughts = () => {
                               {format(thought.timestamp, "HH:mm - MMM d, yyyy")}
                             </p>
                           </div>
-                          <p>{thought.content}</p>
+                          <p className="break-words">{thought.content}</p>
                         </div>
                       </div>
                     </div>
