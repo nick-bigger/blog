@@ -60,7 +60,7 @@ export const Typewriter = ({
   ]);
 
   return (
-    <H1 className="animate-typing max-w-fit overflow-hidden whitespace-nowrap border-r-[3px] border-r-foreground text-[1.5rem] font-normal leading-[24px] tracking-wide text-primary sm:text-[2rem] sm:leading-[28px] md:text-[1.5rem] md:leading-[30px] lg:text-[2rem] lg:leading-[32px]">
+    <H1 className="animate-typing max-w-fit overflow-hidden whitespace-nowrap border-r-[3px] border-r-foreground text-[2rem] font-normal leading-[24px] tracking-wide text-primary sm:leading-[28px] md:text-[1.5rem] md:leading-[30px] lg:text-[2rem] lg:leading-[32px]">
       {displayedText}
     </H1>
   );

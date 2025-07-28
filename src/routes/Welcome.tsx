@@ -10,18 +10,10 @@ import Stamp5 from "@/assets/stamps/stamp5.png";
 import Stamp6 from "@/assets/stamps/stamp6.gif";
 import Stamp3 from "@/assets/stamps/stamp7.gif";
 import Stamp8 from "@/assets/stamps/stamp8.png";
-import { Typewriter } from "@/components/Typewriter";
-import { Link as TextLink } from "@/components/Typography";
+import { H1, Link as TextLink } from "@/components/Typography";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const Welcome = () => {
-  const phrases = [
-    "welcome !",
-    "hello there !",
-    "nice to see ya !",
-    "glad you're here !",
-  ];
-
   return (
     <>
       <Helmet>
@@ -29,11 +21,9 @@ export const Welcome = () => {
       </Helmet>
       <Card>
         <CardHeader className="flex items-center">
-          <span className="text-[1.5rem] font-normal leading-[24px] text-muted-foreground sm:text-[2rem] sm:leading-[28px] md:text-[1.5rem] md:leading-[30px] lg:text-[2rem] lg:leading-[32px]">
-            {">"}
-          </span>
-
-          <Typewriter phrases={phrases} />
+          <H1 className="animate-pulse text-4xl font-normal tracking-wide text-primary">
+            welcome !
+          </H1>
         </CardHeader>
         <CardContent>
           <div className="float-left mr-4 block h-fit w-fit overflow-hidden rounded-sm border border-primary">
