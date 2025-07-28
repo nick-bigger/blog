@@ -5,7 +5,7 @@ description: pixel art update
 pubDate: 2025-07-23 0:00:00.000
 ---
 
-I've never been much of a visual artist. But, I've always been interested in becoming one ! So, over the last couple months I've been trying to improve at drawing. Up till a few weeks ago, I had only really used pencil on paper and most drawings I've made have been simple shapes and eyes for practice. But, after visiting https://dimden.dev, I was totally taken by the pixel art. I've always had an affinity for the pixelated aesthetic, and I think you can really get some amazing art out of it; I absolutely adored games like Celeste and Animal Well.
+I've never been much of a visual artist. But, I've always been interested in becoming one ! So, over the last couple months I've been trying to improve at drawing. Up till a few weeks ago, I had only really used pencil on paper and most drawings I've made have been simple shapes and eyes for practice. But, after visiting [Dim's Hotel](https://dimden.dev), I was totally taken by the pixel art. I've always had an affinity for the pixelated aesthetic, and I think you can really get some amazing art out of it; I absolutely adored games like Celeste and Animal Well.
 
 And pixel art has always seemed to me, at least on the surface, to be a bit easier than visual art in a traditional medium. There are more rules - literal constraints on where you can actually draw in a grid - so it appeared like a good stepping stone in my artistic journey. I decided I'd try and create a pixel avatar for my website in the style of Dimden's and see if my intuition was correct, or if perhaps I showed some inate talent in this medium that I lacked in others.
 

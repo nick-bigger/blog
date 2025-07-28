@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 
+import CD from "@/assets/cd.png";
 import { H1 } from "@/components/Typography";
 import {
   Card,
@@ -24,8 +25,15 @@ export const Songs = () => {
             to attach the audio at some point !
           </CardDescription>
         </CardHeader>
-        <CardContent className="grid grid-cols-1 gap-5 md:grid-cols-2">
-          <p>no songs yet !!</p>
+        <CardContent className="flex flex-wrap gap-10">
+          <div className="flex h-[300px] w-[300px] items-center justify-center rounded-md bg-muted">
+            <img src={CD} className="h-[250px] w-[250px]" />
+          </div>
+          <ol>
+            <li className="text-xl">1. song 1</li>
+            <li className="text-xl">2. song 2</li>
+            <li className="text-xl">3. song 3</li>
+          </ol>
         </CardContent>
       </Card>
     </div>
