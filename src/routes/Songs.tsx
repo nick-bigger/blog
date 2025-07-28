@@ -35,12 +35,6 @@ export const Songs = () => {
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [lyricsExpanded, setLyricsExpanded] = useState(false);
 
-  const getStableTranslateX = (id: number) => {
-    const seed = id * 73; // Multiply by a prime number for better distribution.
-    const offset = (seed % 21) - 10; // Result will be between -10 and +10.
-    return offset;
-  };
-
   return (
     <div className="mx-auto max-w-7xl">
       <Helmet>
