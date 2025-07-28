@@ -91,6 +91,23 @@ module.exports = {
             color: "#3b82f6",
           },
         },
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden",
+          },
+          "100%": {
+            width: "100%",
+          },
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent",
+          },
+          "100%": {
+            borderColor: "white",
+          },
+        },
         "wave-up-down": {
           "0%, 100%": { transform: "scaleY(0.6)" },
           "25%": { transform: "scaleY(1.0)" },
@@ -109,6 +126,7 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "color-wave": "color-wave 4s infinite alternate",
+        typing: "typing 6s steps(20), blink .9s infinite",
         "wave-up-down": "wave-up-down 1.8s ease-in-out infinite",
         "wave-pulse": "wave-pulse 1.5s ease-in-out infinite",
       },
