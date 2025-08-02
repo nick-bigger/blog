@@ -219,9 +219,12 @@ export const Wrapper = () => {
                 ❌ May: meditate
               </p>
               <p className="text-muted-foreground line-through">
-                ✅ Jun: skateboard !!
+                ✅ Jun: skateboard
               </p>
-              <p>▶️ Jul: writing !!</p>
+              <p className="text-muted-foreground line-through">
+                ✅ Jul: writing
+              </p>
+              <p>▶️ Aug: dance</p>
             </CardContent>
           </Card>
         </aside>
