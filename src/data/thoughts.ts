@@ -1,5 +1,20 @@
 export const thoughts = [
   {
+    timestamp: new Date(2025, 7, 2, 16, 45),
+    content:
+      "tango is crazy. i genuinely dont think you can do it without falling in love w the other person",
+  },
+  {
+    timestamp: new Date(2025, 7, 2, 16, 45),
+    content:
+      "basically i've been dropping into random classes and styles. i've done a decent amount of west coast swing, but now i'm taking classes on argentine tango and bachata",
+  },
+  {
+    timestamp: new Date(2025, 7, 2, 16, 43),
+    content:
+      "i found a local dance place that had an offer for 3 private lessons and a month of free group classes. so new monthly goal is to use all these dance classes !",
+  },
+  {
     timestamp: new Date(2025, 6, 26, 14, 15),
     content:
       "also i saw fantastic 4 for the second time last night. it's very good if you haven't seen it ! i'm not a big super hero movie fan, but i actually really enjoyed both this one and superman",
