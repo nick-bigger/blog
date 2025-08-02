@@ -1,9 +1,18 @@
 import LifeUpdate from "./posts/20250606LifeUpdate.md?raw";
 import AgainstConsistencyContent from "./posts/AgainstConsistency.md?raw";
 import BookReviewTDET from "./posts/BookReview.md?raw";
+import FantasticFourReviewContent from "./posts/FantasticFourReview.md?raw";
 import LearningPixelArtContent from "./posts/LearningPixelArt.md?raw";
 
 export const posts = [
+  {
+    id: 5,
+    title: "fantastic four: first steps review (no spoilers)",
+    timestamp: new Date(2025, 7, 2),
+    content: FantasticFourReviewContent,
+    description: "full review of the new fantastic four",
+    tags: ["review", "movies"],
+  },
   {
     id: 4,
     title: "i've been learning pixel art !!",
