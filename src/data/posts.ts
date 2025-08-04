@@ -1,10 +1,19 @@
 import LifeUpdate from "./posts/20250606LifeUpdate.md?raw";
 import AgainstConsistencyContent from "./posts/AgainstConsistency.md?raw";
 import BookReviewTDET from "./posts/BookReview.md?raw";
+import EddingtonReviewContent from "./posts/EddingtonReview.md?raw";
 import FantasticFourReviewContent from "./posts/FantasticFourReview.md?raw";
 import LearningPixelArtContent from "./posts/LearningPixelArt.md?raw";
 
 export const posts = [
+  {
+    id: 6,
+    title: "eddington review (no spoilers)",
+    timestamp: new Date(2025, 7, 3),
+    content: EddingtonReviewContent,
+    description: "full review of the new A24 movie, Eddington",
+    tags: ["review", "movies"],
+  },
   {
     id: 5,
     title: "fantastic four: first steps review (no spoilers)",
