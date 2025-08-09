@@ -4,8 +4,17 @@ import BookReviewTDET from "./posts/BookReview.md?raw";
 import EddingtonReviewContent from "./posts/EddingtonReview.md?raw";
 import FantasticFourReviewContent from "./posts/FantasticFourReview.md?raw";
 import LearningPixelArtContent from "./posts/LearningPixelArt.md?raw";
+import WeaponsReviewContent from "./posts/WeaponsReview.md?raw";
 
 export const posts = [
+  {
+    id: 7,
+    title: "weapons review (no spoilers)",
+    timestamp: new Date(2025, 7, 9),
+    content: WeaponsReviewContent,
+    description: "full review of the new Zach Cregger's 'Weapons'",
+    tags: ["review", "movies"],
+  },
   {
     id: 6,
     title: "eddington review (no spoilers)",
