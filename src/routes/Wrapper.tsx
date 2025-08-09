@@ -49,11 +49,11 @@ export const Wrapper = () => {
                 <div className="flex flex-wrap justify-between gap-2">
                   <p className="leading-tight text-primary">@daizycrown</p>
                   <p className="leading-tight text-muted-foreground">
-                    {formatRelativeShorthand(new Date(2025, 6, 27, 12, 56))}
+                    {formatRelativeShorthand(new Date(2025, 7, 9, 11, 30))}
                   </p>
                 </div>
                 <p className="leading-tight">
-                  really happy with that notebook effect on the poems page :)
+                  "there is no right and wrong. there is only fun and boring"
                 </p>
               </div>
             </CardContent>
