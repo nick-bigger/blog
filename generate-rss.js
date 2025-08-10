@@ -81,7 +81,21 @@ function generateRssFeed(posts) {
   const escapedFeedTitle = escapeXml(feedConfig.title);
   const escapedFeedLink = escapeXml(feedConfig.link);
   const escapedFeedDescription = escapeXml(feedConfig.description);
-  const lastBuildDate = new Date().toUTCString(); // Current date for lastBuildDate
+
+  // Set the lastBuildDate to the current date and time in CST
+  const lastBuildDate = new Date()
+    .toLocaleString("en-US", {
+      timeZone: "America/Chicago",
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZoneName: "shortOffset",
+    })
+    .replace(/,/, ""); // Remove the comma after the weekday
 
   let rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
@@ -108,12 +122,39 @@ function generateRssFeed(posts) {
     let pubDate;
 
     try {
-      pubDate = new Date(post.pubDate).toUTCString();
+      // Parse the date and format it for CST
+      const date = new Date(post.pubDate);
+      pubDate = date
+        .toLocaleString("en-US", {
+          timeZone: "America/Chicago",
+          weekday: "short",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          timeZoneName: "shortOffset",
+        })
+        .replace(/,/, "");
     } catch (e) {
       console.warn(
         `[WARNING] Invalid pubDate for post "${post.title}": ${post.pubDate}. Using current date. Error: ${e.message}`,
       );
-      pubDate = new Date().toUTCString(); // Fallback to current date if parsing fails
+      // Fallback to current date in CST if parsing fails
+      pubDate = new Date()
+        .toLocaleString("en-US", {
+          timeZone: "America/Chicago",
+          weekday: "short",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          timeZoneName: "shortOffset",
+        })
+        .replace(/,/, "");
     }
 
     rssXml += `
