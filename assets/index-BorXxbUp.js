@@ -357,7 +357,7 @@ i didnt understand yet
 title: life update
 link: https://conifercrown.com/#/blog/2
 description: Life update on my current creative endeavors
-pubDate: 2025-07-06 0:00:00.000
+pubDate: 2025-07-06T0:00:00.000
 ---
 
 As usual, I have way too many personal projects going at once. But I really wouldn't have it any other way! I thought it might be fun going through and discussing my progress with each of my current projects:
@@ -409,7 +409,7 @@ I'm a firm believer in a daily creative practice. It doesn't matter if you're go
 title: Your Routine is Stealing Your Time
 link: https://conifercrown.com/#/blog/1
 description: Why routine is making your life feel short !!
-pubDate: 2025-07-04 0:00:00.000
+pubDate: 2025-07-04T0:00:00.000
 ---
 
 I'm sick of hearing people lament about how quickly time passes, because I really don't think that it does. I do think, however, that the predominant strategies for organizing your schedule, "maximizing" your time, and increasing your productivity, ironically make it _feel_ like time passes quickly. And I'm here to suggest that disconnecting from these ideas and instead focusing on novelty is not only more fun, but is the best remedy for that "time is slipping away" feeling.
@@ -441,7 +441,7 @@ These might seem silly, but try it and tell me that you don't remember these mom
 title: "Book Review: 'The Design of Everyday Things'"
 link: https://conifercrown.com/#/blog/3
 description: My review of a very famous design book
-pubDate: 2025-07-11 0:00:00.000
+pubDate: 2025-07-11T0:00:00.000
 ---
 
 As someone who loves both art and psychology, design has always attracted me. How often do you get a chance to both impress AND manipulate someone? When something is well designed, it feels like it reaches into my head and fiddles with the knobs and buttons. Why did I press this and then pull that? Well, I'm not sure, it just felt right.
@@ -465,7 +465,7 @@ All of this to say, I thouroughly enjoyed this book. If you are a designer who h
 title: eddington review (no spoilers)
 link: https://conifercrown.com/#/blog/6
 description: full review of the new A24 movie, Eddington
-pubDate: 2025-08-03 0:00:00.000
+pubDate: 2025-08-03T0:00:00.000
 ---
 
 In theory, I think that this is an excellent concept that has ample opportunity to make meaningful statements about COVID times, groupthink, political division, etc.
@@ -481,7 +481,7 @@ I really wanted to love this, and I think with an editing pass to change, slim d
 title: "fantastic four: first steps review (no spoilers)"
 link: https://conifercrown.com/#/blog/5
 description: full review of the new fantastic four
-pubDate: 2025-08-02 0:00:00.000
+pubDate: 2025-08-02T0:00:00.000
 ---
 
 This is just a really good movie. All of the characters work well together, and the outcome is a team that actually feels like a family. I was really happy to see that the humor was done sparingly and was not over the top in the way that a lot of Marvel movies tend to use it.
@@ -493,7 +493,7 @@ Without getting into spoilers, I'll add that the villains here were great as wel
 title: i've been learning pixel art !!
 link: https://conifercrown.com/#/blog/4
 description: pixel art update
-pubDate: 2025-07-23 0:00:00.000
+pubDate: 2025-07-23T0:00:00.000
 ---
 
 I've never been much of a visual artist. But, I've always been interested in becoming one ! So, over the last couple months I've been trying to improve at drawing. Up till a few weeks ago, I had only really used pencil on paper and most drawings I've made have been simple shapes and eyes for practice. But, after visiting [Dim's Hotel](https://dimden.dev), I was totally taken by the pixel art. I've always had an affinity for the pixelated aesthetic, and I think you can really get some amazing art out of it; I absolutely adored games like Celeste and Animal Well.
@@ -555,7 +555,7 @@ But ! This wasn't the end. As you've probably seen on the home page, I went on t
 title: weapons review (no spoilers)
 link: https://conifercrown.com/#/blog/7
 description: full review of the new Zach Cregger's 'Weapons'
-pubDate: 2025-08-09 11:54:00.000
+pubDate: 2025-08-09T11:54:00.000
 ---
 
 Unlike most, it seems, I didn't see any of the marketing for this movie; I hadn't seen or heard of Barbarian; I hadn't even learned yet that Zach Cregger was a director. In other words, I had no expectations for this movie beyond the fact that it was a movie and was supposed to be scary.
