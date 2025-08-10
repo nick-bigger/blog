@@ -110,19 +110,13 @@ function generateRssFeed(posts) {
     let pubDate;
 
     try {
-      // Create a Date object from the post's pubDate string.
-      // We manually add the timezone to ensure it's parsed as CST.
-      // This is crucial for correctly converting it to UTC.
-      const dateStringCST = post.pubDate.includes("CST")
-        ? post.pubDate
-        : `${post.pubDate} CST`;
-      const date = new Date(dateStringCST);
-
-      // The .toUTCString() method correctly formats the date for RSS
-      pubDate = date.toUTCString();
+      // The pubDate from gray-matter is already a Date object,
+      // so we can directly use its toUTCString() method.
+      // We no longer need the .includes() check.
+      pubDate = post.pubDate.toUTCString();
     } catch (e) {
       console.warn(
-        `[WARNING] Invalid pubDate for post "${post.title}": ${post.pubDate}. Using current GMT date. Error: ${e.message}`,
+        `[WARNING] Invalid pubDate for post "${post.title}". Using current GMT date. Error: ${e.message}`,
       );
       // Fallback to current GMT date if parsing fails
       pubDate = new Date().toUTCString();

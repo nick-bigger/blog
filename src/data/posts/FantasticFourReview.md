@@ -2,7 +2,7 @@
 title: "fantastic four: first steps review (no spoilers)"
 link: https://conifercrown.com/#/blog/5
 description: full review of the new fantastic four
-pubDate: 2025-08-02T0:00:00.000
+pubDate: 2025-08-02T0:00:00.000-05:00
 ---
 
 This is just a really good movie. All of the characters work well together, and the outcome is a team that actually feels like a family. I was really happy to see that the humor was done sparingly and was not over the top in the way that a lot of Marvel movies tend to use it.

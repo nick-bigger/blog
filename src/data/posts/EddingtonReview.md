@@ -2,7 +2,7 @@
 title: eddington review (no spoilers)
 link: https://conifercrown.com/#/blog/6
 description: full review of the new A24 movie, Eddington
-pubDate: 2025-08-03T0:00:00.000
+pubDate: 2025-08-03T0:00:00.000-05:00
 ---
 
 In theory, I think that this is an excellent concept that has ample opportunity to make meaningful statements about COVID times, groupthink, political division, etc.
