@@ -1,3 +1,10 @@
+---
+title: eddington review (no spoilers)
+link: https://conifercrown.com/#/blog/6
+description: full review of the new A24 movie, Eddington
+pubDate: 2025-08-03 0:00:00.000
+---
+
 In theory, I think that this is an excellent concept that has ample opportunity to make meaningful statements about COVID times, groupthink, political division, etc.
 
 In practice, however, the breeding grounds were perhaps too fertile - in other words, this film tries to hit hard on so many points that none of them really ring cleanly to me. The twisting plot and rapid tonal shifts resulted in big moments losing their fire. Though each scene seemed to have its own purpose, I was rarely sure what the movie as a whole was really trying to say.

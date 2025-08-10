@@ -1,3 +1,10 @@
+---
+title: weapons review (no spoilers)
+link: https://conifercrown.com/#/blog/7
+description: full review of the new Zach Cregger's 'Weapons'
+pubDate: 2025-08-09 0:00:00.000
+---
+
 Unlike most, it seems, I didn't see any of the marketing for this movie; I hadn't seen or heard of Barbarian; I hadn't even learned yet that Zach Cregger was a director. In other words, I had no expectations for this movie beyond the fact that it was a movie and was supposed to be scary.
 
 First, to give credit where it is due, the cinematography in this movie is great. The camera work that Cregger employs throughout brings a critical energy and intensity to many scenes. Creative framing and movement of the camera throughout scenes kept the audience engaged, and his use of extreme camera angles accentuated the stomach-dropping, heart-pumping horror movie moments we all love to great effect. And this wasn't limited to jump scares or action sequences - these tactics were employed equally well for humor.
