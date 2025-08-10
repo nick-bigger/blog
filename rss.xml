@@ -4,7 +4,7 @@
     <title>nick bigger</title>
     <link>https://conifercrown.com/#/blog</link>
     <description>unstructured and unregulated thoughts on stuff and things</description>
-    <lastBuildDate>Sat, 09 Aug 2025 16:31:04 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 10 Aug 2025 03:49:45 GMT</lastBuildDate>
     <generator>Custom RSS Feed Generator</generator>
     <language>en-us</language>
 
@@ -33,11 +33,35 @@
     </item>
 
     <item>
+      <title>eddington review (no spoilers)</title>
+      <link>https://conifercrown.com/#/blog/6</link>
+      <description>full review of the new A24 movie, Eddington</description>
+      <pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://conifercrown.com/#/blog/6</guid>
+    </item>
+
+    <item>
+      <title>fantastic four: first steps review (no spoilers)</title>
+      <link>https://conifercrown.com/#/blog/5</link>
+      <description>full review of the new fantastic four</description>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://conifercrown.com/#/blog/5</guid>
+    </item>
+
+    <item>
       <title>i&apos;ve been learning pixel art !!</title>
       <link>https://conifercrown.com/#/blog/4</link>
       <description>pixel art update</description>
       <pubDate>Wed, 23 Jul 2025 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://conifercrown.com/#/blog/4</guid>
+    </item>
+
+    <item>
+      <title>weapons review (no spoilers)</title>
+      <link>https://conifercrown.com/#/blog/7</link>
+      <description>full review of the new Zach Cregger&apos;s &apos;Weapons&apos;</description>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://conifercrown.com/#/blog/7</guid>
     </item>
 
   </channel>
