@@ -2,7 +2,7 @@
 title: weapons review (no spoilers)
 link: https://conifercrown.com/#/blog/7
 description: full review of the new Zach Cregger's 'Weapons'
-pubDate: 2025-08-09 11:54:00.000
+pubDate: 2025-08-09T11:54:00.000
 ---
 
 Unlike most, it seems, I didn't see any of the marketing for this movie; I hadn't seen or heard of Barbarian; I hadn't even learned yet that Zach Cregger was a director. In other words, I had no expectations for this movie beyond the fact that it was a movie and was supposed to be scary.

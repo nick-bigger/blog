@@ -82,20 +82,8 @@ function generateRssFeed(posts) {
   const escapedFeedLink = escapeXml(feedConfig.link);
   const escapedFeedDescription = escapeXml(feedConfig.description);
 
-  // Set the lastBuildDate to the current date and time in CST
-  const lastBuildDate = new Date()
-    .toLocaleString("en-US", {
-      timeZone: "America/Chicago",
-      weekday: "short",
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      timeZoneName: "shortOffset",
-    })
-    .replace(/,/, ""); // Remove the comma after the weekday
+  // Set the lastBuildDate to the current date in GMT
+  const lastBuildDate = new Date().toUTCString();
 
   let rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
@@ -122,39 +110,22 @@ function generateRssFeed(posts) {
     let pubDate;
 
     try {
-      // Parse the date and format it for CST
-      const date = new Date(post.pubDate);
-      pubDate = date
-        .toLocaleString("en-US", {
-          timeZone: "America/Chicago",
-          weekday: "short",
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          timeZoneName: "shortOffset",
-        })
-        .replace(/,/, "");
+      // Create a Date object from the post's pubDate string.
+      // We manually add the timezone to ensure it's parsed as CST.
+      // This is crucial for correctly converting it to UTC.
+      const dateStringCST = post.pubDate.includes("CST")
+        ? post.pubDate
+        : `${post.pubDate} CST`;
+      const date = new Date(dateStringCST);
+
+      // The .toUTCString() method correctly formats the date for RSS
+      pubDate = date.toUTCString();
     } catch (e) {
       console.warn(
-        `[WARNING] Invalid pubDate for post "${post.title}": ${post.pubDate}. Using current date. Error: ${e.message}`,
+        `[WARNING] Invalid pubDate for post "${post.title}": ${post.pubDate}. Using current GMT date. Error: ${e.message}`,
       );
-      // Fallback to current date in CST if parsing fails
-      pubDate = new Date()
-        .toLocaleString("en-US", {
-          timeZone: "America/Chicago",
-          weekday: "short",
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          timeZoneName: "shortOffset",
-        })
-        .replace(/,/, "");
+      // Fallback to current GMT date if parsing fails
+      pubDate = new Date().toUTCString();
     }
 
     rssXml += `

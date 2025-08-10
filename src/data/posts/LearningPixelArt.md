@@ -2,7 +2,7 @@
 title: i've been learning pixel art !!
 link: https://conifercrown.com/#/blog/4
 description: pixel art update
-pubDate: 2025-07-23 0:00:00.000
+pubDate: 2025-07-23T0:00:00.000
 ---
 
 I've never been much of a visual artist. But, I've always been interested in becoming one ! So, over the last couple months I've been trying to improve at drawing. Up till a few weeks ago, I had only really used pencil on paper and most drawings I've made have been simple shapes and eyes for practice. But, after visiting [Dim's Hotel](https://dimden.dev), I was totally taken by the pixel art. I've always had an affinity for the pixelated aesthetic, and I think you can really get some amazing art out of it; I absolutely adored games like Celeste and Animal Well.

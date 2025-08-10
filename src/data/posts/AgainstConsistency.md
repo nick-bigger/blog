@@ -2,7 +2,7 @@
 title: Your Routine is Stealing Your Time
 link: https://conifercrown.com/#/blog/1
 description: Why routine is making your life feel short !!
-pubDate: 2025-07-04 0:00:00.000
+pubDate: 2025-07-04T0:00:00.000
 ---
 
 I'm sick of hearing people lament about how quickly time passes, because I really don't think that it does. I do think, however, that the predominant strategies for organizing your schedule, "maximizing" your time, and increasing your productivity, ironically make it _feel_ like time passes quickly. And I'm here to suggest that disconnecting from these ideas and instead focusing on novelty is not only more fun, but is the best remedy for that "time is slipping away" feeling.
