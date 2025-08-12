@@ -41,7 +41,7 @@ export const Weather = () => {
     isLoading,
     isError,
   } = useQuery<OpenWeatherData, Error>({
-    queryKey: ["austinWeather"],
+    queryKey: ["weather"],
     queryFn: fetchWeather,
     refetchInterval: 600000, // Refetch every 10 minutes.
   });

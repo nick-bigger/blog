@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
 
 import AvatarGif from "@/assets/avatar.gif";
 import Stamp1 from "@/assets/stamps/stamp1.gif";
@@ -10,7 +9,7 @@ import Stamp5 from "@/assets/stamps/stamp5.png";
 import Stamp6 from "@/assets/stamps/stamp6.gif";
 import Stamp3 from "@/assets/stamps/stamp7.gif";
 import Stamp8 from "@/assets/stamps/stamp8.png";
-import { H1, Link as TextLink } from "@/components/Typography";
+import { Code, H1, Link as TextLink } from "@/components/Typography";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const Welcome = () => {
@@ -74,38 +73,31 @@ export const Welcome = () => {
       </Card>
       <Card>
         <CardHeader>
-          <CardTitle>A Little About Me</CardTitle>
+          <CardTitle>Trackers</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="mb-2 grid gap-4 sm:grid-cols-2">
+          <div className="mb-2 grid gap-4 sm:grid-cols-3">
             <div>
-              <h3 className="mb-2 text-2xl">me:</h3>
-              <ul className="ml-4 list-disc">
-                <li>name: nick</li>
-                <li>birthday: 9/2</li>
-                <li>sign: virgo</li>
-              </ul>
+              <h3 className="mb-2 text-2xl">reading:</h3>
+              <Code>the bell jar</Code>
             </div>
             <div>
-              <h3 className="mb-2 text-2xl">favorites:</h3>
-              <ul className="ml-4 list-disc">
-                <li>food: ramen</li>
-                <li>color: green</li>
-                <li>reading books</li>
-                <li>trying new restauraunts</li>
-                <li>skateboarding</li>
-              </ul>
+              <h3 className="mb-2 text-2xl">last watched:</h3>
+              <Code>there will be blood</Code>
+            </div>
+            <div>
+              <h3 className="mb-2 text-2xl">last ate at:</h3>
+              <Code>Oseyo</Code>
+            </div>
+            <div>
+              <h3 className="mb-2 text-2xl">current fav song:</h3>
+              <Code>i got heaven - mannequin pussy</Code>
+            </div>
+            <div>
+              <h3 className="mb-2 text-2xl">new skillz:</h3>
+              <Code>dancing bachata</Code>
             </div>
           </div>
-          <h3 className="mb-2 mt-4 text-2xl">fun facts:</h3>
-          <ul className="mb-4 ml-4 list-disc">
-            <li>i almost died from a trip to the water park</li>
-            <li>i pierced my tongue to win a race</li>
-            <li>test</li>
-          </ul>
-          <Link to="about">
-            <p className="animate-color-wave">→ click here to learn more !</p>
-          </Link>
         </CardContent>
       </Card>
     </>
