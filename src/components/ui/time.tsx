@@ -9,12 +9,12 @@ export const Time = () => {
 
       // Format time part
       const time = now.toLocaleTimeString("en-US", {
-        timeZone: "America/New_York",
+        timeZone: "America/Chicago",
         hour: "numeric",
         minute: "numeric",
         hour12: true,
       });
-      setCurrentTimeFormatted(`${time} EDT`);
+      setCurrentTimeFormatted(`${time} CST`);
     };
 
     // Update time immediately on mount

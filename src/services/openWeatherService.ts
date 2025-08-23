@@ -1,8 +1,8 @@
 import { OpenWeatherData } from "@/types/OpenWeather";
 
 const API_KEY = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
-const LATITUDE = 42.3555; // Latitude for Austin, Texas.
-const LONGITUDE = -71.0565; // Longitude for Austin, Texas.
+const LATITUDE = 30.2672; // Latitude for Austin, Texas.
+const LONGITUDE = -97.7431; // Longitude for Austin, Texas.
 
 export const fetchWeather = async (): Promise<OpenWeatherData> => {
   const response = await fetch(

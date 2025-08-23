@@ -65,7 +65,7 @@ export const Wrapper = () => {
             <CardContent>
               <div className="flex items-center gap-2 text-foreground">
                 <MapPin size={18} />
-                <span>Boston, MA</span>
+                <span>Austin, TX</span>
               </div>
               <div className="flex items-center gap-2 text-foreground">
                 <Clock size={16} />
