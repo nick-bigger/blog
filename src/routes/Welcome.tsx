@@ -79,23 +79,23 @@ export const Welcome = () => {
           <div className="mb-2 grid gap-4 sm:grid-cols-3">
             <div>
               <h3 className="mb-2 text-2xl">reading:</h3>
-              <Code>the bell jar</Code>
+              <Code>acceptance (Southern Reach Series)</Code>
             </div>
             <div>
               <h3 className="mb-2 text-2xl">last watched:</h3>
-              <Code>there will be blood</Code>
+              <Code>tron: ares</Code>
             </div>
             <div>
               <h3 className="mb-2 text-2xl">last ate at:</h3>
-              <Code>Oseyo</Code>
+              <Code>chef hong</Code>
             </div>
             <div>
               <h3 className="mb-2 text-2xl">current fav song:</h3>
-              <Code>i got heaven - mannequin pussy</Code>
+              <Code>expert in a dying field - the beths</Code>
             </div>
             <div>
               <h3 className="mb-2 text-2xl">new skillz:</h3>
-              <Code>dancing bachata</Code>
+              <Code>barista</Code>
             </div>
           </div>
         </CardContent>
